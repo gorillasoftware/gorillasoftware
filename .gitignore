@@ -1,0 +1,6 @@
+# what would you like git to ignore... huh?
+.sass-cache
+src/vendor
+Gemfile.lock
+*~
+
