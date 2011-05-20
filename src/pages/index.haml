@@ -1,1 +1,401 @@
-%h1 StaticMatic!
+%article
+  %section#about
+    .section-wrap
+      %h1 jQuery Waypoints
+      .columns
+        %p Waypoints is a small jQuery plugin that makes it easy to execute a function whenever you scroll to an element.
+        %pre
+          %code
+            %span.fn> $
+            (
+            %span.str> '.entry'
+            ).
+            %span.fn> waypoint
+            (
+            %span.kw> function
+            () {
+            = succeed "(" do
+              %span.fn alert
+            = succeed ");" do
+              %span.str 'You have scrolled to an entry.'
+            });
+        %p
+          Waypoints makes a solid base for modern UI patterns that depend on a user’s scroll position on the page.  Take a look at a few
+          = succeed "." do
+            %a{:href => "#examples"} examples
+        .rcol
+          %a.download{:href => "https://github.com/imakewebthings/jquery-waypoints/zipball/v1.0.2"}
+            Download
+            %span.version v1.0.2
+          %p.sizes 1.2kB min+gzip, 2.7kB minified, 15.4kB full source
+          .meta
+            %p
+              Waypoints is dual licensed under the
+              %a{:href => "https://github.com/imakewebthings/jquery-waypoints/blob/master/MIT-license.txt"} MIT
+              and
+              %a{:href => "https://github.com/imakewebthings/jquery-waypoints/blob/master/GPL-license.txt"} GPL
+              licenses.  You can fork the project or report any issues in the
+              = succeed "." do
+                %a{:href => "https://github.com/imakewebthings/jquery-waypoints"} GitHub repository
+            %p Waypoints has been tested with jQuery versions 1.4+ in IE6+, FF3+, Safari 4+, Chrome 6+, and Opera 11.
+  %section#examples
+    .section-wrap
+      %h1 Examples
+      %ul
+        %li
+          %a{:href => "./infinite-scroll"}
+            .icon ∞
+            %h2 Infinite Scrolling
+        %li
+          %a{:href => "./sticky-elements"}
+            .icon §
+            %h2 Sticky Elements
+        %li
+          %a{:href => "./scroll-analytics"}
+            .icon π
+            %h2 Scroll Analytics
+  %section#documentation
+    .section-wrap
+      %h1 Full Documentation
+      %ul#doc-nav
+        %li
+          %a{:href => "#fn-waypoint"} $.fn.waypoint
+          \— The jQuery effin’ extension.
+          %ul
+            %li
+              %a{:href => "#waypoint-init"} .waypoint([handler], [options])
+              \— Register waypoints.
+            %li
+              %a{:href => "#waypoint-destroy"} .waypoint('destroy')
+              \— Unregister waypoints and unbind all handlers.
+            %li
+              %a{:href => "#waypoint-remove"} .waypoint('remove')
+              \— Unregister waypoints but leave handlers intact.
+            %li
+              %a{:href => "#waypoint-options"} $.fn.waypoint.defaults
+              \— Default waypoint options.
+        %li
+          %a{:href => "#jq-waypoints"} $.waypoints
+          The jQuery object extension.
+          %ul
+            %li
+              %a{:href => "#waypoints-noparam"} $.waypoints()
+              \— Get all waypoints.
+            %li
+              %a{:href => "#waypoints-refresh"} $.waypoints('refresh')
+              \— Recalculate all waypoint positions.
+            %li
+              %a{:href => "#waypoints-viewport-height"} $.waypoints('viewportHeight')
+              \— Get the viewport height, iOS compatible.
+            %li
+              %a{:href => "#waypoints-settings"} $.waypoints.settings
+              \— Waypoints plugin settings.
+      %section
+        %h2#fn-waypoint $.fn.waypoint
+        %p
+          The waypoint namespace extension to the jQuery effin’ object.  This is the meat of the plugin, calling
+          %code .waypoint
+          on one or more elements and registering handlers for when the elements have been reached.
+        .signature
+          %h3#waypoint-init .waypoint([handler], [options])
+          %dl
+            %dt
+              handler —
+              %span function, optional
+            %dd
+              A callback function called when the user scrolls past the element.  The function signature is
+              %code function(event, direction)
+              where
+              %code event
+              is a standard
+              %a{:href => "http://api.jquery.com/category/events/event-object/"} jQuery Event Object
+              and
+              %code direction
+              is a string, either
+              %code 'down'
+              or
+              %code 'up'
+              indicating which direction the user is scrolling.
+            %dt
+              options —
+              %span object, optional
+            %dd
+              A map of options to apply to this set of waypoints, including where on the browser window the waypoint is triggered.  For a full list of options and their defaults, see
+              = succeed "." do
+                %a{:href => "#waypoint-options"} $.fn.waypoint.defaults
+        %p
+          This is how you register an element as a waypoint.  When the user scrolls past that element it triggers
+          = succeed "," do
+            %code waypoint.reached
+          a custom event.  Since the parameters for creating a waypoint are optional, we have a few different possible signatures.  Let’s look at each of them.
+        %pre
+          %code
+            someElements.
+            %span.fn> waypoint
+            ();
+        %p
+          Calling
+          %code .waypoint
+          with no parameters will register the elements as waypoints using the
+          = succeed "." do
+            %a{:href => "#waypoint-options"} default options
+          The elements will fire the
+          %code waypoint.reached
+          event, but calling it in this way does not bind any handler to the event.  You can bind to the event yourself, as with any other event, like so:
+        %pre
+          %code
+            someElements.
+            %span.fn> bind
+            (
+            %span.str> 'waypoint.reached'
+            ,
+            = succeed "(event," do
+              %span.kw function
+            direction) {
+            %span.comment // make it rain
+            });
+        %p
+          You will usually want to create a waypoint and immediately bind a function to
+          = succeed "," do
+            %code waypoint.reached
+          and can do so by passing a handler as the first argument to
+          = succeed ":" do
+            %code .waypoint
+        %pre
+          %code
+            someElements.
+            %span.fn> waypoint
+            (
+            %span.kw> function
+            (event, direction) {
+            %span.kw if
+            (direction ===
+            = succeed ")" do
+              %span.str 'down'
+            {
+            %span.comment // do this on the way down
+            }
+            %span.kw else
+            {
+            %span.comment // do this on the way back up through the waypoint
+            }
+            });
+        %p
+          This will still use the default
+          = succeed "," do
+            %a{:href => "#waypoint-options"} options
+          which will trigger the waypoint when the top of the element hits the top of the window.  We can pass
+          %code .waypoint
+          an options object to customize things:
+        %pre
+          %code
+            someElements.
+            %span.fn> waypoint
+            (
+            %span.kw> function
+            (event, direction) {
+            %span.comment // do something amazing
+            }, {
+            = succeed ":" do
+              %span.key offset
+            %span.str '50%'
+            %span.comment // middle of the page
+            });
+        %p You can also pass just an options object.
+        %pre
+          %code
+            someElements.
+            %span.fn> waypoint
+            ({
+            = succeed ":" do
+              %span.key offset
+            100
+            %span.comment // 100px from the top
+            });
+        %p
+          This behaves like
+          = succeed "," do
+            %code .waypoint()
+          in that it registers the elements as waypoints but binds no event handlers.
+        %p
+          Calling
+          %code .waypoint
+          on an existing waypoint will extend the previous options.  If the call includes a handler, it will be bound to
+          %code waypoint.reached
+          without unbinding any other handlers.
+        .signature
+          %h3#waypoint-destroy .waypoint('destroy')
+        %p
+          Passing the string
+          %code 'destroy'
+          to
+          %code .waypoint
+          will unbind all
+          %code waypoint.reached
+          event handlers on those elements and unregisters them as waypoints.
+        .signature
+          %h3#waypoint-remove .waypoint('remove')
+        %p
+          Passing the string
+          %code 'remove'
+          to
+          %code .waypoint
+          unregisters the elements as waypoints and wipes any custom options, but leaves the
+          %code waypoint.reached
+          events bound.  Calling
+          %code .waypoint
+          again in the future would reregister the waypoint and the old handlers would continue to work.
+        .signature
+          %h3#waypoint-options $.fn.waypoint.defaults
+          %p
+            The default options object that is extended when calling
+            = succeed "." do
+              %code .waypoint
+            It has the following properties:
+          %dl
+            %dt offset
+            %dd.typeof number | string | function
+            %dd.default default: 0
+            %dd Determines how far the top of the element must be from the top of the browser window to trigger a waypoint.  It can be a number, which is taken as a number of pixels, a string representing a percentage of the viewport height, or a function that will return a number of pixels.
+            %dt triggerOnce
+            %dd.typeof boolean
+            %dd.default default: false
+            %dd If true, the waypoint will be destroyed when triggered.
+        %p
+          An
+          %code offset
+          of 250 would trigger the waypoint when the top of the element is 250px from the top of the viewport. Negative values for any offset work as you might expect.  A value of -100 would trigger the waypoint when the element is 100px above the top of the window.
+        %pre
+          %code
+            %span.key> offset
+            \:
+            %span.str '100%'
+        %p
+          A string percentage will determine the pixel offset based on the height of the window.  When resizing the window, this offset will automatically be recalculated without needing to call
+          = succeed "." do
+            %a{:href => "#waypoints-refresh"} $.waypoints('refresh')
+        %pre
+          %code
+            %span.comment // The bottom of the element is in view
+            = succeed ":" do
+              %span.key offset
+            = succeed "()" do
+              %span.kw function
+            {
+            %span.kw return
+            $.
+            %span.fn> waypoints
+            (
+            %span.str> 'viewportHeight'
+            ) -
+            = succeed "(this)." do
+              %span.fn $
+            = succeed "();" do
+              %span.fn outerHeight
+            }
+        %p
+          Offset can take a function, which must return a number of pixels from the top of the window.  The
+          %code this
+          value will always refer to the raw HTML element of the waypoint.  As with % values, functions are recalculated automatically when the window resizes.  For more on recalculating offsets, see
+          = succeed "." do
+            %a{:href => "#waypoints-refresh"} $.waypoints('refresh')
+        %p
+          An offset value of
+          %code 'bottom-in-view'
+          will act as an alias for the function in the example above, as this is a common usage.
+        %pre
+          %code
+            %span.key> offset
+            \:
+            %span.str 'bottom-in-view'
+        %p
+          You can see this alias in use on the
+          %a{:href => "./scroll-analytics/"} scroll analytics
+          example page.
+        %p
+          The
+          %code triggerOnce
+          flag, if true, will destroy the waypoint after the first trigger.  This is just a shortcut for calling
+          %a{:href => "#waypoint-destroy"} .waypoint('destroy')
+          within the waypoint handler.  This is useful in situations such as
+          = succeed "," do
+            %a{:href => "./scroll-analytics/"} scroll analytics
+          where you only want to record an event once for each page visit.
+      %section
+        %h2#jq-waypoints $.waypoints
+        The waypoints namespace extension to the jQuery object houses methods and settings dealing with all waypoints that have been registered through
+        = succeed "." do
+          %a{:href => "#waypoint-init"} fn.waypoint
+        .signature
+          %h3#waypoints-noparam $.waypoints()
+          %p.returns Returns: jQuery
+        %p This will return a jQuery object with a collection of all registered waypoint elements.
+        %pre
+          %code
+            %span.fn> $
+            (
+            %span.str> '.post'
+            ).
+            %span.fn> waypoint
+            ();
+            = succeed "(" do
+              %span.fn $
+            = succeed ")." do
+              %span.str '.ad-unit'
+            = succeed "(" do
+              %span.fn waypoint
+            = succeed "(event," do
+              %span.kw function
+            direction) {
+            %span.comment // Passed an ad unit
+            });
+            console.
+            %span.fn> log
+            ($.
+            %span.fn> waypoints
+            ());
+        %p
+          The example above would log a jQuery object containing all
+          %code .post
+          and
+          %code .ad-unit
+          elements.
+        .signature
+          %h3#waypoints-refresh $.waypoints('refresh')
+        %p
+          This will force a recalculation of each waypoint’s trigger point based on its
+          %code offset
+          option.  This is called automatically whenever the window is resized, new waypoints are added, or a waypoint’s options are modified.  If your project is changing the DOM or page layout without doing one of these things, you may want to manually call this refresh.
+        .signature
+          %h3#waypoints-viewport-height $.waypoints('viewportHeight')
+          %p.returns Returns: number
+        %p
+          This will return the height of the viewport, adjusting for inconsistencies that come with calling
+          %code $(window).height()
+          in iOS. Recommended for use within any offset functions.
+        .signature
+          %h3#waypoints-settings $.waypoints.settings
+          %p Settings object that determines some of the plugin’s behavior.
+          %dl
+            %dt continuous
+            %dd.typeof boolean
+            %dd.default default: true
+            %dd Determines which waypoints to trigger events for if a single scroll change passes more than one waypoint.  If false, only the last waypoint is triggered and the rest are ignored.  If true, all waypoints between the previous scroll position and the new one are triggered in order.
+            %dt resizeThrottle
+            %dd.typeof number
+            %dd.default default: 200
+            %dd
+              For performance reasons, the refresh performed during window resizes is throttled. This value is the rate-limit in milliseconds between resize refreshes. For more information on throttling, check out Ben Alman’s
+              %a{:href => "http://benalman.com/projects/jquery-throttle-debounce-plugin/", :target => "_blank"} throttle / debounce
+              plugin.
+            %dt scrollThrottle
+            %dd.typeof number
+            %dd.default default: 100
+            %dd
+              For performance reasons, checking for any crossed waypoints during the window scroll event is throttled. This value is the rate-limit in milliseconds between scroll checks. For more information on throttling, check out Ben Alman’s
+              %a{:href => "http://benalman.com/projects/jquery-throttle-debounce-plugin/", :target => "_blank"} throttle / debounce
+              plugin.
+      %p.issues
+        If you find something wrong with the plugin, the documentation, or wish to request a feature, let me know on the
+        = succeed "." do
+          %a{:href => "https://github.com/imakewebthings/jquery-waypoints/issues"} project’s issue page
