@@ -1,0 +1,1 @@
+var Foo;Foo=function(){function a(a){this.foo=a}return a}()
