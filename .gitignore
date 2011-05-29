@@ -1,6 +1,4 @@
-# what would you like git to ignore... huh?
+.DS_Store
+build/
 .sass-cache
-src/vendor
-Gemfile.lock
 *~
-
