@@ -1,2 +1,0 @@
-// remap jQuery to $
-(function(a){})(this.jQuery),window.log=function(){log.history=log.history||[],log.history.push(arguments),this.console&&console.log(Array.prototype.slice.call(arguments))},function(a){var b=a.write;a.write=function(c){log("document.write(): ",arguments),/docwriteregexwhitelist/.test(c)&&b.apply(a,arguments)}}(document)
