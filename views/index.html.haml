@@ -1,37 +1,93 @@
-- content_for :head do
-  %title 
-
-#wrapper
-  %h1 gorilla
-  #title_image
-  #main-nav-holder
-    %nav#main-nav
-      %ul
-        %li
-          %a{:href => "#what", :title => "What we do"} What we do
-        %li
-          %a{:href => "#how", :title => "How we work"} How we work
-        %li
-          %a{:href => "#manifest", :title => "What we do"} Our manifest
-        %li
-          %a{:href => "#contact", :title => "How to get in touch with us"} How to get in touch with us
-  %section#container
-    %article#what
-      %h1 What we do
-      %p We are three software craftsmen with a strong technical background.
-    %article#how
-      %h1 How we work
-      %p
-    %article#manifest
-      %h1 Our manifest
-      %p
-    %article#contact
-      %h1 Contact
-      %p
-  %footer
-    %nav
-      %ul
-        %li
-        %li
-          %a.top{:href => "#", :title => "Back to top"} Top
-
+%section#content
+  %ol#posts-list.hfeed
+    %li
+      %article.hentry
+        %header
+          %h2.entry-title
+            %a{:name => "#what", :rel => "bookmark", :title => "What are we doing"} What are we doing
+        %footer.post-info
+        .entry-content
+          %p
+            = lorem.paragraph
+    %li
+      %article.hentry
+        %header
+          %h2.entry-title
+            %a{:name => "#how", :rel => "bookmark", :title => "How can we help you out"} How can we help you out
+        %footer.post-info
+        .entry-content
+          %p
+            = lorem.paragraph
+    %li
+      %article.hentry
+        %header
+          %h2.entry-title
+            %a{:name => "#who", :rel => "bookmark", :title => "Who we are"} Who we are
+        %footer.post-info
+        .entry-content
+          %p
+            = lorem.paragraph
+    %li
+      %article.hentry
+        %header
+          %h2.entry-title
+            %a{:name => "#contact", :rel => "bookmark", :title => "How to get in touch with us"} How to get in touch with us
+        %footer.post-info
+        .entry-content
+          %p
+            = lorem.paragraph
+%section#extras
+  .blogroll
+    %h2 blogroll
+    %ul
+      %li
+        %a{:href => "#", :rel => "external"} HTML5 Doctor
+      %li
+        %a{:href => "#", :rel => "external"} HTML5 Spec (working draft)
+      %li
+        %a{:href => "#", :rel => "external"} Smashing Magazine
+      %li
+        %a{:href => "#", :rel => "external"} W3C
+      %li
+        %a{:href => "#", :rel => "external"} Wordpress
+      %li
+        %a{:href => "#", :rel => "external"} Wikipedia
+      %li
+        %a{:href => "#", :rel => "external"} HTML5 Doctor
+      %li
+        %a{:href => "#", :rel => "external"} HTML5 Spec (working draft)
+      %li
+        %a{:href => "#", :rel => "external"} Smashing Magazine
+      %li
+        %a{:href => "#", :rel => "external"} W3C
+      %li
+        %a{:href => "#", :rel => "external"} Wordpress
+      %li
+        %a{:href => "#", :rel => "external"} Wikipedia
+      %li
+        %a{:href => "#", :rel => "external"} HTML5 Doctor
+      %li
+        %a{:href => "#", :rel => "external"} HTML5 Spec (working draft)
+      %li
+        %a{:href => "#", :rel => "external"} Smashing Magazine
+      %li
+        %a{:href => "#", :rel => "external"} W3C
+      %li
+        %a{:href => "#", :rel => "external"} Wordpress
+      %li
+        %a{:href => "#", :rel => "external"} Wikipedia
+  .social
+    %h2 social
+    %ul
+      %li
+        %a{:href => "http://delicious.com/enrique_ramirez", :rel => "me"} delicious
+      %li
+        %a{:href => "http://digg.com/users/enriqueramirez", :rel => "me"} digg
+      %li
+        %a{:href => "http://facebook.com/enrique.ramirez.velez", :rel => "me"} facebook
+      %li
+        %a{:href => "http://www.lastfm.es/user/enrique-ramirez", :rel => "me"} last.fm
+      %li
+        %a{:href => "http://website.com/feed/", :rel => "alternate"} rss
+      %li
+        %a{:href => "http://twitter.com/enrique_ramirez", :rel => "me"} twitter

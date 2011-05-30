@@ -1,90 +1,321 @@
 @import "compass"
+@import "compass/reset"
 
 // HTML5 Boilerplate Colors
 //  edit, but don't remove these
-$h5bp-text-selection: #FF5E99
-$h5bp-webkit-tap:     #FF5E99
+$color01: #FFF
+$color02: #f5f4ef
+$color03: #C74350
+$color04: #F4E3E3
+$color05: #333
+$color06: #F6CF74
+$color07: #C74451
+$color08: #EEE
+$color09: #444
+$color10: #C64350
+$color11: #F9F9F9
+$color12: #DDD
+$color13: #F8F8F8
+$color14: #888888
+$color15: #F5F5F5
+$color16: #FF5E99
+$color17: #F5F4EF
+$color18: #000305
+
+$h5bp-text-selection: $color16
+$h5bp-webkit-tap:     $color16
 
 @import "html5boilerplate/main"
-
-// Uncomment to use Blueprint Grid System
-// @import "blueprintgrid"
-
-// Uncomment to use 960.gs Grid System
-//  don't forget to uncomment the "require 'ninesixty'" line in config.rb!
 @import "960grid"
+@import "font-stack"
 
 // Your own styles go here.
-
-.hide
-  width: 1px
-  height: 1px
-  position: absolute
-  text-indent: -9999px
-  overflow: hidden
-
 #container
-  +grid-container
+  +grid-system(12)
   +clearfix
+  +grid-children
 
-#main-nav-holder
+body
+  background: url("../images/bg.png") repeat scroll 0 0 $color02
+  color: $color18
+  font-family: 'Trebuchet MS',Trebuchet,'Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial,sans-serif
+  font-size: 87.5%
+  line-height: 1.429
+  margin: 0
+  padding: 0
+  text-align: left
 
-#main-nav
-  ul
-  li
-    &:first-child
-      border-left: 0
+h2
+  font-size: 1.571em
+h3
+  font-size: 1.429em
+h4
+  font-size: 1.286em
+h5
+  font-size: 1.143em
+h6
+  font-size: 1em
 
-.sticky #main-nav
+h2, h3, h4, h5, h6
+  font-weight: 400
+  line-height: 1.1
+  margin-bottom: 0.8em
+
+a
+  outline: 0 none
+  img
+    border: 0 none
+    text-decoration: none
+  &:link, &:visited
+    color: $color03
+    padding: 0 1px
+    text-decoration: underline
+  &:hover, &:active
+    background-color: $color03
+    color: $color01
+    text-decoration: none
+    text-shadow: 1px 1px 1px $color05
+
+p
+  margin-bottom: 1.143em
+
+* p:last-child
+  margin-bottom: 0
+
+strong, b
+  font-weight: bold
+
+*::-moz-selection
+  background: none repeat scroll 0 0 $color06
+  color: $color01
+
+ul
+  list-style: disc outside none
+  margin: 1em 0 1.5em 1.5em
+
+ol
+  list-style: decimal outside none
+  margin: 1em 0 1.5em 1.5em
+
+header, section, footer, aside, nav, article, figure
+  display: block
+
+img
+  &.right figure.right, &.left
+    float: right
+    margin: 0 0 2em 2em
+
+figure.left
+  float: right
+  margin: 0 0 2em 2em
+
+#banner
+  +alpha
+  +grid(12,12)
+  +omega
+  margin: 0 auto
+  padding: 2.5em 0 0
+  h1
+    font-size: 3.571em
+    line-height: 0.6
+    a
+      &:link, &:visited
+        color: $color18
+        display: block
+        font-weight: bold
+        margin: 0 0 0.6em 0.2em
+        text-decoration: none
+      &:hover, &:active
+        background: none repeat scroll 0 0 transparent
+        color: $color03
+        text-shadow: none
+    strong
+      font-size: 0.36em
+      font-weight: normal
+  nav
+    +alpha
+    +grid(12,12)
+    +omega
+    z-index: 100
+    background: none repeat scroll 0 0 $color18
+    border-radius: 5px 5px 5px 5px
+    font-size: 1.143em
+    height: 40px
+    line-height: 30px
+    margin: 0 auto 2em
+    padding: 0
+    text-align: center
+    ul
+      list-style: none outside none
+      margin: 0 auto
+    li
+      display: inline
+      float: left
+      margin: 0
+    a
+      &:link, &:visited
+        color: $color01
+        display: inline-block
+        height: 30px
+        padding: 5px 1.5em
+        text-decoration: none
+      &:hover, &:active
+        background: none repeat scroll 0 0 $color07
+        color: $color01
+        text-shadow: none !important
+    .active a
+      &:link, &:visited
+        background: none repeat scroll 0 0 $color07
+        color: $color01
+        text-shadow: none !important
+    li:first-child a
+      border-bottom-left-radius: 5px
+      border-top-left-radius: 5px
+
+.sticky
   position: fixed
   top: 0
-  left: 0
-  width: 100%
+
+#content
+  +alpha
+  +grid(12, 12)
+  +omega
+  background: none repeat scroll 0 0 $color01
+  border-radius: 10px 10px 10px 10px
+  margin-bottom: 2em
+  overflow: hidden
+
+#extras
+  +alpha
+  +grid(12, 12)
+  +omega
+  margin: 0 auto 3em
+  overflow: hidden
   ul
-    margin: 0 auto
+    list-style: none outside none
+    margin: 0
+  li
+    border-bottom: 1px solid $color01
+  h2
+    color: $color03
+    font-size: 1.429em
+    margin-bottom: 0.25em
+    padding: 0 3px
+  a
+    &:link, &:visited
+      border-bottom: 1px solid $color04
+      color: $color09
+      display: block
+      padding: 0.3em 0.25em
+      text-decoration: none
+  li:last-child
+    border: 0 none
+    a
+      border: 0 none
+  .blogroll li
+    &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(2) a, &:nth-last-child(3) a
+      border: 0 none
+  a
+    &:hover, &:active
+      color: $color01
+  .blogroll
+    +alpha
+    +grid(8, 12)
+    li
+      float: left
+      margin: 0 20px 0 0
+  .social
+    +grid(4, 12)
+    +omega
+    float: right
+  div[class="social"] a
+    background-position: 3px 6px
+    background-repeat: no-repeat
+    padding-left: 25px
 
-.top
-  position: fixed
-  right: 15px
-  bottom: 15px
-  width: 50px
-  height: 25px
-  padding-top: 25px
-  line-height: 25px
-  background: #333
-  color: #888
-  display: block
-  text-transform: uppercase
-  text-decoration: none
-  text-align: center
-  font-size: 14px
-  -webkit-border-radius: 10px
-  -moz-border-radius: 10px
-  border-radius: 10px
-  behavior: url(../PIE.htc)
-  &:before
+.social a
+  &[href*="delicious.com"]
+    background-image: url("../images/icons/delicious.png")
+  &[href*="digg.com"]
+    background-image: url("../images/icons/digg.png")
+  &[href*="facebook.com"]
+    background-image: url("../images/icons/facebook.png")
+  &[href*="last.fm"], &[href*="lastfm."]
+    background-image: url("../images/icons/lastfm.png")
+  &[href*="/feed/"]
+    background-image: url("../images/icons/rss.png")
+  &[href*="twitter.com"]
+    background-image: url("../images/icons/twitter.png")
+
+#about
+  background: none repeat scroll 0 0 $color01
+  border-radius: 10px 10px 10px 10px
+  font-style: normal
+  margin-bottom: 2em
+  overflow: hidden
+  padding: 20px
+  text-align: left
+  .primary
+    float: left
+    strong
+      color: $color10
+      display: block
+      font-size: 1.286em
+  .photo
+    float: left
+    margin: 5px 20px
+  .url
+    &:link, &:visited
+      text-decoration: none
+  .bio
+    float: right
+
+#contentinfo
+  +grid(12, 12)
+  +omega
+  padding-bottom: 2em
+  text-align: right
+
+.hentry
+  border-bottom: 1px solid $color08
+  padding: 1.5em 0
+
+li:last-child .hentry
+  border: 0 none
+  margin: 0
+
+#content > .hentry
+  border: 0 none
+  margin: 0
+  padding: 1em 0
+
+.entry-title
+  font-size: 1.429em
+  margin-bottom: 0
+  a
+    &:link, &:visited
+      text-decoration: none
+
+.hentry
+  .post-info *
+    font-style: normal
+  footer
+    margin-bottom: 2em
+    address
+      display: inline
+
+#posts-list
+  footer address
+    display: block
+  list-style: none outside none
+  margin: 0
+  .hentry
+    padding-left: 200px
+    position: relative
+  footer
+    left: 10px
     position: absolute
-    top: 11px
-    left: 14px
-    content: ""
-    border-bottom: 11px solid #888
-    border-left: 11px solid transparent
-    border-right: 11px solid transparent
-  &:hover
-    color: #eee
-    &:before
-      border-bottom-color: #eee
-
-.opacity .top
-  opacity: 1
-  -webkit-transition: opacity 700ms linear
-  -moz-transition: opacity 700ms linear
-  transition: opacity 700ms linear
-  &.hidden
-    opacity: 0
-
-.no-opacity .top.hidden
-  display: none
+    top: 1.5em
 
 // These imports should remain below the bulk of the stylesheet so they can override correctly.
 @import "html5boilerplate/nonsemantichelpers", "html5boilerplate/mediaqueries"
