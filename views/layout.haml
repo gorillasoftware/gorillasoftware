@@ -28,7 +28,7 @@
     %link{:rel => "apple-touch-icon", :href => "/apple-touch-icon.png"}
 
     -# CSS: implied media="all"
-    %link{:rel => "stylesheet", :href => "stylesheets/style.css?v=2"}
+    //%link{:rel => "stylesheet", :href => "stylesheets/style.css?v=2"}
 
     -# Uncomment if you are specifically targeting less enabled mobile browsers
     -# %link{:rel => "stylesheet", :media => "handheld", :href => "css/handheld.css?v=2"}
@@ -36,40 +36,8 @@
     -# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects
     %script{:src => "javascripts/libs/modernizr-1.7.min.js"}
 
-  %body#index.home
-    #container
-      %header#banner
-        %h1
-          %a{:href => "#"}
-            Smashing HTML5!
-            %strong
-              HTML5 in the year
-              %del 2022
-              %ins 2009
-        %nav
-          %ul
-            %li.active
-              %a{:href => "#what"} work
-            %li
-              %a{:href => "#how"} team
-            %li
-              %a{:href => "#who"} your partner
-            %li
-              %a{:href => "#contact"} contact
-      = yield
-
-      %footer#contentinfo
-        %address#about.vcard
-          %span.primary
-            %strong
-              %a.fn.url{:href => "#"} Smashing Magazine
-            %span.role Amazing Magazine
-          %img.photo{:alt => "Smashing Magazine Logo", :src => "images/avatar.gif"}/
-          %span.bio Smashing Magazine is a website and blog that offers resources and advice to web developers and web designers. It was founded by Sven Lennartz and Vitaly Friedman.
-        %p
-          2005-2009
-          = succeed "." do
-            %a{:href => "http://smashingmagazine.com"} Smashing Magazine
+  %body
+    = yield
 
     -# JavaScript at the bottom for fast page loading
 
@@ -78,8 +46,8 @@
     :javascript
       window.jQuery || document.write("<script src='javascripts/libs/jquery-1.6.0.min.js'>\x3C/script>")
 
-    -# %script{:src => "javascripts/libs/live.js"}
-    %script{:src => "javascripts/libs/waypoints.min.js"}
+    //%script{:src => "javascripts/libs/live.js#css"}
+    //%script{:src => "javascripts/libs/waypoints.min.js"}
 
     -# scripts concatenated and minified via ant build script
     %script{:src => "javascripts/plugins.js"}
