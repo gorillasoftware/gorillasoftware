@@ -5,3 +5,4 @@ source "http://rubygems.org"
 #
 gem "middleman"
 gem "baseline"
+gem "compass-960-plugin"
