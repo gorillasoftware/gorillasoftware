@@ -1,166 +1,82 @@
-%header
-  %hgroup
-    %h1
-      %a{:href => "#"}turku
-    %h2
-      we make individual web-applications
-  %nav
-    %ul
-      %li
-        %a{:href => "#vision"}Our Vision
-      %li
-        %a{:href => "#solutions"}Solutions
-      %li
-        %a{:href => "#about"}About us
-      %li
-        %a{:href => "#contact"}Get in touch
-%section#vision
-  %a{:name => "#vision"}
-    %h1 Our Vision
-  %p
-    We believe in ...
-  %section
-    %article
-      %header
-        %h1 Standing on the shoulders of giants
-      .monoku
+#container
+  %header
+    .title
+      %p= image_tag 'gorilla.png', :alt => "logo gorilla software", :class => 'logo'
+    .body
+      #headline
+        %hgroup
+          %h1
+            gorilla software
+          %h2
+            Individuelle Lösungen fürs Web
+      %p
+        Gorilla Software bietet individuelle Lösungen fürs Web. Wir programmieren aus Leidenschaft und verfolgen dabei einen agilen und pragmatischen Softwareentwicklungsansatz. Die Nachhaltigkeit unserer Arbeit ist uns wichtig.  Mit Rapid Prototyping können wir Kundenbedürfnisse frühzeitig 	 erkennen. Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen. 
+
+  %section#solutions
+    .title
+      %a{:name => "#solutions"}
+        %h2 Lösungen
+    .body
+      %article.solution#web
+        %h3 Web & Mobile Applikationen
         %p
-          We reuse proven tools and frameworks for our work. The 
-          %a{:href => "http://en.wikipedia.org/wiki/Not_Invented_Here"}NIH-Syndrome
-          wasn't invented here.
-    %article
-      %header
-        %h1 Care About Your Craft
-      .monoku
+          Wir bieten Web-Applikationen, die ein breites Spektrum abdecken. Unsere Gesamtlösungen reichen vom mobilen Client, über Web-Schnittstellen bis hin zu komplexen asynchronen Datenverarbeitung.
+      %article.solution#standards
+        %h3 Offene Standards
         %p
-          We are passionate proprammers who care about the quality of our work. 
-          We do test-driven development and make quality a requirements issue.
-    %article
-      %header
-        %h1 Iterate the Schedule with the Code
-      .monoku
+          Wir können das Inseldasein ihrer Lösung beenden. Wir helfen ihnen wenn sie Daten von Partnern oder öffentlichen Anbietern einbinden, oder Ihre Daten für andere zu Verfügung stellen möchten. Ihre Web Schnittstellen (APIs) entwickeln wir nach offenen Standards. 
+      %article.solution#data
+        %h3 Big Data und Web Mining
         %p
-          We follow the
-          %a{:href => "http://agilemanifesto.org/"}Manifesto for Agile Software Development
-          and maintain a close relation to our customer. Rapid prototyping and Tracer Bullets 
-          help us to determine our customer's real needs early on.
-%section#expertise
-  %a{:name => "#expertise"}
-    %h1 Area of Expertise
-  %p
-    We are adaptive creatures but our main expertise lies in the following areas:
-  %section
-    %article
-      %header
-        %h1 Web Technologies
-      .expertise
-        %p We provide the glue between your web components and the components itself.
-    %article
-      %header
-        %h1 Big Data and Web Mining
-      .expertise
-        Making your data queriable. The tools of our choice are:
-        %ul
-          %li Lucene
-          %li Solr/Elasticsearch
-          %li Hadoop
-%section#solutions
-  %a{:name => "#solutions"}
-    %h1 Solutions
-  %article
-    %p
-      = lorem.paragraph
-%section#team
-  %a{:name => "#team"}
-    %h1 team
-  %p
-    turku? wtf?
-  %section
-    %article
-      %header
-        %h1 Markus
-      .social
-        %ul
-          %li twitter
-          %li github
-          %li linkedin
-      .expertise
-        Personal expertise
-        %ul
-    %article
-      %header
-        %h1 Felipe
-      .social
-        %ul
-          %li twitter
-          %li github
-          %li linkedin
-      .expertise
-        Personal expertise
-        %ul
-    %article
-      %header
-        %h1 Sebastian
-      .social
-        %ul
-          %li twitter
-          %li github
-          %li linkedin
-      .expertise
-        Personal expertise
-        %ul
-%section#contact
-  %a{:name => "#contact"}
-    %h1 Get in touch
-    %h3 Drop us a line
-    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin justo ut lacus laoreet congue. Maecenas vel velit augue.
-    %form#contact_form{:action => "submitemail.php", :method => "post"}
-      %label{:for => "name"} Name:
-      %input#name.textbox{:name => "name", :type => "text"}
-      %label{:for => "email"} E-mail:
-      %input#email.textbox{:name => "email", :type => "text"}
-      %label{:for => "subject"} Subject:
-      %input#subject.textbox{:name => "subject", :type => "text"}
-      %label{:for => "message"} Message:
-      %textarea#message.textbox{:name => "message"}
-      %input#submit{:name => "submit", :type => "submit", :value => "Send Message"}
-    %h3 Contact info
-    %p
-      Name of the street 123/4
-      %br
-      Name of the City
-      %br
-      Name of the Country
-      %br
-    %p
-      Phone: +321 123 456 7
-      %br
-      Fax: +321 123 456 7
-      %br
-      E-mail:
-      %a{:href => "#"} johndoe@ipsum.com
-      %br
-      Website:
-      %a{:href => "#"} www.loremipsum.com
-      %br
-    .social-networks
-      %h3 Around the internet
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      %ul.social-links
-        %li.facebook
-          %a{:href => "#"} Facebook
-        %li.twitter
-          %a{:href => "#"} Twitter
-        %li.tumblr
-          %a{:href => "#"} Tumblr
-        %li.reddit
-          %a{:href => "#"} Github
-    %h3 Locate us easily
-    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin justo ut lacus laoreet congue.
-    %iframe{:frameborder => "0", :height => "200", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Smederevska+Palanka,+Central+Serbia&aq=1&sll=38.918167,-97.209177&sspn=0.013239,0.031478&ie=UTF8&hq=&hnear=Smederevska+Palanka,+Central+Serbia,+Serbia&ll=44.362029,20.961227&spn=0.015341,0.033216&z=14&iwloc=A&output=embed", :width => "596"}
-%footer#bottom
+          Wir helfen Ihnen unstrukturierte Daten such- und fassbar zu machen. Unsere skalierbaren Lösungen ermöglichen es Ihnen gezielt auf Informationen 
+
+  %section#team
+    %a{:name => "#team"}
+      %h2 Team
+    %section
+      %article.portrait#felipe
+
+      %article.portrait#seb
+
+      %article.portrait#markus
+
+/ %section#contact
+/   %a{:name => "#contact"}
+/     %h2 Kontakt
+/     %p
+/       Name of the street 123/4
+/       %br
+/       Name of the City
+/       %br
+/       Name of the Country
+/       %br
+/     %p
+/       Phone: +321 123 456 7
+/       %br
+/       Fax: +321 123 456 7
+/       %br
+/       E-mail:
+/       %a{:href => "#"} johndoe@ipsum.com
+/       %br
+/       Website:
+/       %a{:href => "#"} www.loremipsum.com
+/       %br
+/     .social-networks
+/       %h3 Around the internet
+/       %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/       %ul.social-links
+/         %li.facebook
+/           %a{:href => "#"} Facebook
+/         %li.twitter
+/           %a{:href => "#"} Twitter
+/         %li.tumblr
+/           %a{:href => "#"} Tumblr
+/         %li.reddit
+/           %a{:href => "#"} Github
+/     %iframe{:frameborder => "0", :height => "200", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Smederevska+Palanka,+Central+Serbia&aq=1&sll=38.918167,-97.209177&sspn=0.013239,0.031478&ie=UTF8&hq=&hnear=Smederevska+Palanka,+Central+Serbia,+Serbia&ll=44.362029,20.961227&spn=0.015341,0.033216&z=14&iwloc=A&output=embed", :width => "596"}
+%footer#footer
   #competitors
-    %h2 Not what you were looking for?
+    %h3 Not what you were looking for?
     %p Try one of our competitors:
     %ul
       %li
