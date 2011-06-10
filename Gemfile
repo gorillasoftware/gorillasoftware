@@ -1,8 +1,8 @@
 # A sample Gemfile
 source "http://rubygems.org"
 
-# gem "rails"
-#
-gem "middleman"
-gem "baseline"
-gem "compass-960-plugin"
+group :development do
+    gem "middleman"
+    gem "compass-960-plugin"
+    gem "compass-baseline"
+end
