@@ -1150,7 +1150,8 @@ article {
       margin-right: 0; }
     /* line 100, ../../views/stylesheets/style.css.sass */
     #footer #footer-container a {
-      color: #dabfa2; }
+      color: #dabfa2;
+      text-decoration: none; }
       /* line 18, ../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
       #footer #footer-container a:visited {
         color: #dabfa2; }
@@ -1163,10 +1164,29 @@ article {
       /* line 27, ../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
       #footer #footer-container a:active {
         color: #26a9e1; }
-    /* line 102, ../../views/stylesheets/style.css.sass */
-    #footer #footer-container #competitors {
+    /* line 103, ../../views/stylesheets/style.css.sass */
+    #footer #footer-container #footernav {
+      padding-left: 160px;
       display: inline;
       float: left;
       margin-left: 10px;
       margin-right: 10px;
-      width: 620px; }
+      width: 140px; }
+    /* line 106, ../../views/stylesheets/style.css.sass */
+    #footer #footer-container #footercontact {
+      display: inline;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 380px; }
+    /* line 108, ../../views/stylesheets/style.css.sass */
+    #footer #footer-container #footermore {
+      display: inline;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 140px;
+      margin-right: 0; }
+    /* line 111, ../../views/stylesheets/style.css.sass */
+    #footer #footer-container dd {
+      margin: 0px; }
