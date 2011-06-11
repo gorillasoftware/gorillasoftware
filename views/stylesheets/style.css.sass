@@ -29,6 +29,8 @@ $h5bp-webkit-tap:     $blue
 
 a 
   +link-colors($brown, $brown_light, $blue, $brown, $green)
+a img
+  border: 0px
 
 body
   font: normal normal 400 1em/1.5em Georgia,Serif
@@ -71,6 +73,12 @@ article
         +grid(3,12)
         +clearfix
         +omega
+        ul
+          clear: none
+          list-style: none
+          padding: 0px
+          li
+            float: left
       .resume
         +grid(6,12)
         +clearfix
