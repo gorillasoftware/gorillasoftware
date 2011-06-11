@@ -162,10 +162,29 @@
 /     %iframe{:frameborder => "0", :height => "200", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Smederevska+Palanka,+Central+Serbia&aq=1&sll=38.918167,-97.209177&sspn=0.013239,0.031478&ie=UTF8&hq=&hnear=Smederevska+Palanka,+Central+Serbia,+Serbia&ll=44.362029,20.961227&spn=0.015341,0.033216&z=14&iwloc=A&output=embed", :width => "596"}
 #footer
   #footer-container
-    #competitors
-      %h3 Not what you were looking for?
-      %p Try one of our competitors:
-      %ul
-        %li
-          %a{:href => "http://screenconcept.ch/"}screenconcept.ch
+    %dl#footernav
+      %dt Navigation
+      %dd 
+        =link_to "Vision", "#"
+      %dd
+        =link_to "Lösungen", "#solutions"
+      %dd
+        =link_to "Team", "#team"
+      %dd
+        =link_to "Kontakt", "#contact"
+    %dl#footercontact
+      %dt Kontakt
+      %dd gorilla software
+      %dd Foobarstrasse 18
+      %dd 80XX Zürich
+      %dd Schweiz
+      %dd 
+        =mail_to "contact@gorillasoftware.ch", "✉ contact@gorillasoftware.foobar"
+      %dd Tel: +41XXXXXXX
+    %dl#footermore
+      %dt Weitere Informationen
+      %dd 
+        =link_to "AGB", "#"
+      %dd
+        =link_to "Blog", "#solutions"
 
