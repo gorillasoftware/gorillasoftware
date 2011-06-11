@@ -4,6 +4,7 @@ set :haml, { :format => :html5 }
 # Compass 960.gs support
 require 'ninesixty'
 require 'baseline'
+require 'html5-boilerplate'
 
 # CodeRay syntax highlighting in Haml
 # activate :code_ray
