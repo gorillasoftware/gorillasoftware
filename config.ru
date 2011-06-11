@@ -1,4 +1,11 @@
-require 'rubygems'
-require 'middleman'
+require "rubygems"
+require 'rack/contrib'
+require 'rack-rewrite'
 
-run Middleman::Server
+use Rack::ETag
+use Rack::Rewrite do
+  rewrite '/', '/index.html'
+end
+
+run Rack::Directory.new('build')
+

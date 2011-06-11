@@ -7,3 +7,7 @@ group :development do
     gem "compass-960-plugin"
     gem "compass-baseline"
 end
+
+gem "rack-contrib"
+gem "rack-rewrite"
+
