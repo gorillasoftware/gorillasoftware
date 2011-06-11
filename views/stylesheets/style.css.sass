@@ -17,14 +17,15 @@ $h5bp-webkit-tap:     $blue
 
 @import html5boilerplate/main
 @import 960/grid.sass
-@import baseline
 
 +global-reset
 
 // These imports should remain below the bulk of the stylesheet so they can override correctly.
-@import "html5boilerplate/nonsemantichelpers", "html5boilerplate/mediaqueries"
+@import "html5boilerplate/nonsemantichelpers"
+@import "html5boilerplate/mediaqueries"
 
-+baseline
+@import "blueprint/typography"
++blueprint-typography
 
 a 
   +link-colors($brown, $brown_light, $blue, $brown, $green)
@@ -43,7 +44,7 @@ article
   header
     padding: 50px 0px 50px
     +clearfix
-    border-bottom: 2px dotted $brown_light
+    border-bottom: 1px dotted $brown_light
     .title
       +grid-prefix(1,12)
       +grid(3,12)
@@ -53,14 +54,12 @@ article
       +omega
       #headline
         +clearfix
-  section
-    padding: 0px 0px 40px
+  & > section
+    padding: 30px 0px 40px
     +clearfix
     .title
       +grid-prefix(2,12)
       +grid(3,12)
-    .body:last
-      border-bottom: none
     .body
       border-bottom: 1px dotted $brown_light
       +grid(6,12)
