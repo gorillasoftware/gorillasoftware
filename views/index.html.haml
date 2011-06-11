@@ -41,18 +41,64 @@
       %h2 Team
     .body
       %section
-        %article.portrait#felipe
-          %h3 Felipe Kaufmann
-          %p
-            =lorem.paragraph
         %article.portrait#seb
-          %h3 Sebastian de Castelberg
-          %p
-            =lorem.paragraph
+          .image
+            =image_tag lorem.image('120x120')
+          .about
+            %h3 Sebastian de Castelberg
+            .social
+              %a{:href => "#"}
+                =image_tag "icons/48px/twitter_48px.png"
+              %a{:href => "#"}
+                =image_tag "icons/48px/facebook_48px.png"
+              %a{:href => "#"}
+                =image_tag "icons/48px/facebook_48px.png"
+          .resume
+            %p 
+              =lorem.sentence
+            %h4 Expertise & Technologien
+            %ul
+              %li Web Technologien (Ruby on Rails, Serverseitiges JS/Coffeescript)
+              %li Front-end Entwicklung (JQuery, Haml/Sass)
+              %li Dataprocessing (Hadoop/HBase, Solr and Lucene, Message queues)
+              %li Systeme und Services (Linux, AWS)
+        %article.portrait#felipe
+          .image
+            =image_tag lorem.image('120x120')
+          .about
+            %h3 Felipe Kaufmann
+          .resume
+            %p
+              =lorem.sentence
+            %h4 Expertise & Technologien
+            %ul
+              %li
+                =lorem.sentence
+              %li
+                =lorem.sentence
+              %li
+                =lorem.sentence
+              %li
+                =lorem.sentence
+
         %article.portrait#markus
-          %h3 Markus Kinzler
-          %p
-            =lorem.paragraph
+          .image
+            =image_tag lorem.image('120x120')
+          .about
+            %h3 Markus Kinzler
+          .resume
+            %p
+              =lorem.sentence
+            %h4 Expertise & Technologien
+            %ul
+              %li
+                =lorem.sentence
+              %li
+                =lorem.sentence
+              %li
+                =lorem.sentence
+              %li
+                =lorem.sentence
 
 / %section#contact
 /   %a{:name => "#contact"}
