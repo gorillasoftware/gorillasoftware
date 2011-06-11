@@ -645,15 +645,19 @@ a {
   a:active {
     color: #26a9e1; }
 
-/* line 33, ../../views/stylesheets/style.css.sass */
+/* line 32, ../../views/stylesheets/style.css.sass */
+a img {
+  border: 0px; }
+
+/* line 35, ../../views/stylesheets/style.css.sass */
 body {
   font: normal normal 400 1em/1.5em Georgia, Serif; }
 
-/* line 36, ../../views/stylesheets/style.css.sass */
+/* line 38, ../../views/stylesheets/style.css.sass */
 article {
   padding: 10px, 0px, 10px; }
 
-/* line 39, ../../views/stylesheets/style.css.sass */
+/* line 41, ../../views/stylesheets/style.css.sass */
 #container {
   margin-left: auto;
   margin-right: auto;
@@ -850,13 +854,13 @@ article {
   /* line 60, ../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-960-plugin-0.10.3/stylesheets/960/_grid.sass */
   #container .omega {
     margin-right: 0; }
-  /* line 44, ../../views/stylesheets/style.css.sass */
+  /* line 46, ../../views/stylesheets/style.css.sass */
   #container header {
     padding: 50px 0px 50px;
     overflow: hidden;
     *zoom: 1;
     border-bottom: 1px dotted #dabfa2; }
-    /* line 48, ../../views/stylesheets/style.css.sass */
+    /* line 50, ../../views/stylesheets/style.css.sass */
     #container header .title {
       padding-left: 80px;
       display: inline;
@@ -864,7 +868,7 @@ article {
       margin-left: 10px;
       margin-right: 10px;
       width: 220px; }
-    /* line 51, ../../views/stylesheets/style.css.sass */
+    /* line 53, ../../views/stylesheets/style.css.sass */
     #container header .body {
       padding-left: 80px;
       display: inline;
@@ -873,16 +877,16 @@ article {
       margin-right: 10px;
       width: 460px;
       margin-right: 0; }
-      /* line 55, ../../views/stylesheets/style.css.sass */
+      /* line 57, ../../views/stylesheets/style.css.sass */
       #container header .body #headline {
         overflow: hidden;
         *zoom: 1; }
-  /* line 57, ../../views/stylesheets/style.css.sass */
+  /* line 59, ../../views/stylesheets/style.css.sass */
   #container > section {
     padding: 30px 0px 40px;
     overflow: hidden;
     *zoom: 1; }
-    /* line 60, ../../views/stylesheets/style.css.sass */
+    /* line 62, ../../views/stylesheets/style.css.sass */
     #container > section .title {
       padding-left: 160px;
       display: inline;
@@ -890,7 +894,7 @@ article {
       margin-left: 10px;
       margin-right: 10px;
       width: 220px; }
-    /* line 63, ../../views/stylesheets/style.css.sass */
+    /* line 65, ../../views/stylesheets/style.css.sass */
     #container > section .body {
       border-bottom: 1px dotted #dabfa2;
       display: inline;
@@ -898,9 +902,46 @@ article {
       margin-left: 10px;
       margin-right: 10px;
       width: 460px;
-      margin-right: 0; }
+      margin-right: 0;
+      overflow: hidden;
+      *zoom: 1; }
+      /* line 70, ../../views/stylesheets/style.css.sass */
+      #container > section .body .image {
+        display: inline;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 140px; }
+      /* line 72, ../../views/stylesheets/style.css.sass */
+      #container > section .body .about {
+        display: inline;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 220px;
+        overflow: hidden;
+        *zoom: 1;
+        margin-right: 0; }
+        /* line 76, ../../views/stylesheets/style.css.sass */
+        #container > section .body .about ul {
+          clear: none;
+          list-style: none;
+          padding: 0px; }
+          /* line 80, ../../views/stylesheets/style.css.sass */
+          #container > section .body .about ul li {
+            float: left; }
+      /* line 82, ../../views/stylesheets/style.css.sass */
+      #container > section .body .resume {
+        display: inline;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 460px;
+        overflow: hidden;
+        *zoom: 1;
+        margin-right: 0; }
 
-/* line 68, ../../views/stylesheets/style.css.sass */
+/* line 87, ../../views/stylesheets/style.css.sass */
 #footer {
   width: 100%;
   background-color: #483831;
@@ -909,7 +950,7 @@ article {
   box-shadow: 0px 0px 10px #483831;
   height: 160px;
   padding: 30px 0px 50px; }
-  /* line 76, ../../views/stylesheets/style.css.sass */
+  /* line 95, ../../views/stylesheets/style.css.sass */
   #footer #footer-container {
     margin-left: auto;
     margin-right: auto;
@@ -1107,7 +1148,7 @@ article {
     /* line 60, ../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-960-plugin-0.10.3/stylesheets/960/_grid.sass */
     #footer #footer-container .omega {
       margin-right: 0; }
-    /* line 81, ../../views/stylesheets/style.css.sass */
+    /* line 100, ../../views/stylesheets/style.css.sass */
     #footer #footer-container a {
       color: #dabfa2; }
       /* line 18, ../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
@@ -1122,7 +1163,7 @@ article {
       /* line 27, ../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
       #footer #footer-container a:active {
         color: #26a9e1; }
-    /* line 83, ../../views/stylesheets/style.css.sass */
+    /* line 102, ../../views/stylesheets/style.css.sass */
     #footer #footer-container #competitors {
       display: inline;
       float: left;
