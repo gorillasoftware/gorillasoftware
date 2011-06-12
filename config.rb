@@ -24,8 +24,27 @@ require 'html5-boilerplate'
 
 # Helpers
 helpers do
-  def some_helper(*args)
-    "Helping"
+  #   <%= google_analytics 'UA-XXXXXX-XX' %>
+  # </body>
+  # application_helper.rb
+  def google_analytics(id = nil)
+    content_tag(:script, :type => 'text/javascript') do
+      "var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '#{id}']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })()"
+    end unless id.blank?
+  end
+
+  def mixpanel(id = nil)
+    content_tag(:script, :type => 'text/javascript') do
+      "var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src=\"' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js\" type=\"text/javascript\"%3E%3C/script%3E'));
+      try {  var mpmetrics = new MixpanelLib('#{id}'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; }"
+    end unless id.blank?
   end
 end
 
