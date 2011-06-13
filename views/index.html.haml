@@ -179,36 +179,6 @@
       %br
       =link_to "In google maps öffnen", "http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Baumstrasse+10,+8005+Z%C3%BCrich&aq=&sll=47.382205,8.535778&sspn=0.008035,0.01929&ie=UTF8&hq=&hnear=Baumgasse+10,+Kreis+5+8005+Z%C3%BCrich,+Switzerland&t=h&z=16"
 
-#footer
-  #footer-container
-    #footernav
-      %h5 Navigation
-      %ul
-        %li 
-          =link_to "Vision", "#"
-        %li
-          =link_to "Lösungen", "#solutions"
-        %li
-          =link_to "Team", "#team"
-        %li
-          =link_to "Kontakt", "#contact"
-    #footercontact
-      %h5 Kontakt
-      %ul.address
-        %li gorilla software
-        %li Baumstrasse 10
-        %li CH-80XX Zürich
-        %li 
-          =mail_to "hi@gorillasoftware.ch"
-        %li Tel: +41 (0) 44 586 12 89
-    #footermore
-      %h5 Mehr
-      %ul
-        %li 
-          =link_to "AGB", "#"
-        %li
-          =link_to "Blog", "http://gorillasoftware.tumblr.com"
-
 - content_for(:post_body) do
   =javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false&region=CH&language=de"
 

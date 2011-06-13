@@ -43,6 +43,40 @@
   %body
     = yield
 
+    #footer
+      #footer-container
+        #footernav
+          %h5 Navigation
+          %ul
+            %li 
+              =link_to "Vision", "#"
+            %li
+              =link_to "Lösungen", "#solutions"
+            %li
+              =link_to "Team", "#team"
+            %li
+              =link_to "Kontakt", "#contact"
+        #footercontact
+          %h5 Kontakt
+          %ul.address
+            %li gorilla software
+            %li Baumstrasse 10
+            %li CH-80XX Zürich
+            %li 
+              =mail_to "hi@gorillasoftware.ch"
+            %li Tel: +41 (0) 44 586 12 89
+        #footermore
+          %h5 Mehr
+          %ul
+            %li 
+              =link_to "AGB", "#"
+            %li
+              =link_to "Blog", "http://gorillasoftware.tumblr.com"
+      #footermeta
+        #footerversion
+          %p
+            =version()
+
     -# JavaScript at the bottom for fast page loading
 
     -# Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
