@@ -7,6 +7,7 @@ group :development do
     gem "compass-960-plugin"
     gem "compass-baseline"
     gem "middleman-smusher"
+    gem "grit"
 end
 
 gem "rack-contrib"

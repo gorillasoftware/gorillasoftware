@@ -18,10 +18,14 @@ GEM
       sass (~> 3.1.0)
     crack (0.1.8)
     daemons (1.1.3)
+    diff-lcs (1.1.2)
     eventmachine (0.12.10)
     execjs (1.0.0)
       multi_json (~> 1.0)
     fssm (0.2.7)
+    grit (2.4.1)
+      diff-lcs (~> 1.1)
+      mime-types (~> 1.15)
     haml (3.1.1)
     html5-boilerplate (1.0.0)
       compass (>= 0.11.1)
@@ -52,6 +56,7 @@ GEM
     middleman-smusher (0.0.3)
       middleman (~> 1.2.0)
       smusher (~> 0.4.6)
+    mime-types (1.16)
     multi_json (1.0.3)
     padrino-core (0.9.29)
       activesupport (>= 3.0.0)
@@ -97,6 +102,7 @@ PLATFORMS
 DEPENDENCIES
   compass-960-plugin
   compass-baseline
+  grit
   html5-boilerplate
   middleman
   middleman-smusher
