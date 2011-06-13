@@ -46,6 +46,16 @@ helpers do
       try {  var mpmetrics = new MixpanelLib('#{id}'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; }"
     end unless id.blank?
   end
+
+  def uservoice(id = nil)
+    content_tag(:script, :type => 'text/javascript') do
+      "(function() {
+        var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+        uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/#{id}.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+      })();"
+    end unless id.blank?
+  end
 end
 
 # Change the CSS directory
