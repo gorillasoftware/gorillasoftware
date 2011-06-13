@@ -17,8 +17,12 @@
     -# Pull in the page title
     = yield_content :head
   
-    %meta{:name => "description", :content => ""}
-    %meta{:name => "author", :content => ""}
+    %meta{:name => "description", :content => "Gorilla Software bietet individuelle Lösungen fürs Web. Wir programmieren aus Leidenschaft und verfolgen dabei einen agilen und pragmatischen Softwareentwicklungsansatz. Die Nachhaltigkeit unserer Arbeit ist uns wichtig.  Mit Rapid Prototyping können wir Kundenbedürfnisse frühzeitig erkennen. Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen."} 
+    %meta{:name => "copyright", :content => "2011 gorilla software"}
+    %meta{:name => "author", :content => "gorilla software"}
+
+    -# rss feed from tumblr
+    %link{:href => "http://gorillasoftware.tumblr.com/rss", :rel => "alternate", :title => "gorilla software blog", :type => "application/rss+xml"}
 
     -# Mobile viewport optimized: j.mp/bplateviewport
     %meta{:name =>"viewport", :content => "width=device-width, initial-scale=1.0"}
@@ -34,7 +38,7 @@
     -# %link{:rel => "stylesheet", :media => "handheld", :href => "css/handheld.css?v=2"}
 
     -# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects
-    %script{:src => "javascripts/libs/modernizr-1.7.min.js"}
+    = javascript_include_tag "libs/modernizr-1.7.min.js"
 
   %body
     = yield
@@ -42,24 +46,28 @@
     -# JavaScript at the bottom for fast page loading
 
     -# Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
-    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"}
+    =javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"
     :javascript
       window.jQuery || document.write("<script src='javascripts/libs/jquery-1.6.0.min.js'>\x3C/script>")
 
-    //%script{:src => "javascripts/libs/live.js#css"}
-    //%script{:src => "javascripts/libs/waypoints.min.js"}
+    //= javascript_include_tag "javascripts/libs/live.js#css"
+    //= javascript_include_tag "javascripts/libs/waypoints.min.js"
+    = javascript_include_tag "libs/handlebars.1.0.0.beta.3.js"
 
     -# scripts concatenated and minified via ant build script
-    %script{:src => "javascripts/plugins.js"}
-    %script{:src => "javascripts/script.js"}
+    = javascript_include_tag "plugins.js"
+    = javascript_include_tag "script.js"
 
 
     /[if lt IE 7 ]
-      %script{:src => "javascripts/libs/dd_belatedpng.js"}
+      = javascript_include_tag "libs/dd_belatedpng.js"
       :javascript
         DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb
 
 
     = google_analytics "UA-XXX-X"
     = mixpanel "XXX"
+
+    // Additional body stuff to load (e.g. javascripts)
+    = yield_content :post_body
 
