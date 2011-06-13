@@ -114,8 +114,8 @@ ul.address
   -moz-box-shadow: 0px 0px 10px $brown
   -webkit-box-shadow: 0px 0px 10px $brown
   box-shadow: 0px 0px 10px $brown
-  padding: 30px 0px 50px
-  li, h5, p
+  padding: 30px 0px 0px
+  li, h5, #footerversion
     color: $brown_light
   #footer-container
     +grid-system(12)
@@ -138,11 +138,12 @@ ul.address
     ul
       margin: 0px
   #footermeta
-    padding: 30px 0px 0px
+    +grid-system(12)
     +clearfix
+    +grid-children
+    padding: 30px 0px 0px
     #footerversion
       font-size: 70%
-      +grid-system(12)
       +grid-prefix(2,12)
       +grid(8,12)
       +omega
