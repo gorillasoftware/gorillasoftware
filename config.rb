@@ -60,7 +60,7 @@ helpers do
 
   def version()
     repo = Grit::Repo.new(File.dirname(__FILE__))
-    v = repo.recent_tag_name(nil, {:long => true})
+    v = "#{repo.tags.last.message} (#{repo.recent_tag_name(nil, {:long => true})})"
   end
 end
 
