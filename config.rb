@@ -5,6 +5,7 @@ set :haml, { :format => :html5 }
 require 'ninesixty'
 require 'baseline'
 require 'html5-boilerplate'
+require 'grit'
 
 # CodeRay syntax highlighting in Haml
 # activate :code_ray
@@ -55,6 +56,12 @@ helpers do
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
       })();"
     end unless id.blank?
+  end
+
+  def version()
+    repo = Grit::Repo.new(File.dirname(__FILE__))
+    h = repo.heads.last
+    "#{h.name} (#{h.commit.id})"
   end
 end
 
