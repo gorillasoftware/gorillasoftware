@@ -60,8 +60,7 @@ helpers do
 
   def version()
     repo = Grit::Repo.new(File.dirname(__FILE__))
-    h = repo.heads.last
-    "#{h.name} (#{h.commit.id})"
+    v = repo.recent_tag_name(nil, {:long => true})
   end
 end
 
