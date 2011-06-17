@@ -58,9 +58,10 @@ helpers do
     end unless id.blank?
   end
 
-  def version()
+  def version
     repo = Grit::Repo.new(File.dirname(__FILE__))
-    v = "#{repo.tags.last.message} (#{repo.recent_tag_name(nil, {:long => true})})"
+    # force_encoding: perhaps https://github.com/mojombo/grit/issues/24
+    v = "#{repo.tags.last.message} (#{repo.recent_tag_name(nil, {:long => true})})".force_encoding "UTF-8"
   end
 end
 
