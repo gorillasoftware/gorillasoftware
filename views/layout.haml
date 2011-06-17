@@ -60,17 +60,15 @@
           %ul.address
             %li gorilla software
             %li Baumstrasse 10
-            %li CH-80XX Zürich
+            %li CH-8005 Zürich
             %li 
               =mail_to "hi@gorillasoftware.ch"
             %li Tel: +41 (0) 44 586 12 89
         #footermore
           %h5 Mehr
           %ul
-            %li 
-              =link_to "AGB", "#"
             %li
-              =link_to "Blog", "http://gorillasoftware.tumblr.com"
+              =link_to "Blog", "http://blog.gorillasoftware.com"
       #footermeta
         #footerversion
           Version: 
@@ -98,8 +96,8 @@
         DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb
 
 
-    = google_analytics "UA-XXX-X"
-    = mixpanel "XXX"
+    /= google_analytics "UA-XXX-X"
+    /= mixpanel "XXX"
     = uservoice "Iq96uoNqdtEset33q6mSJA"
 
     // Additional body stuff to load (e.g. javascripts)
