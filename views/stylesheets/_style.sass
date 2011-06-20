@@ -1,0 +1,87 @@
+@import "compass"
+@import "compass/reset"
+
+// Colors
+$light: #FFF
+$heavy: #000
+$brown: #483831
+$brown_light: #DABFA2
+$green: #BED638
+$blue: #26A9E1
+$orange: #F6931E
+
+// HTML5 Boilerplate Colors
+//  edit, but don't remove these
+$h5bp-text-selection: $blue
+$h5bp-webkit-tap:     $blue
+
+@import html5boilerplate/main
+@import 960/grid.sass
+
++global-reset
+
+// These imports should remain below the bulk of the stylesheet so they can override correctly.
+@import "html5boilerplate/nonsemantichelpers"
+@import "html5boilerplate/mediaqueries"
+@import "compass/typography/lists/horizontal-list"
+@import "compass/typography/lists/bullets"
+
+@import "blueprint/typography"
++blueprint-typography
+
+a
+  +link-colors($brown, $brown_light, $blue, $brown, $green)
+
+a img
+  border: 0px
+
+body
+  font: normal normal 400 1em/1.5em Georgia,Serif
+
+article
+
+#container
+  header
+    padding: 0px 0px 50px
+    border-bottom: 1px dotted $brown_light
+    #nav-holder
+      padding: 0px 0px 50px
+      nav
+        +horizontal-list
+      .address
+        font-size: 60%
+  & > section
+    padding: 30px 0px 40px
+    .body
+      border-bottom: 1px dotted $brown_light
+
+.social
+  & > ul
+    +horizontal-list
+
+#map_holder
+  #map_canvas
+    height: 300px
+
+ul.address
+  padding-left: 0px
+  +no-bullets
+
+#footer
+  width: 100%
+  background-color: $brown
+  li, h5, #footerversion
+    color: $brown_light
+  #footer-container
+    +no-bullets
+    ul
+      padding-left: 0px
+    a
+      +link-colors($brown_light, $light, $blue, $brown_light, $green)
+      text-decoration: none
+    ul
+      margin: 0px
+  #footermeta
+    padding: 30px 0px 0px
+    #footerversion
+      font-size: 70%

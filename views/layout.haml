@@ -31,7 +31,20 @@
     %link{:rel => "apple-touch-icon", :href => "/apple-touch-icon.png"}
 
     -# CSS: implied media="all"
-    %link{:rel => "stylesheet", :href => "stylesheets/style.css?v=2"}
+    %noscript
+      %link{:href => "assets/css/mobile.css", :rel => "stylesheet"}
+    :javascript
+      // Edit to suit your needs.
+      var ADAPT_CONFIG = {
+        path: 'stylesheets/',
+        dynamic: true,
+        // Separate ranges by "to" keyword.
+        range: [
+          '0px    to 960px  = mobile.css',
+          '960px            = 960.css'
+        ]
+      };
+    = javascript_include_tag "libs/adapt.min.js"
 
     -# Uncomment if you are specifically targeting less enabled mobile browsers
     -# %link{:rel => "stylesheet", :media => "handheld", :href => "css/handheld.css?v=2"}
