@@ -15,7 +15,24 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href='/favicon.ico' rel='shortcut icon'>
     <link href='/apple-touch-icon.png' rel='apple-touch-icon'>
-    <link href='stylesheets/style.css?v=2' rel='stylesheet'>
+    <noscript>
+      <link href='assets/css/mobile.css' rel='stylesheet'>
+    </noscript>
+    <script>
+      //<![CDATA[
+        // Edit to suit your needs.
+        var ADAPT_CONFIG = {
+          path: 'stylesheets/',
+          dynamic: true,
+          // Separate ranges by "to" keyword.
+          range: [
+            '0px    to 960px  = mobile.css',
+            '960px            = 960.css'
+          ]
+        };
+      //]]>
+    </script>
+    <script src="javascripts/libs/adapt.min.js" type="text/javascript"></script>
     <script src="javascripts/libs/modernizr-1.7.min.js" type="text/javascript"></script>
   </head>
   <body>
@@ -235,7 +252,7 @@
       <div id='footermeta'>
         <div id='footerversion'>
           Version:
-          Kungsör (v0.5.3-0-geb371dd)
+          Arboga (v0.5.4-0-gca3d2fb)
         </div>
       </div>
     </div>
