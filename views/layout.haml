@@ -16,12 +16,13 @@
 
     -# Pull in the page title
     = yield_content :head
-  
+
     %meta{:name => "description", :content => "Gorilla Software bietet individuelle Lösungen fürs Web. Wir programmieren aus Leidenschaft und verfolgen dabei einen agilen und pragmatischen Softwareentwicklungsansatz. Die Nachhaltigkeit unserer Arbeit ist uns wichtig.  Mit Rapid Prototyping können wir Kundenbedürfnisse frühzeitig erkennen. Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen."} 
     %meta{:name => "author", :content => "gorilla software"}
 
-    -# rss feed from tumblr
-    %link{:href => "http://blog.gorillasoftware.ch/rss", :rel => "alternate", :title => "gorilla software blog", :type => "application/rss+xml"}
+    -# rss feed
+    %link{:href => "http://blog.gorillasoftware.ch/rss.xml", :rel => "alternate", :title => "gorilla software blog feed (rss)", :type => "application/rss+xml"}
+    %link{:href => "http://blog.gorillasoftware.ch/atom.xml", :rel => "alternate", :title => "gorilla software blog feed (atom)", :type => "application/atom+xml"}
 
     -# Mobile viewport optimized: j.mp/bplateviewport
     %meta{:name =>"viewport", :content => "width=device-width, initial-scale=1.0"}
