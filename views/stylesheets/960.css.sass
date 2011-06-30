@@ -2,7 +2,7 @@
 
 #container
   padding: 10px 0px
-  +grid-system(12)
+  +grid-system(10)
   +clearfix
   +grid-children
 
@@ -12,47 +12,44 @@
       +clearfix
       padding: 0px 0px 50px
       nav
-        +grid-prefix(1,12)
-        +grid(4,12)
+        +grid(4,10)
       .address
         font-size: 60%
-        +grid(7,12)
+        +grid(6,10)
         +omega
     .title
-      +grid-prefix(1,12)
-      +grid(3,12)
+      +grid(3,10)
     .body
-      +grid-prefix(1,12)
-      +grid(6,12)
+      +grid-prefix(1,10)
+      +grid(6,10)
       +omega
       #headline
         +clearfix
   & > section
     +clearfix
     .title
-      +grid-prefix(2,12)
-      +grid(3,12)
+      +grid-prefix(1,10)
+      +grid(3,10)
     .body
-      +grid(6,12)
+      +grid(6,10)
       +omega
       +clearfix
       .image
-        +grid(2,12)
+        +grid(2,10)
       .about
-        +grid(3,12)
+        +grid(3,10)
         +clearfix
         +omega
       .resume
-        +grid(6,12)
+        +grid(6,10)
         +clearfix
         +omega
 
 #map_holder
-  +grid-system(12)
+  +grid-system(10)
   +clearfix
-  +grid-prefix(1,12)
   #map_canvas
-    +grid(10,12)
+    +grid(10,10)
     +omega
 
 #footer
@@ -62,23 +59,23 @@
   -webkit-box-shadow: 0px 0px 10px $brown
   box-shadow: 0px 0px 10px $brown
   #footer-container
-    +grid-system(12)
+    +grid-system(10)
     +clearfix
     +grid-children
     #footernav
-      +grid-prefix(2,12)
-      +grid(3,12)
+      +grid-prefix(1,10)
+      +grid(3,10)
     #footercontact
-      +grid(3,12)
+      +grid(3,10)
     #footermore
-      +grid(3,12)
+      +grid(3,10)
       +omega
   #footermeta
-    +grid-system(12)
+    +grid-system(10)
     +clearfix
     +grid-children
     #footerversion
-      +grid-prefix(2,12)
-      +grid(8,12)
+      +grid-prefix(1,10)
+      +grid(8,10)
       +omega
 
