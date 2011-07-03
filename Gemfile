@@ -10,5 +10,5 @@ group :development do
     gem "grit"
 end
 
-gem "rack-contrib"
-gem "rack-rewrite"
+gem 'rack'
+
