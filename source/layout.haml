@@ -79,17 +79,13 @@
 
     -# Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
     =javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"
-    :javascript
-      window.jQuery || document.write("<script src='javascripts/libs/jquery-1.6.0.min.js'>\x3C/script>")
     = javascript_include_tag "libs/handlebars.1.0.0.beta.3.js"
     = javascript_include_tag "script.js"
-
 
     /[if lt IE 7 ]
       = javascript_include_tag "libs/dd_belatedpng.js"
       :javascript
         DD_belatedPNG.fix("img, .png_bg");
-
 
     = google_analytics "UA-24038149-1"
     = uservoice "Iq96uoNqdtEset33q6mSJA"
