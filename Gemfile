@@ -8,6 +8,7 @@ group :development do
     gem "compass-baseline"
     gem "middleman-smusher"
     gem "grit"
+    gem "heroku"
 end
 
 gem 'rack'
