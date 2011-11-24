@@ -14,7 +14,7 @@
             =link_to "Kontakt", "#contact"
       .address
         %p
-          gorilla software GmbH | Baumstrasse 10 | 8005 Zürich | |
+          gorilla software GmbH | Baumgasse 10 | 8005 Zürich | |
           =mail_to "hi@gorillasoftware.ch"
           | Tel: +41 44 508 07 73
     .title
@@ -87,12 +87,12 @@
       %h2 Kontakt
     .body
       %ul.address
-        %li gorilla software
-        %li Baumstrasse 10
+        %li gorilla software GmbH
+        %li Baumgasse 10
         %li 8005 Zürich
         %li
           =mail_to "hi@gorillasoftware.ch"
-        %li Tel: +41 44 508 07 73
+        %li Tel: +41 (0) 44 508 07 73
         %li
           Website:
           =link_to "gorillasoftware.ch", "http://gorillasoftware.ch"
@@ -114,7 +114,7 @@
       %br
       {{address2}}
       %br
-      =link_to "In google maps öffnen", "http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Baumstrasse+10,+8005+Z%C3%BCrich&aq=&sll=47.382205,8.535778&sspn=0.008035,0.01929&ie=UTF8&hq=&hnear=Baumgasse+10,+Kreis+5+8005+Z%C3%BCrich,+Switzerland&t=h&z=16"
+      =link_to "In google maps öffnen", "http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Baumgasse+10,+8005+Z%C3%BCrich&aq=&sll=47.382205,8.535778&sspn=0.008035,0.01929&ie=UTF8&hq=&hnear=Baumgasse+10,+Kreis+5+8005+Z%C3%BCrich,+Switzerland&t=h&z=16"
 
 - content_for(:post_body) do
   =javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false&amp;region=CH&amp;language=de"
