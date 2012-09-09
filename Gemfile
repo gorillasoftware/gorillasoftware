@@ -1,15 +1,9 @@
-# A sample Gemfile
-source "http://rubygems.org"
+source :rubygems
 
-group :development do
-    gem "middleman"
-    gem "html5-boilerplate"
-    gem "compass-960-plugin"
-    gem "compass-baseline"
-    gem "middleman-smusher"
-    gem "grit"
-    gem "heroku"
-end
-
-gem 'rack'
+gem "middleman", "~>3.0.0"
+gem "middleman-favicon-maker", "~>3.0.0", :git => "git://github.com/follmann/middleman-favicon-maker.git"
+gem "middleman-livereload", "~>3.0.0", :git => "git://github.com/middleman/middleman-livereload.git"
+gem "susy", "1.0"
+gem "redcarpet"
+gem "sass"
 
