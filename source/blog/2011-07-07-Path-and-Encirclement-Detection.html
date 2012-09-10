@@ -1,0 +1,61 @@
+<p>
+In an earlier post I was trying to describe a way to use 
+<a href="/2011/06/20/grids-and-coordinate-systems.html">coordinates on triangular grids.</a>
+In the end I decided to go with a simple three lane coordinate system that
+allows easy calculations based on graph theory.
+</p>
+
+<h2>Encirclement</h2>
+<p>The basic Birom rules are based on encirclement detection. The three following cases are all implemented
+as <a href="http://en.wikipedia.org/wiki/Breadth-first_search">Breadth-first search</a> with different parameters for
+neighbour detection and exit conditions.
+</p>
+
+<p>
+  <img src="/images/2011-06-30-Path-and-Encirclement-Detection/encirclement.png">
+</p>
+
+<h3>1: Scoring</h3>
+<p>When a player encloses an vacant area, the captured area is being marked with point stones for the corresponding player.</p>
+
+<h3>2: Capturing opponent's stones</h3>
+<p>When a player fully encircles one or more opponent's stones, the stones get captured by the opponent. They can than be re-used later
+as additional stones. (There has been extensive discussions about this topic partially covered in
+<a href="/2011-06-29-Birom-Dilemma-I.html">Birom Dilemma I.</a>. In this implementation, stones are captured, even though they are 
+only encircled by common ground)
+</p>
+
+<h3>3: Encircling the central red Birom</h3>
+<p>This rule checks, weather a player has managed to fully encircle the central red Birom. The first player achieving that, wins the
+game. If both players encircle the red Birom during the same turn, the game ends in a draw.
+</p>
+
+<h2>Try it out!</h2>
+<p>This example is based on triangles only. The same rules as in <a href="http://birom.net/424843/Rules">birom</a> are applied. 
+Click to add a triangle. The triangle must be connected to the existing stones with at least one corner.</p>
+<p>
+  <div id="header">
+    <div style="float: left; width: 150px;" class="coordinates">xy: <span id="xy"></span></div>
+    <div style="float: left; width: 150px;" class="coordinates">uvw: <span id="uvw"></span></div>
+    <div style="float: left; width: 100px;" id="points"><span id="0"></span><span id="1"></span></div>
+    <span style="float: left; width: 200px; color: red;" id="error"></span>
+  </div>
+  <div style="clear: left;"></div>
+  <div id="paper" style="height: 800px; width: 800px; background-color: black;"></div>
+</p>
+
+<h2>What's next</h2>
+<p>For the reason that a Birom is nothing more than a collection of triangles, the same algorithms can be used
+for the real Birom game implementation. Focus is more and more shifting towards client implementation, game persistency and other
+back-end related stuff. There may be a post about our CoffeeScript, node.js and mongoDB setup soon.
+</p>
+
+<script type="text/javascript" src="/javascripts/jquery-1.6.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/raphael.js"></script>
+<script type="text/javascript" src="/javascripts/2011-06-30-Path-and-Encirclement-Detection/standalone.js"></script>
+
+<script type="text/javascript">
+  var start = require('./standalone');
+  start();
+</script>
+
