@@ -4,9 +4,7 @@ module SiteHelpers
 
   def page_title
     title = "GORILLA software"
-    if data.page.title
-      title << " | " + data.page.title
-    end
+    title = "#{data.page.title} | #{title}" if data.page.title
     title
   end
 
