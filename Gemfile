@@ -6,4 +6,6 @@ gem "middleman-livereload", "~>3.0.0", :git => "git://github.com/middleman/middl
 gem "susy", "1.0"
 gem "redcarpet"
 gem "sass"
+gem "middleman-blog", "~> 3.0.0"
+gem "builder", "~> 3.0.0" # For feed.xml.builder
 
