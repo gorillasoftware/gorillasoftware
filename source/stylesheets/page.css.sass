@@ -1,6 +1,3 @@
-body
-  @include background(image-url("pattern_dust.png"))
-
 #main-logo
   @include pre(1)
   +hide-text
@@ -50,7 +47,7 @@ section
   min-height: 50em
 
 #header-container, #teaser-container
-  background-color: $orange
+  @include background(image-url("pattern_dust.png"), $orange)
 
 #gorilla
   @include pre(2)
@@ -70,7 +67,7 @@ section
     @include span-columns(8)
 
 #solutions-container
-  background-color: $beige
+  @include background(image-url("pattern_dust.png"), $beige)
   .solution
     h3
       text-align: center
@@ -87,7 +84,7 @@ section
         @include span-columns(6 4)
 
 #team-container
-  background-color: $green
+  @include background(image-url("pattern_dust.png"), $green)
   .details
     @include span-columns(6)
     @include post(3)
