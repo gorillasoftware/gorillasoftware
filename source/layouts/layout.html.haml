@@ -18,8 +18,7 @@
     = stylesheet_link_tag "site"
   %body
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
-    %header.main
-      = partial(data.page.header || 'layouts/nav_full')
+    = partial(data.page.header || 'layouts/header')
     = yield
     %footer
 

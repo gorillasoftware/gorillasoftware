@@ -1,0 +1,99 @@
+body
+  @include background(image-url("pattern_dust.png"))
+
+#main-logo
+  @include pre(1)
+  +hide-text
+  float: left
+
+#main-nav
+  @include post(1)
+  padding-top: 1em
+  float: right
+  ul
+    +horizontal-list(0.5em)
+    text-transform: uppercase
+    .blog
+      +hide-text
+    li
+      display: block
+      height: image-height("blog.png")
+      line-height: image-height("blog.png")
+
+.title
+  padding-top: 2em
+  h2
+    font-size: 2em
+  text-align: center
+  text-transform: uppercase
+  @include pre(3)
+  @include span-columns(6)
+  @include post(3)
+  background-repeat: repeat-x
+  .center
+    @include background(image-url("banner-big-bg.png"))
+    height: image-height("banner-big-bg.png")
+    overflow:hidden
+  .left
+    @include background(image-url("banner-big-left.png"))
+    float: left
+    width: image-width("banner-big-left.png")
+    height: image-height("banner-big-left.png")
+  .right
+    @include background(image-url("banner-big-right.png"))
+    float: right
+    width: image-width("banner-big-right.png")
+    height: image-height("banner-big-right.png")
+
+section
+  padding-top: 0.83em
+  min-height: 50em
+
+#header-container, #teaser-container
+  background-color: $orange
+
+#gorilla
+  @include pre(2)
+  @include span-columns(6)
+  @include background(image-url("gorilla.png"))
+  height: image-height("gorilla.png")
+  width: image-width("gorilla.png")
+  background-repeat: no-repeat
+
+#teaser
+  h2
+    font-size: 3em
+    @include span-columns(2)
+    @include post(2)
+  p
+    @include pre(2)
+    @include span-columns(8)
+
+#solutions-container
+  background-color: $beige
+  .solution
+    h3
+      text-align: center
+    p
+      padding-left: 1em
+      padding-right: 1em
+    @include span-columns(4)
+    @include nth-omega(3n)
+    &.other
+      @include pre(3)
+      @include span-columns(6)
+      @include post(3)
+      .hey
+        @include span-columns(6 4)
+
+#team-container
+  background-color: $green
+  .details
+    @include span-columns(6)
+    @include post(3)
+    .social ul
+      +horizontal-list(0.5em)
+
+section .body
+  margin-bottom: 3em
+  margin-top: 3em

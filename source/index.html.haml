@@ -1,10 +1,10 @@
 ---
-title: foo
 description: bar
-header: layouts/nav_full
 ---
+
 %section#teaser-container
   #teaser.main
+    #gorilla
     %h2
       Individuelle Lösungen fürs Web
     %p GORILLA Software bietet individuelle Lösungen fürs Web an. Wir programmieren aus Leidenschaft und verfolgen dabei einen agilen und pragmatischen Softwareentwicklungsansatz. Die Nachhaltigkeit unserer Arbeit ist uns wichtig.  Mit Rapid Prototyping können wir Kundenbedürfnisse frühzeitig erkennen. Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen.
@@ -12,21 +12,26 @@ header: layouts/nav_full
 %section#solutions-container
   #solutions.main
     .title
-      %h2 Lösungen
+      .left
+      .right
+      .center
+        %h2 Lösungen
     .body
-      %article.solution#web
+      %article.solution.web
         %h3 Web- & Mobilanwendungen
         %p
           Wir bieten Webanwendungen an, die ein breites Spektrum abdecken. Unsere Lösungen reichen vom mobilen Client, über Web-Schnittstellen bis hin zur komplexen Datenverarbeitung.
-      %article.solution#standards
+      %article.solution.standards
         %h3 Offene Standards
         %p
           Wir können das Inseldasein ihrer Lösung beenden. Wir helfen ihnen, wenn sie Daten von Partnern oder öffentlichen Anbietern einbinden, oder ihre Daten für andere zur Verfügung stellen möchten. Ihre Web-Schnittstellen (APIs) entwickeln wir nach offenen Standards.
-      %article.solution#data
+      %article.solution.data
         %h3 Big Data und Web-Mining
         %p
           Wir helfen ihnen, unstrukturierte Daten such- und fassbar zu machen. Unsere skalierbaren Lösungen ermöglichen es ihnen gezielt auf Informationen zuzugreifen und diese individuell darzustellen.
-      %article.solution#other
+      .clearfix
+      %article.solution.other
+        .image.hey
         %p
           Suchen Sie Entwickler für ihr Projekt oder haben Sie einfach nur Fragen? 
           =mail_to "hi@gorillasoftware.ch"
@@ -34,25 +39,29 @@ header: layouts/nav_full
 %section#team-container
   #team.main
     .title
-      %h2 Team
+      .left
+      .right
+      .center
+        %h2 Team
     .body
       %section
-        %article.portrait#seb
-          .image
-            =image_tag "portrait_sebastian.jpg", :alt => ""
-          .about
-            %h3 Sebastian de Castelberg
-            .social
-              %ul
-                %li
-                  %a{:href => "http://twitter.com/sdecastelberg"}
-                    =image_tag "authbuttons/twitter_32.png", :alt => ""
-                %li
-                  %a{:href => "http://ch.linkedin.com/in/sdecastelberg"}
-                    =image_tag "authbuttons/linkedin_32.png", :alt => ""
-                %li
-                  %a{:href => "http://github.com/sdecastelberg"}
-                    =image_tag "authbuttons/github_32.png", :alt => ""
+        %article.portrait#sebastian
+          .details
+            .image
+              =image_tag "sebastian.jpg", :alt => "Portrait Sebastian"
+            .about
+              %h3 Sebastian de Castelberg
+              .social
+                %ul
+                  %li
+                    =link_to "http://twitter.com/sdecastelberg" do
+                      .image.social-twitter-black
+                  %li
+                    =link_to "http://ch.linkedin.com/in/sdecastelberg" do
+                      .image.social-linkedin-black
+                  %li
+                    =link_to "http://github.com/sdecastelberg" do
+                      .image.social-github-black
           .resume
             %h4 Expertise & Technologien
             %ul
@@ -64,7 +73,10 @@ header: layouts/nav_full
 %section#contact-container
   #contact.main
     .title
-      %h2 Kontakt
+      .left
+      .right
+      .center
+        %h2 Kontakt
     .body
       %ul.address
         %li GORILLA software GmbH

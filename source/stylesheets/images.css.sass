@@ -1,0 +1,17 @@
+$bookmark              : 'bookmark'
+$blog                  : 'blog'
+$banner-big-left       : 'banner-big-left'
+$banner-big-right      : 'banner-big-right'
+$hey                   : 'hey'
+$social-linkedin-black : 'social-linkedin-black'
+$social-github-black   : 'social-github-black'
+$social-twitter-black  : 'social-twitter-black'
+
+$images: $bookmark $blog $banner-big-left $banner-big-right $hey $social-linkedin-black $social-twitter-black $social-twitter-black
+
+@each $image in $images
+  .image.#{$image}
+    @include background(image-url("#{$image}.png"))
+    background-repeat: no-repeat
+    height: image-height("#{$image}.png")
+    width: image-width("#{$image}.png")
