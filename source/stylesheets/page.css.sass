@@ -28,19 +28,13 @@
   @include post(3)
   background-repeat: repeat-x
   .center
+    overflow: hidden
     @include background(image-url("banner-big-bg.png"))
     height: image-height("banner-big-bg.png")
-    overflow:hidden
   .left
-    @include background(image-url("banner-big-left.png"))
     float: left
-    width: image-width("banner-big-left.png")
-    height: image-height("banner-big-left.png")
   .right
-    @include background(image-url("banner-big-right.png"))
     float: right
-    width: image-width("banner-big-right.png")
-    height: image-height("banner-big-right.png")
 
 section
   padding-top: 0.83em

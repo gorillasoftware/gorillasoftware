@@ -1,13 +1,17 @@
-$bookmark              : 'bookmark'
-$blog                  : 'blog'
-$banner-big-left       : 'banner-big-left'
-$banner-big-right      : 'banner-big-right'
-$hey                   : 'hey'
-$social-linkedin-black : 'social-linkedin-black'
-$social-github-black   : 'social-github-black'
-$social-twitter-black  : 'social-twitter-black'
-
-$images: $bookmark $blog $banner-big-left $banner-big-right $hey $social-linkedin-black $social-twitter-black $social-twitter-black
+$images: ()
+$images: append($images, 'bookmark')
+$images: append($images, 'blog')
+$images: append($images, 'banner-big-left')
+$images: append($images, 'banner-big-right')
+$images: append($images, 'hey')
+$images: append($images, 'social-linkedin-green')
+$images: append($images, 'social-github-green')
+$images: append($images, 'social-twitter-green')
+$images: append($images, 'social-linkedin-black')
+$images: append($images, 'social-github-black')
+$images: append($images, 'social-twitter-black')
+$images: append($images, 'banner-big-left')
+$images: append($images, 'banner-big-right')
 
 @each $image in $images
   .image.#{$image}
