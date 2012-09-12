@@ -42,6 +42,9 @@ body, html
 section
   padding-top: 0.83em
   min-height: 100%
+  .body
+    margin-bottom: 3em
+    margin-top: 3em
 
 #header-container, #teaser-container
   @include background(image-url("pattern_dust.png"), $orange)
@@ -111,6 +114,7 @@ section
       height: 15em
   @include background(image-url("pattern_dust.png"), $blue)
 
-section .body
-  margin-bottom: 3em
-  margin-top: 3em
+footer
+  min-height: 50%
+  @include background(image-url("pattern_dust.png"), $anthrazit)
+
