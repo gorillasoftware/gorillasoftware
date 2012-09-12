@@ -80,10 +80,27 @@ section
 #team-container
   @include background(image-url("pattern_dust.png"), $green)
   .details
-    @include span-columns(6)
-    @include post(3)
+    background: yellow
+    @include pre(1)
+    @include span-columns(5)
+  .about
     .social ul
       +horizontal-list(0.5em)
+    @include span-columns(5)
+    @include post(1)
+    background: red
+  .resume
+    .skill
+      .image
+        text-align: center
+        display: block
+        margin-left: auto
+        margin-right: auto
+      p
+        padding-left: 1em
+        padding-right: 1em
+      @include span-columns(4)
+      @include nth-omega(3n)
 
 section .body
   margin-bottom: 3em

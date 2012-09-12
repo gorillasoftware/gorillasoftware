@@ -42,33 +42,46 @@ description: bar
       .left.banner-big-left.image
       .right.banner-big-right.image
       .center
-        %h2 Team
+        %h2 Team & Kontakt
     .body
       %section
         %article.portrait#sebastian
           .details
             .image
               =image_tag "sebastian.jpg", :alt => "Portrait Sebastian"
-            .about
-              %h3 Sebastian de Castelberg
-              .social
-                %ul
-                  %li
-                    =link_to "http://twitter.com/sdecastelberg" do
-                      .image.social-twitter-black
-                  %li
-                    =link_to "http://ch.linkedin.com/in/sdecastelberg" do
-                      .image.social-linkedin-black
-                  %li
-                    =link_to "http://github.com/sdecastelberg" do
-                      .image.social-github-black
+          .about
+            %h3 Sebastian de Castelberg
+            .social
+              %ul
+                %li
+                  =link_to "http://twitter.com/sdecastelberg" do
+                    .image.social-twitter-green
+                %li
+                  =link_to "http://ch.linkedin.com/in/sdecastelberg" do
+                    .image.social-linkedin-green
+                %li
+                  =link_to "http://github.com/sdecastelberg" do
+                    .image.social-github-green
+          .clearfix
           .resume
             %h4 Expertise & Technologien
-            %ul
-              %li Web-Technologien (Ruby on Rails, Serverseitiges JS/Coffeescript)
-              %li Front-end Entwicklung (jQuery, Haml/Sass)
-              %li Data Processing (Hadoop/HBase, Solr and Lucene, Message queues)
-              %li Systeme und Services (Linux, AWS)
+            .skill
+              .image.skills-ruby
+              %p
+                Web-Technologien (Ruby on Rails, Serverseitiges JS/Coffeescript)
+            .skill
+              .image.skills-nodejs
+              %p
+                JavaScript/Coffeescript
+                Front-end Entwicklung (jQuery, Haml/Sass)
+            .skill
+              .image.skills-ruby
+              %p
+                Data Processing (Hadoop/HBase, Solr and Lucene, Message queues)
+            .skill
+              .image.skills-ruby
+              %p
+                Systeme und Services (Linux, AWS)
 
 %section#contact-container
   #contact.main
