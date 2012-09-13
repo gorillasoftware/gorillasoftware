@@ -2,14 +2,21 @@
 description: bar
 ---
 
-%section#teaser-container
+#header-container.container
+  =partial('partials/header')
+
   #teaser.main
     #gorilla
     %h2
       Individuelle Lösungen fürs Web
-    %p GORILLA Software bietet individuelle Lösungen fürs Web an. Wir programmieren aus Leidenschaft und verfolgen dabei einen agilen und pragmatischen Softwareentwicklungsansatz. Die Nachhaltigkeit unserer Arbeit ist uns wichtig.  Mit Rapid Prototyping können wir Kundenbedürfnisse frühzeitig erkennen. Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen.
+    %p
+      GORILLA Software bietet individuelle Lösungen fürs Web an.
+      Wir programmieren aus Leidenschaft und verfolgen dabei einen agilen und pragmatischen Softwareentwicklungsansatz.
+      Die Nachhaltigkeit unserer Arbeit ist uns wichtig.
+      Mit Rapid Prototyping können wir Kundenbedürfnisse frühzeitig erkennen.
+      Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen.
 
-%section#solutions-container
+%section#solutions-container.container
   #solutions.main
     .title
       .left.banner-big-left.image
@@ -36,7 +43,7 @@ description: bar
           Suchen Sie Entwickler für ihr Projekt oder haben Sie einfach nur Fragen? 
           =mail_to "hi@gorillasoftware.ch"
 
-%section#team-container
+%section#team-container.container
   #team.main
     .title
       .left.banner-big-left.image
@@ -99,7 +106,7 @@ description: bar
               %p
                 Systeme und Services (Linux, AWS)
 
-%section#contact-container
+%section#contact-container.container
   #contact.main
     .title
       .left.banner-big-left.image
@@ -124,3 +131,4 @@ description: bar
   #map_holder
     #map_canvas
 
+=partial('partials/footer')
