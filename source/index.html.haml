@@ -2,7 +2,7 @@
 description: bar
 ---
 
-#header-container.container
+#header.container
   =partial('partials/header')
 
   #teaser.main
@@ -16,7 +16,7 @@ description: bar
       Mit Rapid Prototyping können wir Kundenbedürfnisse frühzeitig erkennen.
       Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen.
 
-%section#solutions-container.container
+%section#solutions.container
   #solutions.main
     .title
       .left.banner-big-left.image
@@ -43,8 +43,59 @@ description: bar
           Suchen Sie Entwickler für ihr Projekt oder haben Sie einfach nur Fragen? 
           =mail_to "hi@gorillasoftware.ch"
 
-%section#team-container.container
-  #team.main
+%section#technologies.container
+  #technologies-inner.main
+    .title
+      .left.banner-big-left.image
+      .right.banner-big-right.image
+      .center
+        %h2 Technologien
+    .body
+      %section.resume
+        .skill
+          .left
+            .image.skills-ruby
+          %p
+            Web-Technologien (Ruby on Rails, Serverseitiges JS/Coffeescript)
+        .skill
+          .left
+            .image.skills-nodejs
+          %p
+            JavaScript/Coffeescript
+            Front-end Entwicklung (jQuery, Haml/Sass)
+        .skill
+          .left
+            .image.skills-rails
+          %p
+            Data Processing (Hadoop/HBase, Solr and Lucene, Message queues)
+        .skill
+          .left
+            .image.skills-linux
+          %p
+            Systeme und Services (Linux, AWS)
+        .skill
+          .left
+            .image.skills-python
+          %p
+            Systeme und Services (Linux, AWS)
+        .skill
+          .left
+            .image.skills-solr
+          %p
+            Systeme und Services (Linux, AWS)
+        .skill
+          .left
+            .image.skills-html5
+          %p
+            Systeme und Services (Linux, AWS)
+        .skill
+          .left
+            .image.skills-coffeescript
+          %p
+            Systeme und Services (Linux, AWS)
+
+%section#team.container
+  #team-inner.main
     .title
       .left.banner-big-left.image
       .right.banner-big-right.image
@@ -70,44 +121,9 @@ description: bar
                   =link_to "http://github.com/sdecastelberg" do
                     .image.social-github-green
           .clearfix
-          .resume
-            %h4 Expertise & Technologien
-            .skill
-              .image.skills-ruby
-              %p
-                Web-Technologien (Ruby on Rails, Serverseitiges JS/Coffeescript)
-            .skill
-              .image.skills-nodejs
-              %p
-                JavaScript/Coffeescript
-                Front-end Entwicklung (jQuery, Haml/Sass)
-            .skill
-              .image.skills-rails
-              %p
-                Data Processing (Hadoop/HBase, Solr and Lucene, Message queues)
-            .skill
-              .image.skills-linux
-              %p
-                Systeme und Services (Linux, AWS)
-            .skill
-              .image.skills-python
-              %p
-                Systeme und Services (Linux, AWS)
-            .skill
-              .image.skills-solr
-              %p
-                Systeme und Services (Linux, AWS)
-            .skill
-              .image.skills-html5
-              %p
-                Systeme und Services (Linux, AWS)
-            .skill
-              .image.skills-coffeescript
-              %p
-                Systeme und Services (Linux, AWS)
 
-%section#contact-container.container
-  #contact.main
+%section#contact.container
+  #contact-inner.main
     .title
       .left.banner-big-left.image
       .right.banner-big-right.image

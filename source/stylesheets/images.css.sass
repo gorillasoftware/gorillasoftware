@@ -24,6 +24,7 @@ $images: append($images, 'skills-coffeescript')
 @each $image in $images
   .image.#{$image}
     @include background(image-url("#{$image}.png"))
+    //@include background(image-url("#{$image}.svg"))
     background-repeat: no-repeat
     height: image-height("#{$image}.png")
     width: image-width("#{$image}.png")
