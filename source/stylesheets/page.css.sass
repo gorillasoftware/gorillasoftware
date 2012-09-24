@@ -89,26 +89,32 @@ section
 #technologies
   @include background(image-url("pattern_dust.png"), $green)
   .resume
-    .skill
+    .technology
       @include background(image-url("pattern_dust.png"), $darkgreen)
       +border-radius(8px)
       +box-shadow
-      height: 6em
-      margin-bottom: 1em
-
-      .left
-        height: 6em
-        display: table-cell
-        vertical-align: middle
-        height: 100%
-        @include span-columns(4)
-        .image
-          margin-left: auto
-          margin-right: auto
-      p
-        @include span-columns(8 omega)
       @include span-columns(6)
       @include nth-omega(2n)
+      margin-bottom: 2em
+
+      .technology-outer
+        @include span-columns(4)
+        display: table
+        margin: 0px auto
+        height: 8em
+        overflow: hidden
+
+        .technology-inner
+          height: 100%
+          display: table-cell
+          vertical-align: middle
+
+          .image
+            margin-left: auto
+            margin-right: auto
+
+      p
+        @include span-columns(8 omega)
 
 #team
   @include background(image-url("pattern_dust.png"), $red)
