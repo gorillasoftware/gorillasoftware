@@ -38,16 +38,18 @@
 
 body, html
   height: 100%
+  color: #FAE2A5
 
 .container
   min-height: 100%
 
-section
-  .body
-    margin-bottom: 3em
+.inner
+  padding-top: 1em
 
 #header
   @include background(image-url("pattern_dust.png"), $orange)
+  .inner
+    padding-top: 0
 
 #gorilla
   @include pre(2)
@@ -120,21 +122,33 @@ section
   @include background(image-url("pattern_dust.png"), $red)
   .details
     @include pre(1)
-    @include span-columns(5)
+    @include span-columns(4)
+    .image
+      +box-shadow
+      overflow: hidden
   .about
     .social ul
       +horizontal-list(0.5em)
+    @include pre(1)
     @include span-columns(5)
     @include post(1)
 
 #contact
   @include background(image-url("pattern_dust.png"), $blue)
   .address
-    @include span-columns(4)
-    @include nth-omega(3n)
-  #map_holder
-    #map_canvas
-      height: 15em
+    +no-bullets
+    @include span-columns(3)
+    .social
+      ul
+        +horizontal-list(0.5em)
+
+  .map-holder
+    +box-shadow
+    @include span-columns(8 omega)
+    .map-canvas
+      +clearfix
+      height: 18em
+
 
 footer
   min-height: 50%

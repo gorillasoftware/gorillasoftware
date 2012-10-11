@@ -6,5 +6,5 @@ jQuery ->
     mapTypeId: google.maps.MapTypeId.ROADMAP
     scrollwheel: false
 
-  console.log $("#map_canvas")
-  map = new google.maps.Map($("#map_canvas")[0], mapOptions)
+  console.log $(".map-canvas")
+  map = new google.maps.Map($(".map-canvas")[0], mapOptions)

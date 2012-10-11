@@ -5,19 +5,19 @@ description: bar
 #header.container
   =partial('partials/header')
 
-  #teaser.main
+  #teaser.inner
     #gorilla
     %h2
       Individuelle Lösungen fürs Web
     %p
-      GORILLA Software bietet individuelle Lösungen fürs Web an.
+      gorilla software bietet individuelle Lösungen fürs Web an.
       Wir programmieren aus Leidenschaft und verfolgen dabei einen agilen und pragmatischen Softwareentwicklungsansatz.
       Die Nachhaltigkeit unserer Arbeit ist uns wichtig.
       Mit Rapid Prototyping können wir Kundenbedürfnisse frühzeitig erkennen.
       Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen.
 
 %section#solutions.container
-  #solutions.main
+  #solutions.inner
     .title
       .left.banner-big-left.image
       .right.banner-big-right.image
@@ -44,7 +44,7 @@ description: bar
           =mail_to "hi@gorillasoftware.ch"
 
 %section#technologies.container
-  #technologies-inner.main
+  #technologies-inner.inner
     .title
       .left.banner-big-left.image
       .right.banner-big-right.image
@@ -102,18 +102,17 @@ description: bar
             Systeme und Services (Linux, AWS)
 
 %section#team.container
-  #team-inner.main
+  #team-inner.inner
     .title
       .left.banner-big-left.image
       .right.banner-big-right.image
       .center
-        %h2 Team & Kontakt
+        %h2 Team
     .body
       %section
-        %article.portrait#sebastian
+        %article.portrait.sebastian
           .details
-            .image
-              =image_tag "sebastian.jpg", :alt => "Portrait Sebastian"
+            .image=image_tag "sebastian.jpg", :alt => "Portrait Sebastian"
           .about
             %h3 Sebastian de Castelberg
             .social
@@ -130,7 +129,7 @@ description: bar
           .clearfix
 
 %section#contact.container
-  #contact-inner.main
+  #contact-inner.inner
     .title
       .left.banner-big-left.image
       .right.banner-big-right.image
@@ -138,20 +137,23 @@ description: bar
         %h2 Kontakt
     .body
       %ul.address
-        %li GORILLA software GmbH
+        %li gorilla software GmbH
         %li Baumgasse 10
         %li 8005 Zürich
         %li
           =mail_to "hi@gorillasoftware.ch"
-        %li Tel: +41 44 508 07 73
+        %li +41 44 508 07 73
         %li
-          Website:
           =link_to "gorillasoftware.ch", "http://gorillasoftware.ch"
-      .social
-        %ul
-          %li=link_to 'twitter', "http://twitter.com/gorillasoftware", :class => 'twitter'
-          %li=link_to 'github', "http://github.com/gorillasoftware", :class => 'github'
-  #map_holder
-    #map_canvas
+        %li.social
+          %ul
+            %li
+              =link_to 'http://twitter.com/gorillasoftware' do
+                .image.social-twitter-green
+            %li
+              =link_to 'http://github.com/gorillasoftware' do
+                .image.social-github-green
+      .map-holder
+        .map-canvas
 
 =partial('partials/footer')
