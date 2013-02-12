@@ -1,165 +1,166 @@
-#main-logo
-  @include pre(1)
-  +hide-text
-  float: left
-
-#main-nav
-  @include post(1)
-  padding-top: 1em
-  float: right
-  ul
-    +horizontal-list(0.5em)
-    text-transform: uppercase
-    .blog
-      +hide-text
-    li
-      display: block
-      height: image-height("blog.png")
-      line-height: image-height("blog.png")
-
-.title
-  padding-bottom: 2em
-  h2
-    font-size: 2em
-  text-align: center
-  text-transform: uppercase
-  @include pre(3)
-  @include span-columns(6)
-  @include post(3)
-  background-repeat: repeat-x
-  .center
-    overflow: hidden
-    @include background(image-url("banner-big-bg.png"))
-    height: image-height("banner-big-bg.png")
-  .left
-    float: left
-  .right
-    float: right
-
 body, html
   height: 100%
 
-.container
+.outer
   min-height: 100%
+  display: table
+  height: 100%
+  width: 100%
 
-.inner
-  padding-top: 1em
-
-#header
-  @include background(image-url("pattern_dust.png"), $orange)
   .inner
-    padding-top: 0
+    margin-left: auto
+    margin-right: auto
+    display: table-row
+    max-width: 200px
+    .content
+      padding: 0 3%
+      display: table-cell
+      vertical-align: middle
+
+h1, h2, h3
+  text-transform: uppercase
 
 #gorilla
-  @include pre(2)
-  @include span-columns(6)
-  @include background(image-url("gorilla.png"))
+  max-width: 96%
+  margin-left: auto
+  margin-right: auto
+
+  +background(image-url("gorilla.png"))
   height: image-height("gorilla.png")
   width: image-width("gorilla.png")
   background-repeat: no-repeat
 
 #teaser
-  h2
-    text-align: right
-    font-size: 3em
-    text-transform: uppercase
-    margin-top: 1.5em
-    @include span-columns(5)
-    @include post(1)
   p
-    @include pre(2)
-    @include span-columns(8)
+    text-transform: uppercase
+
++at-breakpoint($desktop)
+  #teaser
+    h2, p
+      text-transform: uppercase
+      +pre(2)
+      +span-columns(8)
 
 #solutions
-  @include background(image-url("pattern_dust.png"), $beige)
-  .solution
-    h3
-      text-align: center
+  .solution.other
     p
-      padding-left: 1em
-      padding-right: 1em
-    @include span-columns(4)
-    @include nth-omega(3n)
-    &.other
-      @include pre(3)
-      @include span-columns(6)
-      @include post(3)
+      +pre(1)
+      +span-columns(3)
+      +post(1)
+    .hey
+      margin-left: auto
+      margin-right: auto
+
++at-breakpoint($desktop)
+  #solutions
+    .solution
+      +span-columns(4)
+      +nth-omega(3n)
+    .solution.other
+      padding-top: 5em
+      +pre(3)
+      +span-columns(6)
+      +post(3)
+
       .hey
-        @include span-columns(6 4)
-
-#technologies
-  @include background(image-url("pattern_dust.png"), $green)
-  .resume
-    .technology
-      @include background(image-url("pattern_dust.png"), $darkgreen)
-      +border-radius(8px)
-      +box-shadow
-      @include span-columns(6)
-      @include nth-omega(2n)
-      margin-bottom: 2em
-
-      .technology-outer
-        @include span-columns(4)
-        display: table
-        margin: 0px auto
-        height: 8em
-        overflow: hidden
-
-        .technology-inner
-          height: 100%
-          display: table-cell
-          vertical-align: middle
-
-          .image
-            margin-left: auto
-            margin-right: auto
-
+        margin-left: auto
+        margin-right: auto
+        +span-columns(2, 6)
       p
-        @include span-columns(8 omega)
+        margin: 0px auto
+        +span-columns(4, 6)
+        +pre(0)
+        +post(0)
 
+#header
+  text-align: center
+  background-color: #FDFBE7
+#teaser
+  background-color: #427B7B
+  color: white
+#solutions
+  background-color: #AEC249
+#technologies
+  background-color: #E47540
 #team
-  @include background(image-url("pattern_dust.png"), $red)
-  .details
-    @include pre(1)
-    @include span-columns(4)
-    .image
-      +box-shadow
-      overflow: hidden
-  .about
-    .social ul
-      +horizontal-list(0.5em)
-    @include pre(1)
-    @include span-columns(5)
-    @include post(1)
-
-#contact
-  @include background(image-url("pattern_dust.png"), $blue)
-  .address
-    +no-bullets
-    @include span-columns(3)
-    .social
-      ul
-        +horizontal-list(0.5em)
-
-  .map-holder
-    +box-shadow
-    @include span-columns(8 omega)
-    .map-canvas
-      +clearfix
-      height: 18em
+  background-color: #D3BB9C
+#directions
+  background-color: #7EB1B6
 
 
-footer
-  min-height: 50%
-  padding-top: 4em
-  @include background(image-url("pattern_dust.png"), $anthrazit)
-  .address
-    @include pre(2)
-    @include span-columns(3)
-  .contact
-    @include span-columns(3)
-  .social
-    @include span-columns(3)
-    @include post(1)
-    ul
-      +horizontal-list(0.5em)
+//#technologies
+  //+background($green)
+  //.resume
+    //.technology
+      //+background($darkgreen)
+      //+border-radius(8px)
+      //+box-shadow
+      //+span-columns(6)
+      //+nth-omega(2n)
+      //margin-bottom: 2em
+
+      //.technology-outer
+        //+span-columns(4)
+        //display: table
+        //margin: 0px auto
+        //height: 8em
+        //overflow: hidden
+
+        //.technology-inner
+          //height: 100%
+          //display: table-cell
+          //vertical-align: middle
+
+          //.image
+            //margin-left: auto
+            //margin-right: auto
+
+      //p
+        //+span-columns(8 omega)
+
+//#team
+  //+background($red)
+  //.details
+    //+pre(1)
+    //+span-columns(4)
+    //.image
+      //+box-shadow
+      //overflow: hidden
+  //.about
+    //.social ul
+      //+horizontal-list(0.5em)
+    //+pre(1)
+    //+span-columns(5)
+    //+post(1)
+
+//#contact
+  //+background($blue)
+  //.address
+    //+no-bullets
+    //+span-columns(3)
+    //.social
+      //ul
+        //+horizontal-list(0.5em)
+
+  //.map-holder
+    //+box-shadow
+    //+span-columns(8 omega)
+    //.map-canvas
+      //+clearfix
+      //height: 18em
+
+
+//footer
+  //min-height: 50%
+  //padding-top: 4em
+  //+background($anthrazit)
+  //.address
+    //+pre(2)
+    //+span-columns(3)
+  //.contact
+    //+span-columns(3)
+  //.social
+    //+span-columns(3)
+    //+post(1)
+    //ul
+      //+horizontal-list(0.5em)

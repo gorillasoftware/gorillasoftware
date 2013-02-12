@@ -8,6 +8,10 @@ module SiteHelpers
     title
   end
 
+  def page(id, &block)
+    yield
+  end
+
   def page_description
     if data.page.description
       description = data.page.description

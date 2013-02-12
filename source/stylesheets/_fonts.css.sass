@@ -1,38 +1,27 @@
-@font-face
-  font-family: 'BebasNeueRegular'
-  src: url('fonts/BebasNeue-webfont.eot')
-  src: url('fonts/BebasNeue-webfont.eot?#iefix') format("fonts/embedded-opentype"), url('fonts/BebasNeue-webfont.woff') format("woff"), url('fonts/BebasNeue-webfont.ttf') format("truetype"), url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format("svg")
-  font-weight: normal
-  font-style: normal
+=futura
+  font-family: "futura-pt",sans-serif
 
-a
-  +link-colors($orange-dark, $brown)
+body
+  font-weight: 300
+
+h1, h2, h3, p
+  +futura
+
+h1
+  +futura
+  font-size: 3em
+  font-weight: 700
 
 h2, h3
-  color: $brown
+  +futura
+  font-weight: 400
 
 h2
-  font: 60px 'BebasNeueRegular', Arial, sans-serif
+  font-style: italic
+  font-size: 2em
 
 h3
-  font: 36px 'BebasNeueRegular', Arial, sans-serif
+  font-size: 2em
 
-body, html
-  color: $brown
-
-#main-nav
-  a
-    +link-colors($orange-dark, $brown)
-    text-decoration: none
-  font: 20px 'BebasNeueRegular', Arial, sans-serif
-
-#teaser
-  h2
-    color: $orange-light
-    width: 200px
-    text-align: justify
-    font-size: 60px
-  p
-    font: 20px 'BebasNeueRegular', Arial, sans-serif
-    text-align: justify
-
+p
+  font-size: 1.3em

@@ -2,68 +2,57 @@
 description: bar
 ---
 
-#header.container
-  =partial('partials/header')
+#header.outer
+  .inner
+    .content
+      #gorilla
 
-  #teaser.inner
-    #gorilla
-    %h2
-      Individuelle
-      %br
-      Lösungen
-      %br
-      fürs Web
-    %p
-      gorilla software bietet individuelle Lösungen fürs Web an.
-      Wir programmieren aus Leidenschaft und verfolgen dabei einen agilen und pragmatischen Softwareentwicklungsansatz.
-      Die Nachhaltigkeit unserer Arbeit ist uns wichtig.
-      Mit Rapid Prototyping können wir Kundenbedürfnisse frühzeitig erkennen.
-      Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen.
+      %h1
+        GORILLA SOFTWARE
 
-%section#solutions.container
-  #solutions.inner
-    .title
-      .left.banner-big-left.image
-      .right.banner-big-right.image
-      .center
-        %h2 Lösungen
-    .body
+#teaser.outer
+  .inner
+    .content
+      %h2
+        Individuelle Lösungen fürs Web
+      %p
+        gorilla software bietet individuelle Lösungen fürs Web.
+      %p
+        Wir programmieren aus Leidenschaft und verfolgen dabei einen agilen und pragmatischen Softwareentwicklungsansatz.
+      %p
+        Die Nachhaltigkeit unserer Arbeit ist uns wichtig.
+      %p
+        Mit Rapid Prototyping können wir Kundenbedürfnisse frühzeitig erkennen.
+      %p
+        Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen.
+
+#solutions.outer
+  .inner
+    .content
       %article.solution.web
         %h3
-          Web- &
-          %br
-          Mobilanwendungen
+          Web- & Mobile Anwendungen
         %p
           Wir bieten Webanwendungen an, die ein breites Spektrum abdecken. Unsere Lösungen reichen vom mobilen Client, über Web-Schnittstellen bis hin zur komplexen Datenverarbeitung.
       %article.solution.standards
         %h3
-          Offene
-          %br
-          Standards
+          Offene Standards
         %p
           Wir können das Inseldasein ihrer Lösung beenden. Wir helfen ihnen, wenn sie Daten von Partnern oder öffentlichen Anbietern einbinden, oder ihre Daten für andere zur Verfügung stellen möchten. Ihre Web-Schnittstellen (APIs) entwickeln wir nach offenen Standards.
       %article.solution.data
         %h3
-          Big Data
-          %br
-          und Web-Mining
+          Big Data und Web Mining
         %p
           Wir helfen ihnen, unstrukturierte Daten such- und fassbar zu machen. Unsere skalierbaren Lösungen ermöglichen es ihnen gezielt auf Informationen zuzugreifen und diese individuell darzustellen.
-      .clearfix
       %article.solution.other
         .image.hey
         %p
           Suchen Sie Entwickler für ihr Projekt oder haben Sie einfach nur Fragen? 
           =mail_to "hi@gorillasoftware.ch"
 
-%section#technologies.container
-  #technologies-inner.inner
-    .title
-      .left.banner-big-left.image
-      .right.banner-big-right.image
-      .center
-        %h2 Technologien
-    .body
+#technologies.outer
+  .inner
+    .content
       %section.resume
         .technology
           .technology-outer
@@ -114,14 +103,9 @@ description: bar
           %p
             Systeme und Services (Linux, AWS)
 
-%section#team.container
-  #team-inner.inner
-    .title
-      .left.banner-big-left.image
-      .right.banner-big-right.image
-      .center
-        %h2 Team
-    .body
+#team.outer
+  .inner
+    .content
       %section
         %article.portrait.sebastian
           .details
@@ -141,14 +125,9 @@ description: bar
                     .image.social-github-green
           .clearfix
 
-%section#contact.container
-  #contact-inner.inner
-    .title
-      .left.banner-big-left.image
-      .right.banner-big-right.image
-      .center
-        %h2 Kontakt
-    .body
+#directions.outer
+  .inner
+    .content
       %ul.address
         %li gorilla software GmbH
         %li Baumgasse 10
@@ -169,4 +148,4 @@ description: bar
       .map-holder
         .map-canvas
 
-=partial('partials/footer')
+-#=partial('partials/footer')

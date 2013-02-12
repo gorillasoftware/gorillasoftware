@@ -1,0 +1,16 @@
+@import "susy"
+
+$total-columns : 5
+$column-width  : 4em
+$gutter-width  : 1em
+$grid-padding  : 4em
+
+$desktop       : 50em 12
+
+.inner
+  +container($total-columns, $desktop)
+  /*+susy-grid-background*/
+
++at-breakpoint($desktop)
+  .inner
+    /*+susy-grid-background*/
