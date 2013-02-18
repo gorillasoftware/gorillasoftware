@@ -1,5 +1,7 @@
 $(document).ready ->
-  $('#technologies .content').flexslider
+  $.localScroll.defaults.duration = 400
+  $.localScroll()
+
     animation: "slide"
     slideshow: false
     controlNav: false
