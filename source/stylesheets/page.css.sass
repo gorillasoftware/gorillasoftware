@@ -4,10 +4,14 @@ body, html
 .outer
   min-height: 100%
   position: relative
-  padding-bottom: 1em
+  +box-pack(center)
+  +box-orient(vertical)
+  +display-box
+
   .inner
-    padding-top: 6%
-    padding-bottom: 3%
+    padding: 3em 0
+    .content
+
   .image.down
     opacity: 0.2
     +transition(opacity 400ms)
