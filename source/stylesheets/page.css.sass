@@ -10,7 +10,6 @@ body, html
 
   .inner
     padding: 3em 0
-    .content
 
   .image.down
     opacity: 0.2
@@ -20,7 +19,6 @@ body, html
     position: absolute
     bottom: 2em
     width: 100%
-    margin-left: -$grid-padding
 
 h1, h2, h3
   text-transform: uppercase
@@ -28,11 +26,12 @@ h1, h2, h3
 #header.outer
   .inner .content
     text-align: center
-    +image('gorilla')
-    background-size: contain
     +squish(1, 1)
     +span-columns(3)
     #gorilla
+      +image('gorilla')
+      width: auto
+      background-size: contain
     h1
       margin-top: 0px
 
@@ -90,19 +89,41 @@ h1, h2, h3
         +no-bullets
         padding: 0px
         margin: 0px
+        +squish(1, 1)
         .technology
-          padding-bottom: 1em
-          +span-columns(1, 5)
-          +nth-omega(5n)
+          padding-bottom: 2em
+          cursor: pointer
+          +span-columns(1, 3)
+          +nth-omega(3n)
           .image
             width: auto
             background-size: contain
             opacity: 0.5
             +transition(opacity 400ms)
-            &:hover, &:active
-              opacity: 1
-          .wrapper
+            position: relative
+          .arrow_box
+            margin-top: 1em
+            padding: 1em
+            background: #ffffff
+            border: 1px solid #6C3835
+            z-index: 10
+            position: absolute
             display: none
+            left: 3em
+            right: 3em
+            &:after, &:before
+              bottom: 100%
+              border: solid transparent
+              content: " "
+              height: 0
+              width: 0
+              position: absolute
+              pointer-events: none
+          &:hover, &:active
+            .image
+              opacity: 1
+            .arrow_box
+              display: block
 
 +at-breakpoint($desktop)
   #technologies
