@@ -10,9 +10,9 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="100.99081"
-   height="78.669083"
-   viewBox="0 0 80.792645 62.935268"
+   width="100.99"
+   height="100"
+   viewBox="0 0 80.791998 80.000002"
    id="svg2"
    inkscape:version="0.48.2 r9819"
    sodipodi:docname="skills-coffeescript.svg"
@@ -37,8 +37,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="4.2132548"
-     inkscape:cx="60.705468"
-     inkscape:cy="33.709752"
+     inkscape:cx="30.91852"
+     inkscape:cy="71.685143"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -54,14 +54,14 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
     <dc:format>image/svg+xml</dc:format>
     <dc:type
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-    <dc:title></dc:title>
+    <dc:title />
   </cc:Work>
 </rdf:RDF>
 </metadata>
   <g
      style="fill:#8a4440;fill-opacity:1"
      id="g3804"
-     transform="matrix(0.54741935,0,0,0.54741935,-35.554888,-32.863121)"
+     transform="matrix(0.54741935,0,0,0.54741935,-35.555213,-24.330753)"
      inkscape:export-xdpi="89.11702"
      inkscape:export-ydpi="89.11702">
     <path
