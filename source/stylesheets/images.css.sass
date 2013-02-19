@@ -1,31 +1,34 @@
-$images: ()
-$images: append($images, 'bookmark')
-$images: append($images, 'blog')
-$images: append($images, 'banner-big-left')
-$images: append($images, 'banner-big-right')
-$images: append($images, 'hey')
-$images: append($images, 'social-linkedin-green')
-$images: append($images, 'social-github-green')
-$images: append($images, 'social-twitter-green')
-$images: append($images, 'social-linkedin-black')
-$images: append($images, 'social-github-black')
-$images: append($images, 'social-twitter-black')
-$images: append($images, 'banner-big-left')
-$images: append($images, 'banner-big-right')
-$images: append($images, 'skills-nodejs')
-$images: append($images, 'skills-ruby')
-$images: append($images, 'skills-linux')
-$images: append($images, 'skills-rails')
-$images: append($images, 'skills-python')
-$images: append($images, 'skills-solr')
-$images: append($images, 'skills-html5')
-$images: append($images, 'skills-coffeescript')
+=image($img, $raster-format: 'png', $svg: true)
+  $img-raster: "#{$img}.#{$raster-format}"
+  background: image-url($img-raster)
+  @if $svg
+    $img-svg: "#{$img}.svg"
+    background: none, inline-image($img-svg)
+  background-position: center
+  background-repeat: no-repeat
+  width: image-width($img-raster)
+  height: image-height($img-raster)
+  +hide-text
 
-@each $image in $images
-  .image.#{$image}
-    @include background(image-url("#{$image}.png"))
-    //@include background(image-url("#{$image}.svg"))
-    background-repeat: no-repeat
-    height: image-height("#{$image}.png")
-    width: image-width("#{$image}.png")
-    background-position: center
+=image-class($img, $raster-format: 'png', $svg: true)
+  .image.#{$img}
+    +image($img, $raster-format, $svg)
+
++image-class('bookmark')
++image-class('blog')
++image-class('hey', 'png', false)
++image-class('social-linkedin-green')
++image-class('social-github-green')
++image-class('social-twitter-green')
++image-class('social-linkedin-black', 'png', false)
++image-class('social-github-black')
++image-class('social-twitter-black', 'png', false)
++image-class('skills-nodejs')
++image-class('skills-ruby')
++image-class('skills-linux')
++image-class('skills-rails')
++image-class('skills-python')
++image-class('skills-solr')
++image-class('skills-html5')
++image-class('skills-coffeescript')
++image-class('down')
