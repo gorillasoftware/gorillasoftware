@@ -2,7 +2,7 @@
 description: bar
 ---
 
-#header.outer
+%section#header.outer
   .inner
     .content
       #gorilla
@@ -10,7 +10,10 @@ description: bar
       %h1
         GORILLA SOFTWARE
 
-#teaser.outer
+    =link_to "#teaser", { :class => 'nav' } do
+      .image.down
+
+%section#teaser.outer
   .inner
     .content
       %h2
@@ -26,7 +29,10 @@ description: bar
       %p
         Test-Driven Development hilft uns dabei, Qualität zu einer Anforderung zu machen.
 
-#solutions.outer
+    =link_to "#solutions", { :class => 'nav' } do
+      .image.down
+
+%section#solutions.outer
   .inner
     .content
       %article.solution.web
@@ -36,7 +42,7 @@ description: bar
           Wir bieten Webanwendungen an, die ein breites Spektrum abdecken. Unsere Lösungen reichen vom mobilen Client, über Web-Schnittstellen bis hin zur komplexen Datenverarbeitung.
       %article.solution.standards
         %h3
-          Offene Standards
+          Offene Standards & Schnittstellen
         %p
           Wir können das Inseldasein ihrer Lösung beenden. Wir helfen ihnen, wenn sie Daten von Partnern oder öffentlichen Anbietern einbinden, oder ihre Daten für andere zur Verfügung stellen möchten. Ihre Web-Schnittstellen (APIs) entwickeln wir nach offenen Standards.
       %article.solution.data
@@ -50,102 +56,123 @@ description: bar
           Suchen Sie Entwickler für ihr Projekt oder haben Sie einfach nur Fragen? 
           =mail_to "hi@gorillasoftware.ch"
 
-#technologies.outer
-  .inner
-    .content
-      %ul.slides
-        %li.technology
-          .technology-outer
-            .technology-inner
-              .image.skills-rails
-          %p
-            Data Processing (Hadoop/HBase, Solr and Lucene, Message queues)
-        %li.technology
-          .technology-outer
-            .technology-inner
-              .image.skills-nodejs
-          %p
-            Node.js für eventbasierte und hoch-skalierbare Architekturen.
-        %li.technology
-          .technology-outer
-            .technology-inner
-              .image.skills-ruby
-          %p
-            Web-Technologien (Ruby on Rails, Serverseitiges JS/Coffeescript)
-        %li.technology
-          .technology-outer
-            .technology-inner
-              .image.skills-python
-          %p
-            Systeme und Services (Linux, AWS)
-        %li.technology
-          .technology-outer
-            .technology-inner
-              .image.skills-html5
-          %p
-            Systeme und Services (Linux, AWS)
-        %li.technology
-          .technology-outer
-            .technology-inner
-              .image.skills-coffeescript
-          %p
-            Systeme und Services (Linux, AWS)
-        %li.technology
-          .technology-outer
-            .technology-inner
-              .image.skills-linux
-          %p
-            Systeme und Services (Linux, AWS)
-        %li.technology
-          .technology-outer
-            .technology-inner
-              .image.skills-solr
-          %p
-            Systeme und Services (Linux, AWS)
+    =link_to "#technologies", { :class => 'nav' } do
+      .image.down
 
-#team.outer
+%section#technologies.outer
   .inner
     .content
-      %section
-        %article.portrait.sebastian
-          .details
-            .image=image_tag "sebastian.jpg", :alt => "Portrait Sebastian"
-          .about
-            %h3 Sebastian de Castelberg
-            .social
-              %ul
-                %li
-                  =link_to "http://twitter.com/sdecastelberg" do
-                    .image.social-twitter-green
-                %li
-                  =link_to "http://ch.linkedin.com/in/sdecastelberg" do
-                    .image.social-linkedin-green
-                %li
-                  =link_to "http://github.com/sdecastelberg" do
-                    .image.social-github-green
-          .clearfix
+      %ul.matrix
+        %li.technology
+          .image.skills-rails
+          .wrapper
+            %h3
+              Ruby on Rails
+            %p
+              blablabla
 
-#directions.outer
-  .inner
-    .content
-      %ul.address
-        %li gorilla software GmbH
-        %li Baumgasse 10
-        %li 8005 Zürich
-        %li
-          =mail_to "hi@gorillasoftware.ch"
-        %li +41 44 508 07 73
-        %li
-          =link_to "gorillasoftware.ch", "http://gorillasoftware.ch"
-        %li.social
-          %ul
-            %li
-              =link_to 'http://twitter.com/gorillasoftware' do
-                .image.social-twitter-green
-            %li
-              =link_to 'http://github.com/gorillasoftware' do
-                .image.social-github-green
-      .map-holder
-        .map-canvas
+        %li.technology
+          .image.skills-nodejs
+          .wrapper
+            %h3
+              Node.js
+            %p
+              Node.js für eventbasierte und hoch-skalierbare Architekturen.
+
+        %li.technology
+          .image.skills-ruby
+          .wrapper
+            %h3
+              Ruby
+            %p
+              Open-Source Programmiersprache
+
+        %li.technology
+          .image.skills-python
+          .wrapper
+            %h3
+              Python
+            %p
+              Open-Source Programmiersprache
+
+        %li.technology
+          .image.skills-html5
+          .wrapper
+            %h3
+              HTML5
+            %p
+              blablabla
+
+        %li.technology
+          .image.skills-coffeescript
+          .wrapper
+            %h3
+              Coffee Script
+            %p
+              blablabla
+
+        %li.technology
+          .image.skills-linux
+          .wrapper
+            %h3
+              Linux
+            %p
+              Systeme und Services (Linux, AWS)
+
+        %li.technology
+          .image.skills-solr
+          .wrapper
+            %h3
+              Data Processing (Hadoop/HBase, Solr and Lucene, Message queues)
+            %p
+              Systeme und Services (Linux, AWS)
+
+    =link_to "#team", { :class => 'nav' } do
+      .image.down
+
+-#%section#team.outer
+  -#.inner
+    -#.content
+      -#%section
+        -#%article.portrait.sebastian
+          -#.details
+            -#.image=image_tag "sebastian.jpg", :alt => "Portrait Sebastian"
+          -#.about
+            -#%h3 Sebastian de Castelberg
+            -#.social
+              -#%ul
+                -#%li
+                  -#=link_to "http://twitter.com/sdecastelberg" do
+                    -#.image.social-twitter-green
+                -#%li
+                  -#=link_to "http://ch.linkedin.com/in/sdecastelberg" do
+                    -#.image.social-linkedin-green
+                -#%li
+                  -#=link_to "http://github.com/sdecastelberg" do
+                    -#.image.social-github-green
+          -#.clearfix
+
+-#%section#directions.outer
+  -#.inner
+    -#.content
+      -#%ul.address
+        -#%li gorilla software GmbH
+        -#%li Baumgasse 10
+        -#%li 8005 Zürich
+        -#%li
+          -#=mail_to "hi@gorillasoftware.ch"
+        -#%li +41 44 508 07 73
+        -#%li
+          -#=link_to "gorillasoftware.ch", "http://gorillasoftware.ch"
+        -#%li.social
+          -#%ul
+            -#%li
+              -#=link_to 'http://twitter.com/gorillasoftware' do
+                -#.image.social-twitter-green
+            -#%li
+              -#=link_to 'http://github.com/gorillasoftware' do
+                -#.image.social-github-green
+      -#.map-holder
+        -#.map-canvas
 
 -#=partial('partials/footer')
