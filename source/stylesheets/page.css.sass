@@ -143,23 +143,32 @@ h1, h2, h3
 #technologies
   background-color: #FEFBF3
 #team
+  background-color: #1077BC
+  color: white
 #directions
   background-color: #7EB1B6
 
-//#team
-  //+background($red)
-  //.details
-    //+pre(1)
-    //+span-columns(4)
-    //.image
-      //+box-shadow
-      //overflow: hidden
-  //.about
-    //.social ul
-      //+horizontal-list(0.5em)
-    //+pre(1)
-    //+span-columns(5)
-    //+post(1)
+#team
+  .portrait
+    .details.image
+      img
+        +squish(1, 1)
+        +span-columns(3)
+        +box-shadow
+    .about
+      text-align: center
+      .social ul
+        +no-bullets
+        padding: 0px
+        margin: 0px
+        li
+          +span-columns(1, 3)
+          +nth-omega(3n)
+          .image
+            background-size: contain
+            width: auto
+      +squish(1, 1)
+      +span-columns(3)
 
 //#contact
   //+background($blue)
