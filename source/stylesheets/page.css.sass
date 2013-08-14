@@ -1,8 +1,10 @@
 body, html
   height: 100%
+  margin: 0px
 
 .outer
   min-height: 100%
+  width: 100%
   position: relative
   +box-pack(center)
   +box-orient(vertical)
@@ -41,8 +43,6 @@ h1, h2, h3
   #header.outer .inner .content
     +squish(2, 2)
     +span-columns(8, 12)
-    #gorilla
-      background-size: 50% auto
 
 #teaser
   p
@@ -146,7 +146,7 @@ h1, h2, h3
   background-color: #1077BC
   color: white
 #directions
-  background-color: #7EB1B6
+  background-color: #E87576
 
 #team
   .portrait
@@ -156,6 +156,8 @@ h1, h2, h3
         +span-columns(3)
         +box-shadow
     .about
+      +squish(1, 1)
+      +span-columns(3)
       text-align: center
       .social ul
         +no-bullets
@@ -167,37 +169,23 @@ h1, h2, h3
           .image
             background-size: contain
             width: auto
-      +squish(1, 1)
-      +span-columns(3)
 
-//#contact
-  //+background($blue)
-  //.address
-    //+no-bullets
-    //+span-columns(3)
-    //.social
-      //ul
-        //+horizontal-list(0.5em)
+#directions
+  ul.address
+    +span-columns(3)
+    +no-bullets
+    padding: 0px
+    margin: 0px
+  ul.social
+    +span-columns(1, 3)
+    +nth-omega(2n)
+    .image
+      background-size: contain
+      width: auto
 
-  //.map-holder
-    //+box-shadow
-    //+span-columns(8 omega)
-    //.map-canvas
-      //+clearfix
-      //height: 18em
-
-
-//footer
-  //min-height: 50%
-  //padding-top: 4em
-  //+background($anthrazit)
-  //.address
-    //+pre(2)
-    //+span-columns(3)
-  //.contact
-    //+span-columns(3)
-  //.social
-    //+span-columns(3)
-    //+post(1)
-    //ul
-      //+horizontal-list(0.5em)
+  .map-holder
+    +box-shadow
+    +squish(1, 1)
+    +span-columns(3)
+    .map-canvas
+      height: 18em

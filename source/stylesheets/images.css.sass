@@ -6,8 +6,9 @@
     background: none, inline-image($img-svg)
   background-position: center
   background-repeat: no-repeat
+  background-size: contain
   width: image-width($img-raster)
-  height: image-height($img-raster)
+  min-height: image-height($img-raster)
   +hide-text
 
 =image-class($img, $raster-format: 'png', $svg: true)

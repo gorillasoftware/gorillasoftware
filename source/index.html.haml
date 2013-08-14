@@ -115,17 +115,17 @@ description: bar
           .image.skills-linux
           .arrow_box
             %h3
-              Linux
+              GNU/Linux
             %p
-              Systeme und Services (Linux, AWS)
+              Systeme und Services (GNU/Linux, AWS)
 
         %li.technology
           .image.skills-solr
           .arrow_box
             %h3
-              Data Processing (Hadoop/HBase, Solr and Lucene, Message queues)
+              Data Processing
             %p
-              Systeme und Services (Linux, AWS)
+              Hadoop/HBase, Solr and Lucene, Message queues
 
     =link_to "#team", { :class => 'nav' } do
       .image.down
@@ -151,27 +151,24 @@ description: bar
                   =link_to "http://github.com/sdecastelberg" do
                     .image.social-github-white
 
--#%section#directions.outer
-  -#.inner
-    -#.content
-      -#%ul.address
-        -#%li gorilla software GmbH
-        -#%li Baumgasse 10
-        -#%li 8005 Zürich
-        -#%li
-          -#=mail_to "hi@gorillasoftware.ch"
-        -#%li +41 44 508 07 73
-        -#%li
-          -#=link_to "gorillasoftware.ch", "http://gorillasoftware.ch"
-        -#%li.social
-          -#%ul
-            -#%li
-              -#=link_to 'http://twitter.com/gorillasoftware' do
-                -#.image.social-twitter-green
-            -#%li
-              -#=link_to 'http://github.com/gorillasoftware' do
-                -#.image.social-github-green
-      -#.map-holder
-        -#.map-canvas
+%section#directions.outer
+  .inner
+    .content
+      %ul.address
+        %li gorilla software GmbH
+        %li Baumgasse 10
+        %li 8005 Zürich
+        %li
+          =mail_to "hi@gorillasoftware.ch"
+        %li +41 44 508 07 73
+      %ul.social
+        %li
+          =link_to 'http://twitter.com/gorillasoftware' do
+            .image.social-twitter-green
+        %li
+          =link_to 'http://github.com/gorillasoftware' do
+            .image.social-github-green
+      .map-holder
+        .map-canvas
 
 -#=partial('partials/footer')
