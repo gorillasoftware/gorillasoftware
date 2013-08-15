@@ -1,0 +1,11 @@
+=image($img, $raster-format: 'png', $svg: true)
+  $img-raster: "#{$img}.#{$raster-format}"
+  background: image-url($img-raster)
+  @if $svg
+    $img-svg: "#{$img}.svg"
+    background: none, inline-image($img-svg)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: contain
+  width: image-width($img-raster)
+  min-height: image-height($img-raster)
