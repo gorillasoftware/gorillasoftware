@@ -7,11 +7,10 @@
     / Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "The Middleman"
 
-    %script{:src => "//use.typekit.net/iof8zoc.js", :type => "text/javascript"}
-    :javascript
-      try{Typekit.load();}catch(e){}
+    = stylesheet_link_tag "normalize"
+    = stylesheet_link_tag "site"
 
-    = stylesheet_link_tag "normalize", "site"
-    = javascript_include_tag  "all"
   %body{:class => page_classes}
     = yield
+  = javascript_include_tag "http://code.jquery.com/jquery-1.10.1.min.js"
+  = javascript_include_tag  "site"

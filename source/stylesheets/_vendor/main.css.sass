@@ -1,0 +1,1928 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic)
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700)
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic)
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600,600italic,700,700italic)
+
+/*  Last Projects Slider
+
+.projectsContent
+  height: 500px
+  padding: 0px 0px !important
+  margin-bottom: 30px
+
+.footer-line
+  width: 100%
+  height: 13px
+  background: url("../img/footer_pattern.png") repeat-x
+
+.newsletter
+  display: inline-table
+  margin-top: 85px
+  p
+    float: left
+
+html, button, input, select, textarea
+  color: #222
+
+body
+  font-size: 1em
+  line-height: 1.4
+  overflow-x: hidden
+  font-family: 'Open Sans', sans-serif
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+
+\::-moz-selection, ::selection
+  background: #b3d4fc
+  text-shadow: none
+
+/*
+ * A better looking default horizontal rule
+
+hr
+  display: block
+  height: 1px
+  border: 0
+  border-top: 1px solid #ccc
+  margin: 1em 0
+  padding: 0
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+
+img
+  vertical-align: middle
+
+/*
+ * Remove default fieldset styles.
+
+fieldset
+  border: 0
+  margin: 0
+  padding: 0
+
+textarea
+  resize: vertical
+
+.chromeframe
+  margin: 0.2em 0
+  background: #ccc
+  color: #000
+  padding: 0.2em 0
+
+.img-project:hover .close
+  display: block
+
+li a
+  text-decoration: none
+
+li
+  list-style: none outside none !important
+
+/*  Last Projects Controller
+
+.selected
+  background: #268e7a !important
+
+.bottom-works
+  padding-bottom: 87px !important
+
+#banner
+  width: 100%
+  padding-top: 110px
+  background: #df6662
+
+.page
+  &.first
+    padding-top: 900px
+    width: 100%
+    height: auto
+    background: #fff
+  width: 100%
+  height: 100%
+  background: #1d1c1c
+  padding-bottom: 1px
+
+#team
+  width: 100%
+  height: 100%
+  background: #fff
+
+#portfolio
+  width: 100%
+  height: 100%
+
+#services, #contact
+  width: 100%
+  height: 100%
+
+#footer
+  position: absolute
+  /*margin-top: 370px;
+  z-index: 9998
+  width: 100%
+  height: 375px
+  background: #2b3e50
+  text-align: center
+
+.credits
+  font-size: 12px
+  font-weight: 600
+  font-family: 'Open Sans', sans-serif
+  color: #577ea5
+  text-transform: uppercase
+  text-align: right
+  width: 100%
+  clear: both
+
+.newsletter h1
+  font-size: 36px
+  font-weight: 400
+  font-family: 'Lato', sans-serif
+  color: #fff
+  width: auto
+  float: left
+  line-height: 36px
+
+#newsletter
+  border: none
+  background: #486e93
+  width: 510px
+  height: auto
+  font-family: 'Lato', sans-serif
+  font-size: 20px
+  font-weight: normal
+  color: #8caecf
+  padding: 8px 15px
+  outline: none
+  float: left
+  margin: 0 13px
+
+.subscribe
+  float: left
+  background-color: #49c9af
+  border-radius: 6px
+  display: inline-block
+  color: #fff
+  font-family: 'Lato', sans-serif
+  font-size: 19px
+  font-weight: 400
+  padding: 9px 30px 10px 30px
+  text-decoration: none
+  text-align: center
+  margin-right: 0px
+  &:hover
+    background: #3fb79f
+
+.footer-container
+  right: 50%
+  position: relative
+
+.sociafoot
+  height: 50px
+  display: inline-table
+  margin-left: 0
+
+.footerContent
+  width: auto
+  height: auto
+  text-align: center
+  .socialtext
+    margin-top: 40px
+    margin-bottom: 20px
+    text-align: center
+    font-family: 'Open Sans', sans-serif
+    font-size: 12px
+    font-style: italic
+    text-transform: uppercase
+    color: #fff
+    font-weight: 600
+
+.socialicons
+  margin: auto
+  width: 145px
+  height: 27px
+  text-align: center
+  margin: auto
+  padding: 20px 0
+
+.icon
+  float: left
+  width: 50px
+  height: 50px
+  margin: 0px 7px
+  display: inline
+
+.sc-fb
+  background: url(../img/social/facebook.png)
+
+.sc-tw
+  background: url(../img/social/twitter.png)
+
+.sc-print
+  background: url(../img/social/printerest.png)
+
+.sc-rss
+  background: url(../img/social/rss.png)
+
+.sc-glg
+  background: url(../img/social/google.png)
+
+.media a
+  width: 39px
+  height: 39px
+  float: left
+  margin: 0 5px
+  cursor: pointer
+  &:hover
+    opacity: 0.8
+  &:first-child
+    margin-left: 0
+  &:last-child
+    margin-right: 0
+
+.twitter
+  background: url("../img/twitter.png") no-repeat
+
+.rss
+  background: url("../img/rss.png") no-repeat
+
+.facebook
+  background: url("../img/facebook.png") no-repeat
+
+.pinterest
+  background: url("../img/pinterest.png") no-repeat
+
+.icon
+  float: left
+  width: 50px
+  height: 50px
+  margin: 0px 7px
+  display: inline
+
+.section-one, .section-two
+  width: 960px
+  margin: auto
+  padding: 115px 0
+  overflow: auto
+
+.window
+  text-align: center
+  padding-top: 20px
+  padding-bottom: 110px
+
+.bg-one
+  background: #fff
+  clear: both
+  position: relative
+
+.bg-two
+  background: #49c9af
+  clear: both
+  position: relative
+
+.separator
+  width: 100%
+  height: 5px
+
+.line
+  width: 105px
+  height: 5px
+  margin: auto
+
+.line-1
+  background: #ededed
+
+.line-2
+  background: #44bba3
+
+.no-bottom
+  padding-bottom: 0px
+
+.title-one
+  font-size: 45px
+  text-transform: uppercase
+  font-family: 'Titillium Web', sans-serif
+  font-weight: 700
+  color: #49c9af
+  text-align: center
+  padding-bottom: 25px
+
+.data-content-one
+  font-size: 18px
+  font-family: 'Titillium Web', sans-serif
+  font-weight: 400
+  color: #949496
+  padding: 25px 230px
+  line-height: 28px
+  text-align: center
+
+.title-two
+  font-size: 45px
+  text-transform: uppercase
+  font-family: 'Titillium Web', sans-serif
+  font-weight: 700
+  color: #fff
+  text-align: center
+  padding-bottom: 25px
+
+.data-content-two
+  font-size: 18px
+  font-family: 'Titillium Web', sans-serif
+  font-weight: 400
+  color: #fff
+  padding: 25px 230px
+  line-height: 28px
+  text-align: center
+
+.profile-title
+  font-family: 'Lato', sans-serif
+  font-size: 18px
+  font-weight: 400
+  color: #f06862
+  text-align: center
+  width: 210px
+  float: left
+  span
+    font-weight: 700
+
+.profile-info
+  font-family: 'Lato', sans-serif
+  font-size: 14px
+  font-weight: 400
+  text-align: center
+  color: #7c8180
+
+.members-box
+  background: #f9f9f5
+  border-radius: 8px 8px 0 0
+  width: 250px
+  padding: 40px 0 0
+
+.photo
+  width: 165px
+  height: 165px
+  border-radius: 50%
+  margin: auto
+
+.who
+  float: left
+  margin: 0 26px
+  &:nth-child(1)!
+  &:nth-child(4)
+    margin-left: 22px
+  &:nth-child(7)
+    margin-left: 0
+
+.team .who
+  &:first-child
+    margin-left: 0
+  &:last-child
+    margin-right: 0
+
+.photo-one
+  background: url(../img/team/photo-team-01.jpg)
+
+.photo-two
+  background: url(../img/team/photo-team-02.jpg)
+
+.photo-three
+  background: url(../img/team/photo-team-03.jpg)
+
+.name-team
+  font-family: 'Open Sans', sans-serif
+  font-size: 16px
+  font-weight: 700
+  color: #2c3e50
+  text-align: center
+  padding: 20px 0
+
+.photo-footer
+  border-radius: 0 0 8px 8px
+  background: #49c9af
+  width: 250px
+  height: 65px
+  overflow: hidden
+  position: relative
+  &:hover
+    cursor: pointer
+
+.plus-btn
+  text-align: center
+  font-family: 'Open Sans', sans-serif
+  font-size: 23px
+  font-weight: 700
+  color: #f3f3f3
+  width: 250px
+  height: 67px
+  position: absolute
+  top: 0px
+  padding-top: 12px
+  background: url(../img/follow.jpg) no-repeat center 6px #fa5c5c
+  span
+    display: inline-block
+    font-size: 45px
+    font-weight: 800
+    line-height: 20px
+    padding-top: 10px
+
+.titleworks
+  width: 200px
+  height: 200px
+
+.works
+  width: 200px
+  height: auto
+  margin: 0 25px
+  float: left
+  &:first-child
+    margin-left: 0px
+  &:last-child
+    margin-right: 0px
+
+.infoworks
+  font-size: 19px
+  color: #565552
+  font-family: 'Open Sans', sans-serif
+  text-align: center
+  padding: 27px 0
+  text-transform: uppercase
+
+.disciplines
+  width: auto
+  height: auto
+  overflow: auto
+  margin-top: 10px
+  margin-bottom: 53px
+
+.ico-one
+  background: url(../img/ico-one.png) no-repeat
+
+.ico-two
+  background: url(../img/ico-two.png) no-repeat
+
+.ico-three
+  background: url(../img/ico-three.png) no-repeat
+
+.ico-four
+  background: url(../img/ico-four.png) no-repeat
+
+/* ------------------------ PROGRESS BAR ---------------------------
+
+.skill-1 .skill-in
+  width: 100%
+
+/* Change your percent Skills here!
+
+.skill-2 .skill-in
+  width: 90%
+
+/* Change your percent Skills here!
+
+.skill-3 .skill-in
+  width: 65%
+
+/* Change your percent Skills here!
+
+.skill-4 .skill-in
+  width: 80%
+
+/* Change your percent Skills here!
+
+.info-skills
+  font-family: 'Lato', sans-serif
+  font-size: 20px
+  font-weight: 700
+  text-transform: uppercase
+  float: left
+  padding: 10px 0px 0 40px
+
+.skill-light
+  color: #97ecdb
+
+.skill-dark
+  color: #4cd6b9
+
+.skill-content
+  clear: left
+
+.progress-bar
+  height: 42px
+  width: 690px
+  margin: 20px 0
+  float: left
+  background: #f3f2eb
+  .skill-in
+    display: inline-block
+    height: 100%
+
+.stripes1 .skill-in
+  background: #49c9af
+  height: 42px
+  -webkit-transition: all 0.1s ease-out
+  -moz-transition: all 0.1s ease-out
+  transition: all 0.1s ease-out
+  font-weight: bold
+
+.stripes2 .skill-in
+  background: #24ac90
+  height: 42px
+  -webkit-transition: all 0.1s ease-out
+  -moz-transition: all 0.1s ease-out
+  transition: all 0.1s ease-out
+  font-weight: bold
+
+.percent
+  color: #bfbeb5
+  font-family: 'Lato', sans-serif
+  font-weight: 900
+  line-height: 44px
+  font-size: 20px
+  padding: 19px 0 0 22px
+  float: left
+
+.contactinfo
+  width: 350px
+  height: auto
+  float: left
+  margin-bottom: 150px
+  margin-top: 17px
+  font-family: 'Latos', sans-serif
+  font-size: 17px
+  font-weight: 400
+  color: #ffffff
+  margin: 10px 0px 0px 40px
+  margin-left: 44px
+  p
+    margin-top: 40px
+    line-height: 25px
+  h2
+    margin-bottom: 0px
+    line-height: normal
+
+#formulario
+  float: right
+  width: 520px
+  margin: 33px 45px 0 0
+  fieldset p
+    margin-bottom: 0px
+
+.titlecontact
+  font-family: 'Lato', sans-serif
+  font-size: 30px
+  font-weight: 700
+  color: #2c3e50
+
+.email
+  background: url(../img/email.png) no-repeat
+  width: 64px
+  height: 62px
+  margin: 15px 0px 0px 35px
+
+.phone
+  background: url(../img/phone.png) no-repeat
+  width: 64px
+  height: 62px
+  margin: 15px 0px 0px 35px
+
+.skype
+  background: url(../img/skype.png) no-repeat
+  width: 64px
+  height: 62px
+  margin: 15px 0px 0px 35px
+
+.data-form
+  color: #f3f3f3
+  font-family: 'Lato', sans-serif
+  font-weight: 700
+  font-size: 12px
+  text-transform: uppercase
+
+#messageform
+  border-radius: 8px
+  border: none
+  background: #3fb79f
+  width: 480px
+  height: 105px
+  font-family: 'Open Sans', sans-serif
+  font-size: 13px
+  font-weight: normal
+  color: #ffffff
+  padding: 15px 20px
+  outline: none
+  margin-top: 12px
+
+#nameform, #emailform
+  border-radius: 8px
+  border: none
+  background: #3fb79f
+  width: 480px
+  height: 13px
+  font-family: 'Open Sans', sans-serif
+  font-size: 13px
+  font-weight: normal
+  color: #ffffff
+  padding: 15px 20px
+  outline: none
+  margin: 12px 0 20px
+
+.portfoliocontent
+  padding-top: 0px
+
+.contentsection
+  margin-top: 100px
+
+.data-content, .data-content2
+  font-family: 'Open Sans', sans-serif
+  font-size: 18px
+  font-weight: normal
+  color: #676b6a
+  text-align: center
+  margin: 50px 20px 30px 20px
+  width: auto
+
+.works-container .data-content
+  font-family: 'Open Sans', sans-serif
+  font-size: 18px
+  font-weight: normal
+  color: #f8f7f3
+  text-align: center
+  margin: 50px auto 20px auto
+  width: auto
+  max-width: 960px
+
+.title-profile
+  font-size: 110px
+  font-weight: bold
+  font-family: 'Montserrat', sans-serif
+  color: #909090
+  text-transform: uppercase
+  text-align: center
+
+.pofile-item
+  width: 210px
+  float: left
+  margin: 0px 144px
+  &:first-child
+    width: 210px
+    float: left
+    margin: 0 0 0 10px
+  &:last-child
+    width: 210px
+    float: left
+    margin: 0 10px 0 0
+
+.profile-element
+  width: 210px
+  height: 211px
+  float: left
+  margin-bottom: 25px
+  background-position: 0px 0px
+
+.element-1
+  background: url(../img/about_ico_01.png) no-repeat
+
+.element-2
+  background: url(../img/about_ico_02.png) no-repeat
+
+.element-3
+  background: url(../img/about_ico_03.png) no-repeat
+
+.profile-element:hover
+  background-position: 0 -212px
+  cursor: pointer
+
+.profile
+  width: auto
+  margin: auto
+
+.imagefribbies
+  width: 589px
+  height: 486px
+  background: url(../img/imac.png) no-repeat
+  margin: auto
+
+.wall0
+  background: url(../img/imac_project_01.jpg) no-repeat
+
+.wall1
+  background: url(../img/imac_project_02.jpg) no-repeat
+
+.wall2
+  background: url(../img/imac_project_03.jpg) no-repeat
+
+.wall3
+  background: url(../img/imac_project_04.jpg) no-repeat
+
+.pantallaFondo
+  margin: 22px 0 10px 23px
+  width: 542px
+  height: 308px
+  position: absolute
+  z-index: 10
+
+.pantalla
+  margin: 22px 0 10px 23px
+  width: 542px
+  height: 308px
+  position: absolute
+  z-index: 20
+
+.profile-menu
+  overflow: hidden
+  margin: auto
+
+.footer-profile
+  background: url(../img/profile_footer.png) no-repeat
+  width: 201px
+  height: 22px
+  margin: auto
+  padding-bottom: 55px
+
+.contact-title
+  background: url(../img/contact-title.png) no-repeat
+  width: 820px
+  height: 79px
+  margin: auto
+  margin-top: 10px
+
+.topline
+  position: absolute
+  margin-top: 115px
+  width: 100%
+  height: 17px
+  background: url(../img/pattern_top_about.png) repeat-x
+
+.logosection
+  position: absolute
+  left: 50%
+  margin-left: -115px
+  margin-top: 30px
+  width: 210px
+  height: 147px
+  &.about
+    background: url(../img/about_header.png) no-repeat
+  &.freebies
+    background: url(../img/freebies_header.png) no-repeat
+  &.team
+    background: url(../img/team_header.png) no-repeat
+  &.portfolio
+    background: url(../img/portfolio_header.png) no-repeat
+  &.services
+    background: url(../img/services_header.png) no-repeat
+  &.contact
+    background: url(../img/contact_header.png) no-repeat
+
+.title
+  text-align: center
+  font-family: 'Open Sans', sans-serif
+  font-size: 30px
+  font-weight: 800
+  color: #ffffff
+  text-transform: uppercase
+  padding-top: 76px
+  &.portfolio, &.services, &.contact
+    font-size: 30px
+
+.titlesection
+  font-family: 'Open Sans', sans-serif
+  font-size: 48px
+  font-weight: 800
+  color: #ffffff
+  line-height: 40px
+  float: left
+  margin-bottom: 10px
+  width: 100%
+
+.title-2
+  font-size: 26px
+  width: 100%
+
+.twittersection
+  height: 60px
+  padding: 0px 30px
+
+.symbol
+  float: left
+  width: 45px
+  height: 36px
+  background: url(../img/twitter_symbol.png) no-repeat
+  margin-top: 4px
+
+.tweets
+  font-family: 'Open Sans', sans-serif
+  font-size: 15px
+  font-weight: normal
+  color: #ffffff
+  float: left
+  width: 620px
+  padding-left: 20px
+  a
+    color: #fbfe0b
+    &:hover
+      color: #fbfe0b
+      cursor: pointer
+
+.alltweets
+  float: right
+  width: 90px
+  height: 25px
+  background-color: #ffffff
+  border-radius: 6px
+  display: inline-block
+  color: #747065
+  font-family: 'Open Sans', sans-serif
+  font-size: 16px
+  font-weight: normal
+  padding: 7px 24px 3px 24px
+  text-decoration: none
+  text-align: center
+  margin-right: 30px
+  &:hover
+    color: #fff
+    background-color: #555252
+
+.last-projects
+  padding-top: 0px
+  margin-bottom: 40px
+  width: 100%
+  overflow: hidden
+
+.lastest
+  font-size: 21px
+
+.team-title
+  font-size: 110px
+  font-weight: bold
+  font-family: 'Montserrat', sans-serif
+  color: #909090
+  text-transform: uppercase
+  text-align: center
+
+.services-title
+  background: url(../img/services-title.png) no-repeat
+  width: 627px
+  height: 87px
+  margin: auto
+
+.last-project-title
+  font-size: 100px
+  font-weight: bold
+  font-family: 'Montserrat', sans-serif
+  color: #1ddfb3
+  text-transform: uppercase
+  text-align: center
+  padding-top: 100px
+
+.works-container h2
+  font-size: 120px
+  font-weight: bold
+  font-family: 'Montserrat', sans-serif
+  color: #1ddfb3
+  text-transform: uppercase
+  text-align: center
+  padding-top: 100px
+
+.page
+  h1
+    font-size: 120px
+    font-weight: bold
+    font-family: 'Montserrat', sans-serif
+    color: #1ddfb3
+    text-transform: uppercase
+    text-align: center
+    padding-top: 100px
+  h2
+    font-size: 110px
+    font-weight: bold
+    font-family: 'Montserrat', sans-serif
+    color: #909090
+    text-transform: uppercase
+    text-align: center
+
+.works-header
+  width: 960px
+  height: auto
+  margin: auto
+
+#freebies .titlesection
+  margin-bottom: 35px
+  font-size: 39px
+
+.freebiescontent
+  font-family: 'Open Sans', sans-serif
+  font-size: 18px
+  font-weight: normal
+  color: #ffffff
+  width: 840px
+  height: auto
+  text-align: center
+  margin: 35px auto 20px
+
+.last-project-footer
+  background: url(../img/last-projects-footer.png) no-repeat
+  width: 248px
+  height: 22px
+  margin: auto
+  padding-bottom: 55px
+
+.download
+  float: right
+  width: 90px
+  height: 25px
+  background-color: #ffffff
+  border-radius: 6px
+  display: inline-block
+  color: #747065
+  font-family: 'Open Sans', sans-serif
+  font-size: 16px
+  font-weight: normal
+  padding: 7px 24px 3px 24px
+  text-decoration: none
+  text-align: center
+  margin-right: 25px
+  margin-top: 20px
+  &:hover
+    color: #fff
+    background-color: #f0c134
+
+.teamhead
+  padding: 110px 35px 0px 20px
+  height: auto
+
+.titlesection.ourteam
+  float: left
+  font-size: 45px
+  text-transform: uppercase
+  padding: 5px 35px 0px 0px
+  width: auto
+
+.teamdescription
+  border-left: 1px solid rgba(255, 255, 255, 0.5)
+  float: left
+  height: 35px
+  padding: 15px 0px 0px 20px
+  color: #faef51
+  text-transform: uppercase
+  font-style: italic
+  font-size: 20px
+
+.contactdescription
+  border-left: 1px solid rgba(255, 255, 255, 0.5)
+  float: left
+  height: 35px
+  padding: 15px 0px 0px 20px
+  color: #ffffff
+  text-transform: uppercase
+  font-style: italic
+  font-size: 20px
+
+.servicesdescription
+  border-left: 1px solid rgba(255, 255, 255, 0.5)
+  float: left
+  height: 35px
+  padding: 15px 0px 0px 20px
+  color: #f7ac00
+  text-transform: uppercase
+  font-style: italic
+  font-size: 20px
+
+.teamcontent
+  font-family: 'Open Sans', sans-serif
+  font-size: 18px
+  font-weight: normal
+  color: #ffffff
+  width: auto
+  height: auto
+  float: left
+  margin: 20px 20px 20px 0px
+
+.membersteamslider
+  width: 960px
+  height: auto
+
+.membersteam
+  width: 320px
+  height: 310px
+  float: left
+  margin: auto
+
+.name
+  float: left
+  height: 100%
+  width: 96px
+  text-align: right
+  border-right: 2px solid rgb(255, 255, 255)
+  padding: 0px 8px
+  font-family: 'Open Sans', sans-serif
+  font-size: 21px
+  font-weight: normal
+  color: #ffffff
+
+.info
+  height: 100%
+  margin: 0px 8px
+  width: 190px
+  float: right
+  font-family: 'Open Sans', sans-serif
+  font-size: 21px
+  font-weight: normal
+  color: #fbdb03
+
+.infomembers
+  height: auto
+  font-family: 'Open Sans', sans-serif
+  font-size: 19px
+  font-weight: 600
+  color: #484545
+  width: 300px
+  margin-left: -40px
+  text-align: center
+  padding: 25px 0 20px 0
+
+.membertag
+  color: #1ddfb3
+  font-weight: 600
+
+.member1
+  text-align: left
+  margin: 0px 0px 30px 25px
+  height: 221px
+  width: 221px
+
+.member2
+  text-align: center
+  margin: 0px 0px 30px 45px
+  height: 221px
+  width: 221px
+
+.member3
+  float: right
+  text-align: right
+  margin: 0px 25px 30px 0px
+  height: 221px
+  width: 221px
+
+.leftmember.centermember
+  margin-left: 15px
+
+.rightmember
+  margin-left: 10px
+
+.banner-background
+  position: absolute
+  top: -165px
+
+.anchor-position
+  position: absolute
+  top: 300px
+
+.non-style
+  text-decoration: none
+
+.map-content
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+
+.inner-map
+  width: 100%
+  height: 398px
+  margin-left: auto
+  margin-right: auto
+
+.slideshow li img
+  width: 528px
+  height: 334px
+  margin-left: 89px
+  margin-top: 22px
+
+.ocult
+  display: none
+
+/* --------------------- TEAM SECTION ---------------------
+
+#team .section
+  width: 960px
+  margin: auto
+  padding-bottom: 20px
+
+.oculto
+  display: none
+
+.disable, .disable-2
+  cursor: default !important
+  opacity: 0.2 !important
+  &:hover
+    background-position: 0 0px !important
+
+.activo:hover
+  cursor: default !important
+  opacity: 1 !important
+
+.dots
+  width: 11px
+  height: 11px
+  float: left
+  margin: 0 4px
+
+.dotsmenu
+  height: 11px
+  width: 57px
+  margin: auto
+  display: none
+  li
+    &.activo
+      background: url(../img/dotin.png) no-repeat
+    background: url(../img/dotout.png) no-repeat
+    &:hover
+      opacity: 0.6
+      cursor: pointer
+
+.teamlist
+  width: 2820px
+  height: auto
+  margin-left: -1px
+
+.teamshow
+  width: 855px
+  overflow: hidden
+  margin: auto
+
+.team li
+  list-style: none
+  float: left
+  width: 221px
+  height: 221px
+  text-align: center
+
+.centre
+  margin: 20px 58px 100px 58px
+
+.sides
+  margin: 20px 40px 100px 40px
+
+.ch-item
+  width: 100%
+  height: 100%
+  position: relative
+  cursor: default
+  -webkit-transition: all 0.4s ease-in-out
+  -moz-transition: all 0.4s ease-in-out
+  -o-transition: all 0.4s ease-in-out
+  -ms-transition: all 0.4s ease-in-out
+  transition: all 0.4s ease-in-out
+
+.team
+  .ch-img-1
+    background-image: url(../img/team/team_01.png)
+  .ch-img-2
+    background-image: url(../img/team/team_02.png)
+  .ch-img-3
+    background-image: url(../img/team/team_03.png)
+  .ch-info
+    position: absolute
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    opacity: 0
+    -webkit-transition: all 0.4s ease-in-out
+    -moz-transition: all 0.4s ease-in-out
+    -o-transition: all 0.4s ease-in-out
+    -ms-transition: all 0.4s ease-in-out
+    transition: all 0.4s ease-in-out
+    -webkit-transform: scale(0)
+    -moz-transform: scale(0)
+    -o-transform: scale(0)
+    -ms-transform: scale(0)
+    transform: scale(0)
+    -webkit-backface-visibility: hidden
+    /*for a smooth font
+    h3
+      color: #fff
+      text-transform: uppercase
+      position: relative
+      letter-spacing: 2px
+      font-size: 22px
+      margin: 0px 30px -30px 30px
+      padding: 40px 0 0 0
+      height: 70px
+      font-family: 'Open Sans', Arial, sans-serif
+    p
+      color: #fff
+      padding: 10px 5px
+      font-style: italic
+      margin: 0 30px
+      font-size: 12px
+      border-top: 1px solid #fff
+      a
+        display: block
+        color: #fff
+        font-style: normal
+        font-weight: 700
+        text-transform: uppercase
+        font-size: 9px
+        letter-spacing: 1px
+        margin-top: 5px
+        font-family: 'Open Sans', Arial, sans-serif
+        &:hover
+          color: #514b4b
+  .ch-item:hover
+    box-shadow: inset 0 0 0 140px rgba(29, 223, 179, 0.8), inset 0 0 0 5px rgba(255, 255, 255, 0), 0 1px 2px rgba(0, 0, 0, 0.1)
+    .ch-info
+      opacity: 1
+      -webkit-transform: scale(1)
+      -moz-transform: scale(1)
+      -o-transform: scale(1)
+      -ms-transform: scale(1)
+      transform: scale(1)
+  .ch-infoie9
+    position: absolute
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    /*  opacity: 0;
+    h3
+      color: #fff
+      text-transform: uppercase
+      position: relative
+      letter-spacing: 2px
+      font-size: 22px
+      margin: 0 30px
+      padding: 40px 0 0 0
+      height: 60px
+      font-family: 'Open Sans', Arial, sans-serif
+      display: none
+    p
+      color: #fff
+      padding: 10px 5px
+      font-style: italic
+      margin: 0 30px
+      font-size: 12px
+      border-top: 1px solid rgba(255, 255, 255, 0.5)
+      display: none
+      a
+        display: block
+        color: #fff
+        color: rgba(255, 255, 255, 0.7)
+        font-style: normal
+        font-weight: 700
+        text-transform: uppercase
+        font-size: 9px
+        letter-spacing: 1px
+        margin-top: 30px
+        font-family: 'Open Sans', Arial, sans-serif
+    &:hover
+      background-image: url(../img/rollie9_team.png)
+      h3
+        display: block
+      p
+        display: block
+        a
+          display: block
+    p a:hover
+      color: #111
+  .ch-itemie9
+    width: 100%
+    height: 221px
+    border-radius: 50%
+    position: relative
+    cursor: default
+
+.navigation
+  margin: auto
+  width: 940px
+
+.direction-bar
+  position: relative
+
+.dir-left
+  width: 47px
+  height: 47px
+  background: url(../img/direction_nav_prev.png) no-repeat
+  cursor: pointer
+  position: absolute
+  bottom: 265px
+  left: -38px
+  &:hover
+    background-position: 0 -47px
+
+.dir-right
+  width: 47px
+  height: 47px
+  background: url(../img/direction_nav_next.png) no-repeat
+  cursor: pointer
+  position: absolute
+  bottom: 265px
+  right: -38px
+  &:hover
+    background-position: 0 -47px
+
+/* --------------------- END TEAM SECTION ---------------------
+
+/* --------------------- PROJECT ---------------------
+
+.close
+  width: 29px
+  height: 29px
+  background: url(../img/close.png) no-repeat
+  position: absolute
+  right: 25px
+  top: 8px
+  display: none
+  &:hover
+    background-position: 0 -29px
+    cursor: pointer
+
+.dotsmenu2
+  height: 14px
+  width: auto
+  float: right
+  position: relative
+  right: -50%
+  height: 14px
+  width: auto
+  margin: auto
+  li
+    &.activo2
+      background: url(../img/dotin2.png) no-repeat
+    background: url(../img/dotout2.png) no-repeat
+    width: 14px
+    height: 14px
+    float: left
+    margin: 10px 3px
+    &:hover
+      cursor: pointer
+
+.project-window
+  width: 100%
+  height: auto
+  /*background: #343333;
+   *border-top: 1px solid #494848;
+   *border-bottom: 1px solid #494848;
+  display: none
+
+.view-btn
+  width: auto
+  clear: right
+
+.nav-project
+  width: auto
+  height: 14px
+  position: relative
+  float: right
+  right: 50%
+
+.project-content
+  color: #fff
+  margin: auto
+  position: relative
+  margin-bottom: 30px
+
+.img-project
+  width: 932px
+  overflow: hidden
+  margin-left: 10px
+
+.info-project
+  padding: 0 10px
+  margin-top: 15px
+
+.thumb-project li
+  float: left
+
+.title-project
+  font-family: 'Lato', Arial, sans-serif
+  color: #fff
+  font-size: 24px
+  font-weight: 800
+  span
+    font-weight: 400
+
+/* PROJECTS
+
+.project-nav
+  float: right
+  width: auto
+  height: 31px
+  margin-right: 10px
+
+.btn-prev
+  width: auto
+  height: 26px
+  background: url(../img/w-prev.png) left no-repeat
+  cursor: pointer
+  color: #44a390
+  font-family: 'Lato', Arial, sans-serif
+  font-size: 22px
+  float: left
+  padding-left: 33px
+  line-height: 22px
+
+.btn-next
+  width: auto
+  height: 26px
+  background: url(../img/w-next.png) right no-repeat
+  cursor: pointer
+  color: #44a390
+  font-family: 'Lato', Arial, sans-serif
+  font-size: 22px
+  float: left
+  padding-right: 33px
+  line-height: 22px
+  border-left: solid 2px #44a390
+  margin-left: 5px
+  padding-left: 5px
+  &:hover
+    opacity: 0.9
+
+.btn-prev:hover
+  opacity: 0.9
+
+.disable2
+  cursor: default !important
+  opacity: 0.6 !important
+  &:hover
+    background: url(../img/btn-prev.png) no-repeat !important
+
+.disable-22
+  cursor: default !important
+  opacity: 0.6 !important
+  &:hover
+    background: url(../img/btn-next.png) no-repeat !important
+
+/* ------ end PROJECT  ------
+
+/* --------------------- PORTFOLIO ISOTOPE ---------------------
+
+.isotope-item
+  z-index: 2
+
+.isotope-hidden.isotope-item
+  pointer-events: none
+  z-index: 1
+
+/* Isotope CSS3 transitions
+
+.isotope
+  -webkit-transition-duration: 0.8s
+  -moz-transition-duration: 0.8s
+  -ms-transition-duration: 0.8s
+  -o-transition-duration: 0.8s
+  transition-duration: 0.8s
+  .isotope-item
+    -webkit-transition-duration: 0.8s
+    -moz-transition-duration: 0.8s
+    -ms-transition-duration: 0.8s
+    -o-transition-duration: 0.8s
+    transition-duration: 0.8s
+    -webkit-transition-property: -webkit-transform, opacity
+    -moz-transition-property: -moz-transform, opacity
+    -ms-transition-property: -ms-transform, opacity
+    -o-transition-property: -o-transform, opacity
+    transition-property: transform, opacity
+  -webkit-transition-property: height, width
+  -moz-transition-property: height, width
+  -ms-transition-property: height, width
+  -o-transition-property: height, width
+  transition-property: height, width
+  &.no-transition
+    -webkit-transition-duration: 0s
+    -moz-transition-duration: 0s
+    -ms-transition-duration: 0s
+    -o-transition-duration: 0s
+    transition-duration: 0s
+    .isotope-item
+      -webkit-transition-duration: 0s
+      -moz-transition-duration: 0s
+      -ms-transition-duration: 0s
+      -o-transition-duration: 0s
+      transition-duration: 0s
+  .isotope-item.no-transition
+    -webkit-transition-duration: 0s
+    -moz-transition-duration: 0s
+    -ms-transition-duration: 0s
+    -o-transition-duration: 0s
+    transition-duration: 0s
+  &.infinite-scrolling
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+
+/* disabling Isotope CSS3 transitions
+
+/* Isotope content styles
+
+#container2
+  width: 100%
+  margin: auto
+  padding-bottom: 0px
+
+.element
+  width: 299px
+  height: 228px
+  float: left
+  position: relative
+  margin: 0 9px 28px
+  &.all!, &.design!, &.motion!, &.websites!, &.branding!
+  *
+    position: absolute
+    margin: 0
+
+/* Horizontal
+
+.horizontal #container2
+  height: 80%
+
+#copy
+  max-width: 640px
+
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/
+
+.clearfix
+  &:before
+    content: ""
+    display: table
+  &:after
+    content: ""
+    display: table
+    clear: both
+  zoom: 1
+
+.port-folio li
+  list-style: none
+  float: left
+  width: 221px
+  height: 221px
+  text-align: center
+
+.info-pf
+  top: 245px
+  margin: auto
+  width: 225px
+
+.portfoliolist
+  width: 1880px
+  height: auto
+
+/* --------------------- end ISOTOPE ---------------------
+
+body .date
+  font-family: 'Open Sans', sans-serif
+  font-size: 16px
+  font-weight: normal
+  color: #1ddfb3
+  text-align: center
+  margin-top: 8px
+  position: relative
+
+.date-inside
+  font-weight: bold
+  margin-left: 10px
+
+.infoproject
+  height: auto
+  font-family: 'Open Sans', sans-serif
+  font-size: 23px
+  font-weight: normal
+  color: #ffffff
+  text-align: center
+  position: relative
+
+.folio-btn
+  color: #fff
+  height: auto
+  text-decoration: none
+
+.last-btn
+  margin-right: 40px
+
+.portfolio-btn
+  font-family: 'Lato', sans-serif
+  font-size: 12px
+  font-weight: 700
+  float: left
+  text-transform: uppercase
+  color: #fff
+  padding: 8px 19px
+  background: #39ad95
+  border-radius: 6px
+  margin: 0 4px
+  &:hover
+    background: #fa5c5c
+
+#options
+  padding-bottom: 60px
+  margin-top: 10px
+
+.portfolio-btn:hover
+  color: #ffffff
+  cursor: pointer
+
+.foliomenu
+  width: 500px
+  height: 49px
+  margin: auto
+
+.all-btn
+  width: 49px
+  height: 49px
+  float: left
+  background: url(../img/portfolio_all_btn.png) no-repeat
+  margin-right: 10px
+
+.websites-btn
+  width: 49px
+  height: 49px
+  float: left
+  background: url(../img/portfolio_websites_btn.png) no-repeat
+  margin-right: 10px
+
+.design-btn
+  width: 49px
+  height: 49px
+  float: left
+  background: url(../img/portfolio_design_btn.png) no-repeat
+  margin-right: 10px
+
+.motion-btn
+  width: 49px
+  height: 49px
+  float: left
+  background: url(../img/portfolio_motion_btn.png) no-repeat
+  margin-right: 10px
+
+.branding-btn
+  width: 49px
+  height: 49px
+  float: left
+  background: url(../img/portfolio_branding_btn.png) no-repeat
+  margin-right: 10px
+
+.all-btn:hover, .websites-btn:hover, design-btn:hover, .motion-btn:hover, .branding-btn:hover
+  background-position: 0 -48px
+  cursor: pointer
+
+.portfolio-btn:hover
+  .all-btn, .websites-btn, .design-btn, .motion-btn
+    background-position: 0 -48px
+    cursor: pointer
+
+.portfolio2-btn:hover .branding-btn
+  background-position: 0 -48px
+  cursor: pointer
+
+.foliomenu .all-btn:hover
+  color: #ffffff
+
+.t-twitter
+  float: left
+  background: url(../img/t-twitter.png) no-repeat
+  width: 28px
+  height: 27px
+  margin: 0px 4px
+
+.t-fb
+  float: left
+  background: url(../img/t-fb.png) no-repeat
+  width: 28px
+  height: 27px
+  margin: 0px 4px
+
+.t-flickr
+  float: left
+  background: url(../img/t-flickr.png) no-repeat
+  width: 28px
+  height: 27px
+  margin: 0px 4px
+
+.t-mail
+  float: left
+  background: url(../img/t-mail.png) no-repeat
+  width: 28px
+  height: 27px
+  margin: 0px 4px
+
+.t-github
+  float: left
+  background: url(../img/t-github.png) no-repeat
+  width: 28px
+  height: 27px
+  margin: 0px 4px
+
+.t-fb:hover, .t-twitter:hover, .t-flickr:hover, .t-mail:hover, .t-github:hover
+  background-position: 0 -27px
+  cursor: pointer
+
+.social
+  width: 150px
+  padding-top: 20px
+  margin: auto
+  text-align: center
+  &.member1
+    margin-left: 55px
+  &.member3
+    margin-right: 55px
+
+.software
+  width: 100%
+  float: left
+
+.submit
+  float: right
+  width: 75px
+  height: 23px
+  background-color: #fa5c5c
+  border-radius: 6px
+  display: inline-block
+  color: #feffff
+  font-family: 'Lato', sans-serif
+  font-size: 15px
+  font-weight: 700
+  padding: 6px 24px 4px 24px
+  text-decoration: none
+  text-align: center
+  margin-right: 0px
+  margin-top: 22px
+  &:hover
+    background-color: #2c3e50
+
+.description
+  color: #fff
+  font-family: 'Lato', sans-serif
+  font-size: 16px
+  font-weight: 400
+  margin-bottom: 20px
+  margin-top: 10px
+  line-height: 30px
+
+.view-project2
+  float: right
+  width: 75px
+  height: 21px
+  background-color: #de6061
+  border-radius: 4px
+  display: inline-block
+  color: #fff
+  font-family: 'Open Sans', sans-serif
+  font-size: 12px
+  font-weight: bold
+  padding: 3px 16px 4px 16px
+  text-decoration: none
+  text-align: center
+  margin-right: 113px
+  margin-bottom: 80px
+  &:hover
+    color: #fff
+    background-color: #1d1c1c
+
+/* --------------------- HELPER CLASSES ---------------------
+
+/*
+ * Image replacement
+
+.ir
+  background-color: transparent
+  border: 0
+  overflow: hidden
+  /* IE 6/7 fallback
+  *text-indent: -9999px
+  &:before
+    content: ""
+    display: block
+    width: 0
+    height: 150%
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+
+.hidden
+  display: none !important
+  visibility: hidden
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+  &.focusable
+    &:active, &:focus
+      clip: auto
+      height: auto
+      margin: 0
+      overflow: visible
+      position: static
+      width: auto
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+
+.invisible
+  visibility: hidden
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+
+.clearfix
+  &:before
+    content: " "
+    /* 1
+    display: table
+    /* 2
+  &:after
+    content: " "
+    /* 1
+    display: table
+    /* 2
+    clear: both
+  *zoom: 1
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+
+/* ==========================================================================
+ *EXAMPLE Media Queries for Responsive Design.
+ *Theses examples override the primary ('mobile first') styles.
+ *Modify as content requires.
+ *==========================================================================
+
+@media only screen and (min-width: 35em)
+  /* Style adjustments for viewports that meet the condition
+
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+  /* Style adjustments for high resolution devices
+
+/* ==========================================================================
+ *Print styles.
+ *Inlined to avoid required HTTP connection: h5bp.com/r
+ *==========================================================================
+
+@media print
+  *
+    background: transparent !important
+    color: #000 !important
+    /* Black prints faster: h5bp.com/s
+    box-shadow: none !important
+    text-shadow: none !important
+  a
+    text-decoration: underline
+    &:visited
+      text-decoration: underline
+    &[href]:after
+      content: " (" attr(href) ")"
+  abbr[title]:after
+    content: " (" attr(title) ")"
+  /*
+   * Don't show links for images, or javascript/internal links
+  .ir a:after
+    content: ""
+  a
+    &[href^="javascript:"]:after, &[href^="#"]:after
+      content: ""
+  pre, blockquote
+    border: 1px solid #999
+    page-break-inside: avoid
+  thead
+    display: table-header-group
+    /* h5bp.com/t
+  tr
+    page-break-inside: avoid
+  img
+    page-break-inside: avoid
+    max-width: 100% !important
+  @page
+    margin: 0.5cm
+
+  p, h2, h3
+    orphans: 3
+    widows: 3
+  h2, h3
+    page-break-after: avoid

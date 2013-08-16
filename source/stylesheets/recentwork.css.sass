@@ -1,0 +1,57 @@
+#recentwork
+  .controller
+    display: inline-table
+    .bullets
+      float: left
+      ol
+        background: #46b7a0
+        border-left: solid 2px #a3dbd0
+        border-right: solid 2px #a3dbd0
+        height: 40px
+        width: auto
+        display: inline-table
+        margin-left: 0px
+        li
+          float: left
+          a
+            display: block
+            width: 13px
+            height: 13px
+            border-radius: 50%
+            background: #fff
+            color: #a5aab0
+            cursor: pointer
+            +hide-text
+            margin: 13px 7px 0
+            &.flex-active
+              background: #268e7a
+            &:hover
+              background: #fa5c5c
+            &:first-child
+              margin: 13px 7px 0 14px
+            &:last-child
+              margin: 13px 14px 0 7px
+
+  .prev
+    background: #46b7a0
+    border-radius: 5px 0 0 5px
+    height: 40px
+    width: 45px
+    float: left
+    background-image: url(../img/controller_prev.png)
+    background-repeat: no-repeat
+    cursor: pointer
+    &:hover
+      background-image: url(../img/controller_prev_roll.png)
+
+  .next
+    background: #46b7a0
+    border-radius: 0 5px 5px 0
+    height: 40px
+    width: 45px
+    float: left
+    background-image: url(../img/controller_next.png)
+    background-repeat: no-repeat
+    cursor: pointer
+    &:hover
+      background-image: url(../img/controller_next_roll.png)
