@@ -7,8 +7,7 @@
     / Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "The Middleman"
 
-    = stylesheet_link_tag "normalize"
-    = stylesheet_link_tag "site"
+    = stylesheet_link_tag "normalize", "app", "style"
 
   %body{:class => page_classes}
     = yield
