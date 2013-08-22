@@ -1,0 +1,27 @@
+%section#team.container
+  #ancla3
+  .section-one
+    .title-one wer
+    .separator
+      .line.line-1
+    .data-content-one
+    %article.content-team.teamshow
+      .teamlist
+        .team
+          .who
+            .members-box
+              .photo.photo-one
+              .name-team Sebastian de Castelberg
+            .photo-footer
+              .plus-btn
+              .socialicons
+                = link_to 'http://github.com/sdecastelberg' do
+                  .t-github
+                = link_to 'http://twitter.com/sdecastelberg' do
+                  .t-twitter
+                = link_to 'http://facebook.com/sdecastelberg' do
+                  .t-fb
+                - mail_block = capture do
+                  .t-mail
+                = mail_to 'sebastian@gorillasoftware.ch', mail_block
+
