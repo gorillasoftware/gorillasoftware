@@ -1,0 +1,1006 @@
+/*
+ ** Skeleton V1.2
+ ** Copyright 2011, Dave Gamache
+ ** www.getskeleton.com
+ ** Free to use under the MIT license.
+ ** http://www.opensource.org/licenses/mit-license.php
+ ** 6/20/2012
+
+/* Table of Content
+ *==================================================
+ *  #Site Styles
+ *  #Page Styles
+ *  #Media Queries
+ *  #Font-Face
+
+/* #Site Styles
+ *==================================================
+
+/* #Page Styles
+ *==================================================
+
+/* #Media Queries
+ *==================================================
+
+/* Smaller than standard 960 (devices and browsers)
+@media only screen and (max-width: 1150px)
+  .header-container
+    padding: 0 30px
+
+@media only screen and (max-width: 959px)
+  #ancla1, #ancla2, #ancla3, #ancla4, #ancla5, #ancla6
+    position: absolute
+    top: -100px
+  .menu-select
+    display: none
+  .profile1
+    font-size: 22px !important
+  .title
+    font-size: 15px
+    padding-top: 52px
+  .title-1
+    font-size: 22px
+  .logosection
+    &.about
+      background: url(../img/about_header_02.png) no-repeat
+    &.freebies
+      background: url(../img/freebies_header_02.png) no-repeat
+    &.team
+      background: url(../img/team_header_02.png) no-repeat
+    &.portfolio
+      background: url(../img/portfolio_header_02.png) no-repeat
+    &.services
+      background: url(../img/services_header_02.png) no-repeat
+    &.contact
+      background: url(../img/contact_header_02.png) no-repeat
+  .navegation_resp
+    visibility: visible
+    display: block
+    position: absolute
+    width: 250px
+    top: 47px
+    right: 30px
+    font-size: 13px
+    font-family: 'Lato', sans-serif
+
+/* Tablet Portrait size to standard 960 (devices and browsers)
+@media only screen and (min-width: 768px) and (max-width: 959px)
+  .section-one, .section-two
+    width: 768px
+    margin: auto
+  .data-content-one, .data-content-two
+    padding: 25px 125px
+  .members-box, .plus-btn, .photo-footer
+    width: 216px
+  .who
+    margin: 0 22px
+  #container2
+    width: 635px
+  #options!
+  .thumb-project li
+    img
+      width: 616px
+    iframe
+      width: 616px !important
+      height: 408px !important
+  .img-project
+    margin-left: 63px
+    width: 616px
+  .img-next
+    top: 180px
+    right: 78px
+  .img-prev
+    top: 180px
+    left: 62px
+  .info-project
+    width: 615px
+    margin: auto
+    margin-top: 15px
+    padding: 0 18px 0 0px
+  .profile
+    width: 767px
+  /*  MENU
+  .header-container
+    width: 768px
+  .contentbtn, .contentbtn2
+    font-size: 12px
+  .menubtn
+    margin: 0px 6px
+  .homebtn
+    margin: 0px 6px 0px 0px
+  .contactbtn
+    margin: 0px 0px 0px 6px
+  /*  BANNER
+  #banner!
+  .infobanner
+    padding-top: 70px
+    width: 100%
+  /*  ABOUT
+  #about!, .page.first!
+  .section, #team .section
+    width: 768px
+  .titlesection
+    font-size: 35px
+    margin-bottom: 30px
+  .title-2
+    font-size: 22px
+  .contentsection
+    margin: 165px auto 0px
+  .img-about
+    margin-top: 50px
+  .pofile-item
+    margin: 0 55px
+  /*  FREEBIES
+  .freebiescontent
+    width: 420px
+    font-size: 16px
+  .bgsepara
+    height: 300px
+  .last-projects
+    padding-top: 120px
+  .last-project-title, .team-title
+    font-size: 90px
+  /*  TEAM
+  .sides
+    margin: 20px 11px 100px 11px
+  .centre
+    margin: 20px 15px 100px 15px
+  .infomembers
+    font-size: 18px
+  .direction-bar
+    margin-right: 40px
+  .navigation
+    width: 768px
+  .teamcontent
+    width: 715px
+    font-size: 16px
+  .img-team
+    margin-top: 45px
+  .title-1
+    font-size: 25px
+  .dir-right
+    right: -80px
+  .dir-left
+    left: -40px
+  /*  PORTFOLIO
+  .title.portfolio
+    font-size: 25px
+  .portfolio-btn!, .element!, .foliomenu!
+  .project-content
+    margin-left: 11px
+  .close
+    top: 4px
+    right: 81px
+  .nav-project
+    margin-left: 350px
+  .view-project2
+    margin-right: 60px
+  .works-header
+    width: 768px
+  /*  SERVICES
+  .title.services
+    font-size: 23px
+  .disciplines
+    width: 455px
+    margin: 30px auto 20px
+  .works
+    width: 225px
+    margin: 0
+  .titleworks
+    font-size: 15px
+    margin: auto
+  .iconworks
+    padding: 7px 9px 15px 0
+  .psd
+    background: url(../img/stats_photoshop_02.png) no-repeat
+  .ae
+    background: url(../img/stats_after_02.png) no-repeat
+  .ai
+    background: url(../img/stats_illustrator_02.png) no-repeat
+  .dream
+    background: url(../img/stats_dreamweaver_02.png) no-repeat
+  .skills
+    width: 180px
+    height: 176px
+  .software
+    width: 540px
+    margin: auto
+    float: inherit
+  .img-contact
+    margin-top: 55px
+  .progress-bar
+    width: 460px
+  /*  CONTACT
+  .title.contact!
+  #messageform, #emailform, #nameform
+    width: 400px
+  #formulario
+    width: 400px
+    margin: 33px 70px 0 0
+  .titlecontact!
+  .contactinfo
+    width: 250px
+    margin-left: 30px
+  .contact-title!
+  #newsletter
+    width: 300px
+
+/* All Mobile Sizes (devices and browser)
+@media only screen and (max-width: 767px)
+  .pofile-item:first-child
+    margin-left: 0
+  .navegation_resp
+    visibility: visible
+    display: block
+    position: absolute
+    width: 125px
+    top: 47px
+    right: 30px
+    font-size: 13px
+    font-family: 'Lato', sans-serif
+  .title.contact
+    font-size: 22px
+  .contact-title
+    background: url(../img/contact-title_03.png) no-repeat
+    width: 475px
+    height: 45px
+  .services-title
+    background: url(../img/services-title_02.png) no-repeat
+    width: 475px
+    height: 66px
+  .dir-left
+    left: -150px
+    bottom: 360px
+  .dir-right
+    left: 175px
+    bottom: 360px
+  .dots
+    display: none
+  .direction-bar
+    width: 75px
+    height: 34px
+    margin: auto
+    float: inherit
+  #options!
+  .title-profile, .page h2, .works-container h2
+    font-size: 75px
+  .last-projects
+    padding-top: 20px
+  .profile
+    width: auto
+    margin: 50px 0
+  .last-project-title
+    font-size: 50px
+    padding-top: 50px
+  .team-title, .works-title
+    font-size: 50px
+  #banner
+    /*margin-top: 60px;
+  .page.first
+    padding-top: 465px
+  .portfolio-btn a:hover, .portfolio2-btn a:hover
+    color: #1ddfb3
+    cursor: pointer
+  #emailform
+    width: 165px
+    margin-bottom: 15px
+  .pofile-item:last-child
+    margin: auto
+  .img-next
+    width: 35px
+    height: 35px
+    top: 83px
+    right: 0px
+    background-position: -16px -15px
+  .img-prev
+    width: 35px
+    height: 35px
+    top: 83px
+    left: 0px
+    background-position: -16px -15px
+  .thumb-project li
+    img
+      width: 299px
+    iframe
+      width: 299px !important
+      height: 198px !important
+  .img-project
+    margin-left: 0px
+    width: 299px
+  #portfolio
+    width: 320px
+  #slider, .projectsContent
+    height: 350px
+  .project-content
+    width: 299px
+  .info-project
+    width: 299px
+    padding: 0
+  .close
+    right: 0px
+    top: 0px
+  .profile-element
+    margin: 15px 0 0 0
+  .pofile-item
+    margin: auto
+  .profile-title
+    width: 200px
+    margin-top: 24px
+  .profile
+    width: 220px
+    margin: 10px auto 65px
+    overflow: auto
+  .pofile-item
+    margin: 0 0 20px 10px
+    &:first-child
+      margin: 0 0 20px 10px
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers)
+@media only screen and (min-width: 480px) and (max-width: 767px)
+  .dir-right, .dir-left
+    bottom: 280px
+  .ico-one, .ico-two, .ico-three, .ico-four
+    background-position: -7px -10px
+  .titleworks
+    width: 180px
+    height: 180px
+    border-radius: 50%
+  #newsletter
+    width: 275px
+  .newsletter h1
+    margin-left: 11px
+  .credits
+    clear: both
+    margin-right: 15px
+  .newsletter
+    margin-top: 45px
+    width: 480px
+  .contactinfo
+    margin-left: 0
+  .anythingSlider
+    height: 350px !important
+  #slider li img
+    width: 400px
+  .section-one
+    width: 400px
+    overflow: inherit
+    padding-bottom: 30px
+  .section-two
+    width: 400px
+    overflow: inherit
+  .data-content-one, .data-content-two
+    padding: 25px 20px
+  .project-image img
+    width: 460px
+  .btn-next
+    right: -45px
+    bottom: 380px
+  .btn-prev
+    left: -45px
+    bottom: 380px
+  .view-project2
+    margin-right: 20px
+  .dir-right!, .dir-left!
+  .skill-content
+    width: 450px
+    margin: auto
+  .works-header
+    width: auto
+  .logosection
+    width: 150px
+    height: 105px
+    margin-top: 22px
+    margin-left: -77px
+  /*  MENU & BANNER
+  .contentMenu
+    .logo
+      display: inherit
+      position: relative
+      left: 50%
+      width: 126px
+      height: 30px
+      margin: 8px 0px 20px -61px
+      background: url(../img/orionlogo_02.png) no-repeat
+    li
+      display: none
+    margin: auto
+    width: 100%
+    padding-left: 0
+  .displaymenu
+    width: 100%
+  .textbanner
+    width: 400px
+    font-size: 12px
+    padding-top: 10px
+    border-top: 2px solid #1d9686
+  #banner
+    /*height: 430px;margin-top: 100px;
+  .infobanner
+    padding-top: 35px
+    width: 100%
+  .bannerfoot
+    padding: 0 5px 0px 0
+  .welcome
+    font-size: 130px
+    height: 80px
+    margin-top: 45px
+  .titlebanner
+    width: 200px
+    height: 78px
+    background: url(../img/jellythemes_02.png) no-repeat !important
+  /*  ABOUT
+  .topline
+    margin-top: 75px
+  .titlesection
+    margin-bottom: 35px
+  .section
+    width: auto
+    padding-top: 80px
+    padding-bottom: 20px
+  #team .section
+    width: auto
+  .contentsection
+    margin: 0
+    text-align: center
+  .titlesection
+    line-height: 25px
+    font-size: 30px
+    text-align: center
+    width: 100%
+  #freebies .titlesection
+    line-height: 35px
+  .title-2
+    font-size: 20px
+  .tweets
+    width: auto
+    margin-top: 20px
+    margin-bottom: 20px
+    float: inherit
+    margin-left: 35px
+  .symbol
+    margin: auto
+    float: left
+    margin-top: 5px
+  .twitersection
+    height: auto
+  .alltweets
+    margin: auto
+    top: 20px
+  .spacer
+    display: none
+  /*  FREEBIES
+  .imagefribbies
+    margin: auto
+    float: inherit
+    width: 475px
+    height: 279px
+    background: url(../img/macbook-base_02.png) no-repeat
+  .pantallaFondo, .pantalla, .slideshow li img
+    margin: 15px 0 0 61px
+    width: 355px
+    height: 225px
+  .wall0
+    background: url(../img/wall1_02.jpg) no-repeat
+  .wall1
+    background: url(../img/wall2_02.jpg) no-repeat
+  .wall2
+    background: url(../img/wall3_02.jpg) no-repeat
+  .wall3
+    background: url(../img/wall4_02.jpg) no-repeat
+  .brillo
+    width: 355px
+    height: 237px
+    background: url(../img/shine_02.png) no-repeat
+    margin-left: 50px
+  .freebiescontent
+    margin: 20px 30px 30px 30px
+    width: auto
+    text-align: center
+    float: inherit
+  .download
+    margin: auto
+    float: inherit
+    margin-top: 20px
+  .img-freebies!
+  /*  TEAM
+  .teamhead
+    padding: 15px 35px 0px 20px
+  .titlesection.ourteam
+    float: inherit
+  .teamdescription
+    border: none
+    height: auto
+    float: inherit
+    padding: 0
+    text-align: center
+  .teamcontent
+    margin: 20px 0px 30px 0px
+    width: auto
+    text-align: center
+    float: inherit
+  .infomembers
+    font-size: 18px
+  .centre, .sides
+    margin: 20px 10px 100px 0px
+  .infomembers
+    font-size: 17px
+  .navigation
+    width: auto
+  .teamlist
+    height: 400px
+  /*  PORTFOLIO
+  .title.portfolio
+    font-size: 18px
+  .portfoliocontent
+    padding-top: 10px !important
+  #portfolio2
+    height: 170px
+  #container2
+    width: 482px
+    margin: auto
+    padding-bottom: 5px
+  .element!
+  .all-btn, .websites-btn, .design-btn, .motion-btn, .branding-btn
+    display: none
+  .portfolio-btn
+    margin: 12px 20px 0 0
+  .folio-btn
+    padding-left: 0
+    line-height: normal
+  .foliomenu
+    width: 400px
+    margin: auto
+  .infoproject
+    font-size: 20px
+  .info-pf
+    position: relative
+  .img-portfolio!
+  .view-btn
+    width: 500px
+    margin: 0 0 40px 0
+    overflow: auto
+  .nav-project
+    margin-left: 206px
+  .img-project!, .project-one!, .project-two!, .project-video!, .video-embed!
+  /*  SERVICES
+  .title.services
+    font-size: 23px
+  .servicesdescription
+    border: none
+    height: auto
+    float: inherit
+    padding: 0
+    text-align: center
+  .disciplines
+    width: 450px
+    margin: auto
+    padding-bottom: 30px
+    padding-top: 15px
+  .works
+    width: 190px
+    height: auto
+    margin: auto
+    margin-bottom: 20px
+    margin-right: 10px
+    margin-left: 10px
+    font-size: 14px
+    &:first-child
+      margin-left: 10px
+  .iconworks
+    padding: 7px 5px 15px 0
+    width: 35px
+  .titleworks
+    font-size: 12px
+  .software
+    margin-bottom: 80px
+  .progress-bar
+    width: 330px
+  .info-skills
+    font-size: 14px
+  /*  CONTACT
+  .contactdescription
+    border: none
+    height: auto
+    float: inherit
+    padding: 0
+    text-align: center
+    color: #fff
+  #formulario, #messageform
+    width: 400px
+    float: inherit
+    margin: auto
+  #nameform
+    width: 400px
+    float: inherit
+    margin: auto
+    width: 360px
+    float: inherit
+  #emailform, #messageform
+    width: 360px
+    float: inherit
+  #nameform, p
+    margin-bottom: 15px
+  .contactinfo
+    margin-bottom: 40px
+    float: inherit
+    overflow: auto
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+@media only screen and (max-width: 479px)
+  #services
+    margin-bottom: 85px
+  .teamlist
+    margin-left: 4px
+  .anythingSlider
+    height: 255px !important
+  .section-one
+    padding: 115px 0 65px
+  .credits
+    clear: both
+    font-size: 10px
+    margin-right: 18px
+  #newsletter
+    width: 205px
+  .subscribe
+    padding: 9px 15px 10px 15px
+  .newsletter
+    h1
+      margin-left: 14px
+    margin-top: 55px
+  .close
+    right: 14px
+    top: 4px
+  .section-one, .section-two
+    width: 316px
+    overflow: inherit
+  .data-content-one, .data-content-two
+    padding: 25px 5px
+  .title-one, .title-two
+    font-size: 34px
+  #slider
+    li img
+      width: 300px
+    height: 255px
+  .projectsContent
+    height: 255px
+  .ch-grid! .ch-item
+  .navegation_resp
+    visibility: visible
+    display: block
+    position: absolute
+    width: 100px
+    top: 47px
+    right: 30px
+    font-size: 13px
+    font-family: 'Lato', sans-serif
+  .project-image img
+    width: 365px
+  .parallax-text
+    font-size: 25px
+    font-weight: 600
+    line-height: 27px
+    padding-top: 125px
+  .titlebanner
+    width: 200px
+    height: 78px
+    background: url(../img/jellythemes_02.png) no-repeat !important
+  .welcome
+    font-size: 80px
+    margin-top: 30px
+    height: 60px
+  .works-header
+    width: auto
+  .company-name
+    font-size: 20px
+  .view-project2
+    margin-right: 55px
+    margin-top: 22px
+  /*  SPACERS PARALLAX
+  .bgsepara
+    height: 300px
+  .img-about
+    margin-top: 46px
+  .img-freebies!
+  .img-team
+    margin-top: 45px
+  .img-portfolio!
+  .img-contact
+    margin-top: 60px
+  .last-projects
+    padding-top: 20px
+    overflow: hidden
+    width: 350px
+    margin: auto
+  .contact-title
+    background: url(../img/contact-title_04.png) no-repeat
+    width: 350px
+    height: 34px
+  .services-title
+    background: url(../img/services-title_03.png) no-repeat
+    width: 350px
+    height: 49px
+  .pofile-item
+    float: inherit
+    margin: auto
+  /*  MACBOOK
+  .imagefribbies
+    margin: auto
+    float: inherit
+    width: 350px
+    height: 206px
+    background: url(../img/macbook-base_03.png) no-repeat
+  .pantallaFondo, .pantalla, .slideshow li img
+    margin: 10px 0 0 44px
+    width: 261px
+    height: 165px
+  .wall0
+    background: url(../img/wall1_03.jpg) no-repeat
+  .wall1
+    background: url(../img/wall2_03.jpg) no-repeat
+  .wall2
+    background: url(../img/wall3_03.jpg) no-repeat
+  .wall3
+    background: url(../img/wall4_03.jpg) no-repeat
+  .brillo
+    width: 269px
+    height: 180px
+    background: url(../img/shine_03.png) no-repeat
+    margin-left: 37px
+  .title
+    &.portfolio
+      font-size: 18px
+    &.services
+      font-size: 23px
+    &.contact
+      font-size: 22px
+  /*  MENU & BANNER
+  .contentMenu
+    .logo
+      margin: 35px 0px 20px 0px
+      background: url(../img/orionlogo_02.png) no-repeat
+      display: inherit
+      position: relative
+      left: 50%
+      width: 126px
+      height: 30px
+      margin: 8px 0px 20px -61px
+    li
+      display: none
+    margin: auto
+    width: 100%
+    padding-left: 0
+  .displaymenu
+    width: 100%
+  .textbanner
+    width: 340px
+    font-size: 12px
+    padding-top: 10px
+    border-top: 2px solid #1d9686
+  #banner
+    /*height: 430px;
+  .infobanner
+    padding-top: 70px
+    width: 100%
+  /*.bannerfoot {width: 30px; height: 15px; background: url(../img/bannerfooter_02.png) no-repeat;padding: 0 4px 0px 0;}
+  /*  ABOUT
+  .logosection
+    width: 150px
+    height: 105px
+    margin-top: 22px
+    margin-left: -77px
+  .profile!
+  .topline
+    margin-top: 75px
+  .titlesection
+    margin-bottom: 10px
+    font-size: 25px
+  .title-2
+    font-size: 20px
+  .section
+    width: auto
+    padding-top: 40px
+  #team .section
+    width: auto
+    padding-bottom: 0px
+  .contentsection
+    margin: 0
+    text-align: center
+  .titlesection
+    line-height: 25px
+    font-size: 23px
+    text-align: center
+    width: 100%
+  .tweets
+    width: auto
+    text-align: center
+    margin-top: 20px
+    margin-bottom: 20px
+  .symbol
+    margin: auto
+    float: inherit
+  .twitersection
+    height: auto
+  .alltweets
+    float: inherit
+    top: 20px
+    margin-left: 31%
+  .spacer
+    display: none
+  /*  FREEBIES
+  .imagefribbies
+    margin: auto
+    float: inherit
+  .freebiescontent
+    margin: 20px 30px 30px 30px
+    width: auto
+    text-align: center
+    float: inherit
+    font-size: 15px
+  .download
+    margin: auto
+    float: inherit
+    margin-top: 20px
+  #freebies .titlesection
+    font-size: 25px
+  .last-project-title
+    font-size: 40px
+    padding-top: 40px
+  /*  TEAM
+  .titlesection.ourteam
+    font-size: 34px
+    margin-left: 28px
+  .teamhead
+    padding-top: 40px
+  .titlesection.ourteam
+    float: inherit
+  .teamdescription
+    border: none
+    height: auto
+    float: inherit
+    padding: 0
+    text-align: center
+    font-size: 15px
+  .teamcontent
+    margin: 20px 0px 30px 0px
+    width: auto
+    text-align: center
+    float: inherit
+    font-size: 15px
+  .infomembers
+    font-size: 18px
+  .socialicons!
+  .centre, .sides
+    margin: 20px 10px 100px 0px
+  .infomembers
+    font-size: 17px
+  .navigation
+    width: auto
+  .teamlist
+    height: 380px
+  .dir-right
+    bottom: 290px
+    right: -140px
+  .dir-left
+    bottom: 290px
+    left: -145px
+  .title-profile, .page h2, .works-container h2
+    font-size: 50px
+  .team-title
+    font-size: 40px
+  /*  PORTFOLIO
+  .portfoliocontent
+    padding-top: 10px !important
+  #portfolio2
+    height: 170px
+  #container2
+    margin: auto
+  .element!
+  .all-btn, .websites-btn, .design-btn, .motion-btn, .branding-btn
+    display: none
+  .portfolio-btn
+    margin: 12px 13px 0 0
+  .folio-btn
+    padding-left: 0
+    line-height: normal
+  .foliomenu
+    width: 350px
+    height: 49px
+    margin: auto
+  .infoproject
+    font-size: 20px
+  .info-pf
+    position: relative
+  /*  SERVICES
+  .servicesdescription
+    border: none
+    height: auto
+    float: inherit
+    padding: 0
+    text-align: center
+    font-size: 15px
+  .disciplines
+    width: 316px
+    margin: auto
+    padding-bottom: 30px
+    padding-top: 15px
+  .works
+    &:first-child, &:last-child
+      margin: auto
+    width: 200px
+    height: auto
+    margin: auto
+    margin-bottom: 20px
+    font-size: 14px
+    float: inherit
+  .iconworks
+    padding: 7px 10px 15px 0
+    width: 52px
+  .titleworks
+    font-size: 17px
+  .software
+    float: inherit
+    margin: auto
+  .progress-bar
+    width: 250px
+  .skill-content
+    width: 350px
+  .percent!
+  .info-skills
+    font-size: 12px
+    padding-left: 15px
+  /*  CONTACT
+  .title.contact
+    font-size: 14px
+  .contactdescription
+    border: none
+    height: auto
+    float: inherit
+    padding: 0
+    text-align: center
+    color: #fff
+    font-size: 15px
+  #formulario, #messageform
+    width: 318px
+    float: inherit
+    margin: auto
+  #nameform
+    width: 318px
+    float: inherit
+    margin: auto
+    width: 275px
+    float: inherit
+  #emailform, #messageform
+    width: 275px
+    float: inherit
+  #nameform, p
+    margin-bottom: 15px
+  .contactinfo
+    margin-bottom: 40px
+    float: inherit
+    overflow: auto
+    margin-left: 0
+  .titlecontact
+    margin-left: 20px
+  .email
+    margin: 20px 0px 10px 20px
+  .phone
+    margin: 20px 0px 20px 20px
+  .skype
+    margin: 10px 0px 0px 20px
+
+/* #Font-Face
+ *==================================================
+/*  This is the proper syntax for an @font-face file
+ *  Just create a "fonts" folder at the root,
+ *  copy your FontName into code below and remove
+ *  comment brackets
+
+/*  @font-face {
+ *    font-family: 'FontName';
+ *    src: url('../fonts/FontName.eot');
+ *    src: url('../fonts/FontName.eot?iefix') format('eot'),
+ *         url('../fonts/FontName.woff') format('woff'),
+ *         url('../fonts/FontName.ttf') format('truetype'),
+ *         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+ *    font-weight: normal;
+ *    font-style: normal; }

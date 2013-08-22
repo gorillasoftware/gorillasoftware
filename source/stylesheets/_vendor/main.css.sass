@@ -90,9 +90,6 @@ li
 .selected
   background: #268e7a !important
 
-.bottom-works
-  padding-bottom: 87px !important
-
 #banner
   width: 100%
   padding-top: 110px
@@ -114,17 +111,12 @@ li
   height: 100%
   background: #fff
 
-#portfolio
-  width: 100%
-  height: 100%
-
 #services, #contact
   width: 100%
   height: 100%
 
 #footer
   position: absolute
-  /*margin-top: 370px;
   z-index: 9998
   width: 100%
   height: 375px
@@ -180,30 +172,6 @@ li
   &:hover
     background: #3fb79f
 
-.footer-container
-  right: 50%
-  position: relative
-
-.sociafoot
-  height: 50px
-  display: inline-table
-  margin-left: 0
-
-.footerContent
-  width: auto
-  height: auto
-  text-align: center
-  .socialtext
-    margin-top: 40px
-    margin-bottom: 20px
-    text-align: center
-    font-family: 'Open Sans', sans-serif
-    font-size: 12px
-    font-style: italic
-    text-transform: uppercase
-    color: #fff
-    font-weight: 600
-
 .socialicons
   margin: auto
   width: 145px
@@ -211,28 +179,6 @@ li
   text-align: center
   margin: auto
   padding: 20px 0
-
-.icon
-  float: left
-  width: 50px
-  height: 50px
-  margin: 0px 7px
-  display: inline
-
-.sc-fb
-  background: url(../img/social/facebook.png)
-
-.sc-tw
-  background: url(../img/social/twitter.png)
-
-.sc-print
-  background: url(../img/social/printerest.png)
-
-.sc-rss
-  background: url(../img/social/rss.png)
-
-.sc-glg
-  background: url(../img/social/google.png)
 
 .media a
   width: 39px
@@ -256,15 +202,11 @@ li
 .facebook
   background: url("../img/facebook.png") no-repeat
 
+.github
+  background: url("../img/github.png") no-repeat
+
 .pinterest
   background: url("../img/pinterest.png") no-repeat
-
-.icon
-  float: left
-  width: 50px
-  height: 50px
-  margin: 0px 7px
-  display: inline
 
 .section-one, .section-two
   width: 960px
@@ -379,8 +321,6 @@ li
     margin-left: 22px
   &:nth-child(7)
     margin-left: 0
-
-.team .who
   &:first-child
     margin-left: 0
   &:last-child
@@ -604,7 +544,7 @@ li
   font-size: 12px
   text-transform: uppercase
 
-#messageform
+#formulario textarea
   border-radius: 8px
   border: none
   background: #3fb79f
@@ -618,7 +558,7 @@ li
   outline: none
   margin-top: 12px
 
-#nameform, #emailform
+#formulario .first input
   border-radius: 8px
   border: none
   background: #3fb79f
@@ -631,9 +571,6 @@ li
   padding: 15px 20px
   outline: none
   margin: 12px 0 20px
-
-.portfoliocontent
-  padding-top: 0px
 
 .contentsection
   margin-top: 100px
@@ -758,26 +695,6 @@ li
   width: 100%
   height: 17px
   background: url(../img/pattern_top_about.png) repeat-x
-
-.logosection
-  position: absolute
-  left: 50%
-  margin-left: -115px
-  margin-top: 30px
-  width: 210px
-  height: 147px
-  &.about
-    background: url(../img/about_header.png) no-repeat
-  &.freebies
-    background: url(../img/freebies_header.png) no-repeat
-  &.team
-    background: url(../img/team_header.png) no-repeat
-  &.portfolio
-    background: url(../img/portfolio_header.png) no-repeat
-  &.services
-    background: url(../img/services_header.png) no-repeat
-  &.contact
-    background: url(../img/contact_header.png) no-repeat
 
 .title
   text-align: center
@@ -911,120 +828,6 @@ li
   height: auto
   margin: auto
 
-#freebies .titlesection
-  margin-bottom: 35px
-  font-size: 39px
-
-.freebiescontent
-  font-family: 'Open Sans', sans-serif
-  font-size: 18px
-  font-weight: normal
-  color: #ffffff
-  width: 840px
-  height: auto
-  text-align: center
-  margin: 35px auto 20px
-
-.last-project-footer
-  background: url(../img/last-projects-footer.png) no-repeat
-  width: 248px
-  height: 22px
-  margin: auto
-  padding-bottom: 55px
-
-.download
-  float: right
-  width: 90px
-  height: 25px
-  background-color: #ffffff
-  border-radius: 6px
-  display: inline-block
-  color: #747065
-  font-family: 'Open Sans', sans-serif
-  font-size: 16px
-  font-weight: normal
-  padding: 7px 24px 3px 24px
-  text-decoration: none
-  text-align: center
-  margin-right: 25px
-  margin-top: 20px
-  &:hover
-    color: #fff
-    background-color: #f0c134
-
-.teamhead
-  padding: 110px 35px 0px 20px
-  height: auto
-
-.titlesection.ourteam
-  float: left
-  font-size: 45px
-  text-transform: uppercase
-  padding: 5px 35px 0px 0px
-  width: auto
-
-.teamdescription
-  border-left: 1px solid rgba(255, 255, 255, 0.5)
-  float: left
-  height: 35px
-  padding: 15px 0px 0px 20px
-  color: #faef51
-  text-transform: uppercase
-  font-style: italic
-  font-size: 20px
-
-.contactdescription
-  border-left: 1px solid rgba(255, 255, 255, 0.5)
-  float: left
-  height: 35px
-  padding: 15px 0px 0px 20px
-  color: #ffffff
-  text-transform: uppercase
-  font-style: italic
-  font-size: 20px
-
-.servicesdescription
-  border-left: 1px solid rgba(255, 255, 255, 0.5)
-  float: left
-  height: 35px
-  padding: 15px 0px 0px 20px
-  color: #f7ac00
-  text-transform: uppercase
-  font-style: italic
-  font-size: 20px
-
-.teamcontent
-  font-family: 'Open Sans', sans-serif
-  font-size: 18px
-  font-weight: normal
-  color: #ffffff
-  width: auto
-  height: auto
-  float: left
-  margin: 20px 20px 20px 0px
-
-.membersteamslider
-  width: 960px
-  height: auto
-
-.membersteam
-  width: 320px
-  height: 310px
-  float: left
-  margin: auto
-
-.name
-  float: left
-  height: 100%
-  width: 96px
-  text-align: right
-  border-right: 2px solid rgb(255, 255, 255)
-  padding: 0px 8px
-  font-family: 'Open Sans', sans-serif
-  font-size: 21px
-  font-weight: normal
-  color: #ffffff
-
 .info
   height: 100%
   margin: 0px 8px
@@ -1151,7 +954,7 @@ li
   margin-left: -1px
 
 .teamshow
-  width: 855px
+  width: 250px
   overflow: hidden
   margin: auto
 
@@ -1569,10 +1372,6 @@ li
   margin: auto
   width: 225px
 
-.portfoliolist
-  width: 1880px
-  height: auto
-
 /* --------------------- end ISOTOPE ---------------------
 
 body .date
@@ -1604,84 +1403,6 @@ body .date
 
 .last-btn
   margin-right: 40px
-
-.portfolio-btn
-  font-family: 'Lato', sans-serif
-  font-size: 12px
-  font-weight: 700
-  float: left
-  text-transform: uppercase
-  color: #fff
-  padding: 8px 19px
-  background: #39ad95
-  border-radius: 6px
-  margin: 0 4px
-  &:hover
-    background: #fa5c5c
-
-#options
-  padding-bottom: 60px
-  margin-top: 10px
-
-.portfolio-btn:hover
-  color: #ffffff
-  cursor: pointer
-
-.foliomenu
-  width: 500px
-  height: 49px
-  margin: auto
-
-.all-btn
-  width: 49px
-  height: 49px
-  float: left
-  background: url(../img/portfolio_all_btn.png) no-repeat
-  margin-right: 10px
-
-.websites-btn
-  width: 49px
-  height: 49px
-  float: left
-  background: url(../img/portfolio_websites_btn.png) no-repeat
-  margin-right: 10px
-
-.design-btn
-  width: 49px
-  height: 49px
-  float: left
-  background: url(../img/portfolio_design_btn.png) no-repeat
-  margin-right: 10px
-
-.motion-btn
-  width: 49px
-  height: 49px
-  float: left
-  background: url(../img/portfolio_motion_btn.png) no-repeat
-  margin-right: 10px
-
-.branding-btn
-  width: 49px
-  height: 49px
-  float: left
-  background: url(../img/portfolio_branding_btn.png) no-repeat
-  margin-right: 10px
-
-.all-btn:hover, .websites-btn:hover, design-btn:hover, .motion-btn:hover, .branding-btn:hover
-  background-position: 0 -48px
-  cursor: pointer
-
-.portfolio-btn:hover
-  .all-btn, .websites-btn, .design-btn, .motion-btn
-    background-position: 0 -48px
-    cursor: pointer
-
-.portfolio2-btn:hover .branding-btn
-  background-position: 0 -48px
-  cursor: pointer
-
-.foliomenu .all-btn:hover
-  color: #ffffff
 
 .t-twitter
   float: left
@@ -1721,16 +1442,6 @@ body .date
 .t-fb:hover, .t-twitter:hover, .t-flickr:hover, .t-mail:hover, .t-github:hover
   background-position: 0 -27px
   cursor: pointer
-
-.social
-  width: 150px
-  padding-top: 20px
-  margin: auto
-  text-align: center
-  &.member1
-    margin-left: 55px
-  &.member3
-    margin-right: 55px
 
 .software
   width: 100%

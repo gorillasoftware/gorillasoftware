@@ -1,0 +1,8 @@
+#footer.container-one
+  .footer-line
+  .newsletter
+    %h1 Newsletter
+    %form{:action => "http://gorillasoftware.us7.list-manage.com/subscribe/post?u=5a4a472acf94be0e77c5796b6&id=e9c19870ae", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+      %input#newsletter.email{:name => "EMAIL", :placeholder => "email address", :required => "", :type => "email", :value => ""}/
+      %p= link_to 'Subscribe', '#', onclick: '$(this).closest("form").submit(); return false;', class: 'subscribe'
+    .credits Copyright © gorilla software GmbH 2011-2013. All Rights Reserved.
