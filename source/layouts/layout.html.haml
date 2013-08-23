@@ -9,7 +9,12 @@
 
     = stylesheet_link_tag "normalize", "app", "style"
 
-  %body{:class => page_classes}
+  %body{ "class" => page_classes,
+    "data-grid-color" => "blue",
+    "data-grid-framework" => "f4",
+    "data-grid-nbcols" => "12",
+    "data-grid-opacity" => "0.5",
+    "data-grid-zindex" => "10" }
     = yield
   = javascript_include_tag "http://code.jquery.com/jquery-1.10.1.min.js"
   = javascript_include_tag  "site"

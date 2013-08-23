@@ -1,0 +1,93 @@
+#team
+  .members-box
+    background: #f9f9f5
+    border-radius: 8px 8px 0 0
+    width: 250px
+    padding: 40px 0 0
+
+  .photo
+    width: 165px
+    height: 165px
+    border-radius: 50%
+    margin: auto
+
+  .who
+    & > div
+      margin: auto
+
+  .photo-one
+    background: url(../img/team/photo-team-01.jpg)
+
+  .photo-two
+    background: url(../img/team/photo-team-02.jpg)
+
+  .photo-three
+    background: url(../img/team/photo-team-03.jpg)
+
+  .name-team
+    font-family: 'Open Sans', sans-serif
+    font-size: 16px
+    font-weight: 700
+    color: #2c3e50
+    text-align: center
+    padding: 20px 0
+
+  .photo-footer
+    border-radius: 0 0 8px 8px
+    background: #49c9af
+    width: 250px
+    height: 65px
+    overflow: hidden
+    position: relative
+    &:hover
+      cursor: pointer
+
+    .plus-btn
+      +transition(top 0.3s)
+      text-align: center
+      font-family: 'Open Sans', sans-serif
+      font-size: 23px
+      font-weight: 700
+      color: #f3f3f3
+      width: 250px
+      height: 67px
+      position: absolute
+      top: 0px
+      padding-top: 12px
+      background: url(../img/follow.jpg) no-repeat center 6px #fa5c5c
+      span
+        display: inline-block
+        font-size: 45px
+        font-weight: 800
+        line-height: 20px
+        padding-top: 10px
+    &:hover
+      .plus-btn
+        top: 67px
+
+  .socialicons
+    margin: auto
+    width: 145px
+    height: 27px
+    text-align: center
+    margin: auto
+    padding: 20px 0
+
+    .t
+      width: 28px
+      height: 27px
+      margin: 0px 4px
+      float: left
+      &.t-twitter
+        background: url(../img/t-twitter.png) no-repeat
+      &.t-fb
+        background: url(../img/t-fb.png) no-repeat
+      &.t-flickr
+        background: url(../img/t-flickr.png) no-repeat
+      &.t-mail
+        background: url(../img/t-mail.png) no-repeat
+      &.t-github
+        background: url(../img/t-github.png) no-repeat
+      &:hover
+        background-position: 0 -27px
+        cursor: pointer
