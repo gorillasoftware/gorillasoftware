@@ -1,4 +1,9 @@
 #team
+  background-color: #70C4AE
+
+  h1
+    color: #fa5c5c
+
   .members-box
     background: #f9f9f5
     border-radius: 8px 8px 0 0
@@ -35,59 +40,72 @@
   .photo-footer
     border-radius: 0 0 8px 8px
     background: #49c9af
+    background: #50ACE0
     width: 250px
     height: 65px
     overflow: hidden
     position: relative
-    &:hover
-      cursor: pointer
-
-    .plus-btn
-      +transition(top 0.3s)
-      text-align: center
-      font-family: 'Open Sans', sans-serif
-      font-size: 23px
-      font-weight: 700
-      color: #f3f3f3
-      width: 250px
-      height: 67px
-      position: absolute
-      top: 0px
-      padding-top: 12px
-      background: url(../img/follow.jpg) no-repeat center 6px #fa5c5c
-      span
-        display: inline-block
-        font-size: 45px
-        font-weight: 800
-        line-height: 20px
-        padding-top: 10px
-    &:hover
-      .plus-btn
-        top: 67px
 
   .socialicons
     margin: auto
-    width: 145px
-    height: 27px
+    width: 100%
+    height: 100%
     text-align: center
-    margin: auto
-    padding: 20px 0
+    padding: 16px 36px
 
     .t
-      width: 28px
-      height: 27px
+      cursor: pointer
+      background-color: darken(#68ACDA, 30%)
+      width: 36px
+      height: 36px
       margin: 0px 4px
       float: left
+      border-radius: 18px
+      background-position: center
+      background-repeat: no-repeat
+      background-size: auto 50%
+
       &.t-twitter
-        background: url(../img/t-twitter.png) no-repeat
+        background-image: image-url('t-twitter.png')
+        background-image: none, inline-image('t-twitter.svg')
       &.t-fb
-        background: url(../img/t-fb.png) no-repeat
-      &.t-flickr
-        background: url(../img/t-flickr.png) no-repeat
+        background-image: image-url('t-fb.png')
+        background-image: none, inline-image('t-fb.svg')
       &.t-mail
-        background: url(../img/t-mail.png) no-repeat
+        background-image: image-url('t-mail.png')
+        background-image: none, inline-image('t-mail.svg')
       &.t-github
-        background: url(../img/t-github.png) no-repeat
+        background-image: image-url('t-github.png')
+        background-image: none, inline-image('t-github.svg')
       &:hover
-        background-position: 0 -27px
-        cursor: pointer
+        background-color: #fa5c5c
+
+html.no-touch
+  #team
+    .photo-footer
+      .plus-btn
+        +transition(top 0.3s)
+        text-align: center
+        font-family: 'Open Sans', sans-serif
+        font-size: 23px
+        font-weight: 700
+        color: #f3f3f3
+        width: 250px
+        height: 67px
+        position: absolute
+        top: 0px
+        padding-top: 12px
+        background: url(../img/follow.jpg) no-repeat center 6px #fa5c5c
+        span
+          display: inline-block
+          font-size: 45px
+          font-weight: 800
+          line-height: 20px
+          padding-top: 10px
+      &:hover
+        .plus-btn
+          top: 67px
+    .socialicons
+      .t
+        &:hover
+          background-color: #fa5c5c

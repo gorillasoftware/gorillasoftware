@@ -1,4 +1,4 @@
-=image($img, $raster-format: 'png', $svg: true)
+=image($img, $raster-format: 'png', $svg: true, $height: false, $width: false)
   $img-raster: "#{$img}.#{$raster-format}"
   background: image-url($img-raster)
   @if $svg
@@ -7,5 +7,7 @@
   background-position: center
   background-repeat: no-repeat
   background-size: contain
-  width: image-width($img-raster)
-  min-height: image-height($img-raster)
+  @if $width
+    width: image-width($img-raster)
+  @if $height
+    min-height: image-height($img-raster)
