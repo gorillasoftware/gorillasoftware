@@ -1,8 +1,24 @@
 #teaser
   background: $red
-  .gorilla.row
+  .row
+    -webkit-animation-name: gorilla
+    -webkit-animation-duration: .9s
     .gorilla
       +image('gorilla', $svg: false, $height: true)
     h1
       text-align: center
       color: white
+
+@-webkit-keyframes gorilla
+  from
+    -webkit-transform: scale(0)
+    opacity: 0
+  50%
+    -webkit-transform: scale(0)
+    opacity: 0
+  82.5%
+    -webkit-transform: scale(1.03)
+    -webkit-animation-timing-function: ease-out
+    opacity: 1
+  to
+    -webkit-transform: scale(1)
