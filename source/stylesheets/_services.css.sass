@@ -6,7 +6,7 @@
         .label
           background-color: $green
       .img
-        margin: auto
+        margin: 0 auto 1em
         cursor: pointer
         background-color: #F3F2EC
         width: 128px
@@ -16,7 +16,8 @@
         background-position: center
         background-repeat: no-repeat
         background-size: auto 70%
-        &:hover
+      &:hover
+        .img
           background-color: #FDEFC6
 
       &.langs .img
@@ -34,6 +35,9 @@
       &.systems .img
         background-image: image-url('skills/linux.png')
         background-image: none, inline-image('skills/linux.svg')
+      &.oss .img
+        background-image: image-url('skills/oss.png')
+        background-image: none, inline-image('skills/oss.svg')
 
 #services
   .services
