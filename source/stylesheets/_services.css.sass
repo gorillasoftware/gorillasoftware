@@ -1,15 +1,50 @@
 #services
-
   .services
-    .img
-      background-repeat: no-repeat
-      min-height: 212px
-      background-position: center top
-      &.img-1
-        background-image: image-url('service_01.png')
-      &.img-2
-        background-image: image-url('service_02.png')
-      &.img-3
-        background-image: image-url('service_03.png')
-      &.img-4
-        background-image: image-url('service_04.png')
+    .service
+      padding-bottom: 3em
+      p
+        .label
+          background-color: $green
+      .img
+        margin: auto
+        cursor: pointer
+        background-color: #F3F2EC
+        width: 128px
+        height: 128px
+        padding-top: 132px
+        border-radius: 64px
+        background-position: center
+        background-repeat: no-repeat
+        background-size: auto 70%
+
+      &.langs .img
+        background-image: image-url('skills/ruby.png')
+        background-image: none, inline-image('skills/ruby.svg')
+      &.web .img
+        background-image: image-url('skills/rails.png')
+        background-image: none, inline-image('skills/rails.svg')
+      &.frontend .img
+        background-image: image-url('skills/html5.png')
+        background-image: none, inline-image('skills/html5.svg')
+      &.dataprocessing .img
+        background-image: image-url('skills/solr.png')
+        background-image: none, inline-image('skills/solr.svg')
+      &.systems .img
+        background-image: image-url('skills/linux.png')
+        background-image: none, inline-image('skills/linux.svg')
+
+#services
+  .services
+    +grid-row
+    .service
+      text-align: center
+      +grid-column(10, $offset: 1, $last-column: true)
+
+@media #{$small}
+  #services
+    .services
+      .service
+        &:nth-child(2n+1)
+          +grid-column(5, $offset: 1, $last-column: false)
+        &:nth-child(2n)
+          +grid-column(5, $offset: 0, $last-column: true)

@@ -1,11 +1,11 @@
-#contact.container.bg-two
-  #ancla6
-  .section-two
-    .title-two hallo
-    .separator
-      .line.line-2
-    .contactinfo
-      %h2.titlecontact Kontakt
+%section#contact.page
+  %h1 hallo
+  .separator
+    .line.line-2
+
+  .row
+    .contactinfo.columns.medium-3.medium-offset-1.small-offset-1.small-10.end
+      %h3.titlecontact Kontakt
       %p
         gorilla software GmbH
         %br/
@@ -19,5 +19,21 @@
       .media
         = link_to '', 'http://github.com/gorillasoftware', class: :github
         = link_to '', 'http://twitter.com/gorillasoftware', class: :twitter
-    %form#formulario{:action => "/", :method => "post"}
-    =partial 'contact_form'
+    %form#contactform.columns.medium-6.small-offset-1.small-10.end{:action => "https://gorillasoftware.wufoo.com/forms/z7x4m1/#public", :autocomplete => "off", :enctype => "multipart/form-data", :method => "post", :name => "form1", :novalidate => "", :target => '_blank'}
+      %input#idstamp{:name => "idstamp", :type => "hidden", :value => "gpZrPXiPuQ+vYMant8YxoXNTtMh22XItHEJTkG4Il4Q="}/
+      %fieldset
+        .vorname
+          %label{:for => "Field5"} Vorname
+          %input#Field5{:name => "Field5", :type => "text", :value => ""}/
+        .nachname
+          %label{:for => "Field6"} Nachname
+          %input#Field6{:name => "Field6", :type => "text", :value => ""}/
+        .email
+          %label{:for => "Field7"} Email
+          %input#Field7{:maxlength => "255", :name => "Field7", :spellcheck => "false", :type => "email", :value => ""}/
+      %fieldset
+        .message
+          %label{:for => "messageform"} Nachricht
+          %textarea#messageform{:name => "Field8"}
+        %p
+          = link_to 'Verschicken', '#', onclick: '$(this).closest("form").submit(); return false;', class: 'submit'
