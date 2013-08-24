@@ -1,23 +1,30 @@
 #about
+  text-align: center
   .motto
-    color: #949496
-    text-align: center
-
+    padding-bottom: 3em
   .solutions
-    .img
-      background-repeat: no-repeat
-      min-height: 212px
-      background-position: center top
-      &:hover
-        background-position: center -212px
+    .solution
+      padding-bottom: 1em
+      .img
+        margin: auto
         cursor: pointer
-      &.img-1
-        background-image: image-url('about_ico_01.png')
-      &.img-2
-        background-image: image-url('about_ico_02.png')
-      &.img-3
-        background-image: image-url('about_ico_03.png')
+        background-color: #F3F2EC
+        width: 128px
+        height: 128px
+        padding-top: 132px
+        border-radius: 64px
+        background-position: center
+        background-repeat: no-repeat
+        background-size: auto 70%
+        &:hover
+          background-color: #FDEFC6
 
-    .profile-info
-      text-align: center
-      color: #7c8180
+      &.web .img
+        background-image: image-url('about/web.png')
+        background-image: none, inline-image('about/web.svg')
+      &.standards .img
+        background-image: image-url('about/standards.png')
+        background-image: none, inline-image('about/standards.svg')
+      &.webmining .img
+        background-image: image-url('about/webmining.png')
+        background-image: none, inline-image('about/webmining.svg')
