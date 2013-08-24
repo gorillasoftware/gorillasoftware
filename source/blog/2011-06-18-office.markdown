@@ -1,7 +1,6 @@
 ---
 title: New Office
 tags: misc
-layout: layouts/blog
 ---
 Last week I set up my new office in Zürich, right next to Zurich University of the Arts. You can find me here:
 
