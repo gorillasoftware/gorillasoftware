@@ -12,3 +12,6 @@ gem "middleman-syntax"
 gem "redcarpet"
 # for blog article summary
 gem "nokogiri"
+
+gem "rack-contrib"
+gem "puma"
