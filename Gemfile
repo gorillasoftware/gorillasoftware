@@ -14,4 +14,4 @@ gem "redcarpet"
 gem "nokogiri"
 
 gem "rack-contrib"
-gem "puma"
+gem "rack-rewrite"

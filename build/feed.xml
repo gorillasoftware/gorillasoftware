@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2011-10-27T00:00:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Hide OS X Mouse Cursor</title>
+    <link rel="alternate" href="/blog/2011/10/27/hide-os-x-mouse-cursor.html"/>
+    <id>/blog/2011/10/27/hide-os-x-mouse-cursor.html</id>
+    <published>2011-10-27T00:00:00Z</published>
+    <updated>2011-10-27T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;These instructions replace the default OS X cursor with an empty image.
+This can be helpful for full-screen environments, where the cursor
+cannot be set from within the application.&lt;/p&gt;
+
+&lt;p&gt;Open the Terminal (Applications -&gt; Utilities -&gt; Terminal) and type the
+following commands:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Make a copy of the existing arrow cursor:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight shell"&gt;cp /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/Resources/cursors/arrow/cursor.png /tmp
+open -A Preview /tmp/cursor.png
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Clear and save the image (e.g: &lt;strong&gt;⌘ + a&lt;/strong&gt;, &lt;strong&gt;Fn+delete&lt;/strong&gt;, &lt;strong&gt;⌘ + s&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Replace the &lt;strong&gt;arrow cursor&lt;/strong&gt; image with the empty image&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight shell"&gt;sudo cp /tmp/cursor.png /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/Resources/cursors/arrow/cursor.png
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Restart your box&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Path and Encirclement Detection</title>
+    <link rel="alternate" href="/blog/2011/07/07/Path-and-Encirclement-Detection.html"/>
+    <id>/blog/2011/07/07/Path-and-Encirclement-Detection.html</id>
+    <published>2011-07-07T14:40:12Z</published>
+    <updated>2011-07-07T14:40:12Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;
+In an earlier post I was trying to describe a way to use
+&lt;a href='/2011/06/20/grids-and-coordinate-systems.html'&gt;coordinates on triangular grids.&lt;/a&gt;
+In the end I decided to go with a simple three lane coordinate system that
+allows easy calculations based on graph theory.
+&lt;/p&gt;
+&lt;h2&gt;Encirclement&lt;/h2&gt;
+&lt;p&gt;
+The basic Birom rules are based on encirclement detection. The three following cases are all implemented as
+&lt;a href='http://en.wikipedia.org/wiki/Breadth-first_search'&gt;Breadth-first search&lt;/a&gt;
+with different parameters for neighbour detection and exit conditions.
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/blog/2011-06-30-Path-and-Encirclement-Detection/encirclement-f0e365fb.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;1: Scoring&lt;/h3&gt;
+&lt;p&gt;When a player encloses an vacant area, the captured area is being marked with point stones for the corresponding player.&lt;/p&gt;
+&lt;h3&gt;2: Capturing opponent's stones&lt;/h3&gt;
+&lt;p&gt;
+When a player fully encircles one or more opponent's stones, the stones get captured by the opponent. They can than be re-used later
+as additional stones. (There has been extensive discussions about this topic partially covered in
+&lt;a href='/2011-06-29-Birom-Dilemma-I.html'&gt;Birom Dilemma I.&lt;/a&gt;.
+In this implementation, stones are captured, even though they are
+only encircled by common ground)
+&lt;/p&gt;
+&lt;h3&gt;3: Encircling the central red Birom&lt;/h3&gt;
+&lt;p&gt;
+This rule checks, weather a player has managed to fully encircle the central red Birom. The first player achieving that, wins the
+game. If both players encircle the red Birom during the same turn, the game ends in a draw.
+&lt;/p&gt;
+&lt;h2&gt;Try it out!&lt;/h2&gt;
+&lt;p&gt;
+This example is based on triangles only. The same rules as in
+&lt;a href='http://birom.net/424843/Rules'&gt;birom&lt;/a&gt;
+are applied.
+Click to add a triangle. The triangle must be connected to the existing stones with at least one corner.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;div id='header'&gt;
+&lt;div class='coordinates' style='float: left; width: 150px;'&gt;
+xy:
+&lt;span id='xy'&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class='coordinates' style='float: left; width: 150px;'&gt;
+uvw:
+&lt;span id='uvw'&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div id='points' style='float: left; width: 100px;'&gt;
+&lt;span id='0'&gt;&lt;/span&gt;
+&lt;span id='1'&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;span id='error' style='float: left; width: 200px; color: red;'&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style='clear: left;'&gt;&lt;/div&gt;
+&lt;div id='paper' style='height: 800px; background-color: black;'&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2&gt;What's next&lt;/h2&gt;
+&lt;p&gt;For the reason that a Birom is nothing more than a collection of triangles, the same algorithms can be used for the real Birom game implementation. Focus is more and more shifting towards client implementation, game persistency and other back-end related stuff. There may be a post about our CoffeeScript, node.js and mongoDB setup soon.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Birom Dilemma I</title>
+    <link rel="alternate" href="/blog/2011/06/29/Birom-Dilemma-I.html"/>
+    <id>/blog/2011/06/29/Birom-Dilemma-I.html</id>
+    <published>2011-06-29T00:00:00Z</published>
+    <updated>2011-06-29T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;While implementing integration tests for our new &lt;a href="http://birom.net"&gt;birom&lt;/a&gt; library I
+encountered a pattern where the implementation did not entirely match the rules
+described &lt;a href="http://birom.net/424843/Rules"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The pattern in question was &lt;em&gt;Fig. 6b&lt;/em&gt;. I tried to replay the game and
+found the following sequence of moves:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Birom Dilemma starts at move 5" src="images/blog/2011-06-29-Birom-Dilemma-I/dilemma-603b15e3.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the remainder, player A holds the blue, player B the yellow stones.
+Moves &lt;strong&gt;(1)&lt;/strong&gt; to &lt;strong&gt;(4)&lt;/strong&gt; are non-ambiguous. The order is clear and
+the shown sequence of stones is the only valid I&amp;#39;ve found.&lt;/p&gt;
+
+&lt;p&gt;With move &lt;strong&gt;(5)&lt;/strong&gt; now, player A creates common
+ground by enclosing a vacant area with his own blue stones (green area).
+At the same time, this allows the yellow stones to encircle the blue
+stone &lt;strong&gt;(1)&lt;/strong&gt;. In move &lt;strong&gt;(6)&lt;/strong&gt;, the blue stone &lt;strong&gt;(1)&lt;/strong&gt; is still in it&amp;#39;s
+place and subject to be captured by the yellow stone in move &lt;strong&gt;(6)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The main question that arises is if a move made by player A can capture
+current player&amp;#39;s stones by enabling his opponent to encircle his own stones
+via common ground in the current move. It&amp;#39;s not a question of state but
+rather a question of sequence. Is stone &lt;strong&gt;(1)&lt;/strong&gt; captured in move &lt;strong&gt;(5)&lt;/strong&gt;
+or &lt;strong&gt;(6)&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;p&gt;Put differently, is stone &lt;strong&gt;(1)&lt;/strong&gt; still captured by yellow if player
+B decides to put the yellow stone of move &lt;strong&gt;(6)&lt;/strong&gt; somewhere else?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update (June 30 2011)&lt;/strong&gt;: As it turned out, the pattern on the picture is
+invalid. The blue stone &lt;strong&gt;(1)&lt;/strong&gt; is encircled when move &lt;strong&gt;(5)&lt;/strong&gt; is
+completed. Blue allows yellow with turn &lt;strong&gt;(5)&lt;/strong&gt; to encircle &lt;strong&gt;(1)&lt;/strong&gt;.
+Therefore, the blue stone can be removed from the field and be
+re-used by player B as an additional yellow stone.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Me fail english</title>
+    <link rel="alternate" href="/blog/2011/06/28/MeFailEnglish.html"/>
+    <id>/blog/2011/06/28/MeFailEnglish.html</id>
+    <published>2011-06-28T00:00:00Z</published>
+    <updated>2011-06-28T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img alt="Me Fail English? That's Unpossible!" src="images/blog/2011-06-28-MeFailEnglish/ralph-5a6b84c2.jpg" /&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Cake Task Completion for Zsh</title>
+    <link rel="alternate" href="/blog/2011/06/24/cake-task-completion-for-zsh.html"/>
+    <id>/blog/2011/06/24/cake-task-completion-for-zsh.html</id>
+    <published>2011-06-24T10:27:33Z</published>
+    <updated>2011-06-24T10:27:33Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Working on a node.js/coffeescript project I got tired of keeping in
+mind and typing all the tasks defined in the Cakefile. As Cakefiles are very
+similar to the Ruby Rakefiles, I had a look at existing solutions for
+rake. The first google result pointed me to a 
+&lt;a href="http://weblog.rubyonrails.org/2006/3/9/fast-rake-task-completion-for-zsh"&gt;working snipped&lt;/a&gt; I
+already had lying around in my zsh.d directory. It turned out to be very
+easy task to modify the rake completion.
+Basically, I just needed to change the following line from&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;rake --silent --tasks | cut -d &lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt; -f 2 &amp;gt; .rake_tasks
+&lt;/pre&gt;
+&lt;p&gt;to&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;cake | cut -d &lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt; -f 2 &amp;gt; .cake_tasks
+&lt;/pre&gt;
+&lt;p&gt;Additionally, I removed the annoying &amp;#39;Generating .*&lt;em&gt;tasks&amp;#39; output. Add
+an .cake&lt;/em&gt;tasks line to the ignore list of your repository and you&amp;#39;re
+done.&lt;/p&gt;
+
+&lt;p&gt;The final zsh snippet looks like this. Add it to your &lt;code&gt;.zshrc&lt;/code&gt; or to
+some other location that gets loaded when zsh starts:&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;_cake_does_task_list_need_generating &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; ! -f .cake_tasks &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then return &lt;/span&gt;0;
+  &lt;span class="k"&gt;else
+    &lt;/span&gt;&lt;span class="nv"&gt;accurate&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;stat -f%m .cake_tasks&lt;span class="k"&gt;)&lt;/span&gt;
+    &lt;span class="nv"&gt;changed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;stat -f%m Cakefile&lt;span class="k"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;expr &lt;span class="nv"&gt;$accurate&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;gt;=&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$changed&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+_cake &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f Cakefile &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then
+    if &lt;/span&gt;_cake_does_task_list_need_generating; &lt;span class="k"&gt;then
+      &lt;/span&gt;cake | cut -d &lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt; -f 2 &amp;gt; .cake_tasks
+    &lt;span class="k"&gt;fi
+    &lt;/span&gt;compadd &lt;span class="sb"&gt;`&lt;/span&gt;cat .cake_tasks&lt;span class="sb"&gt;`&lt;/span&gt;
+  &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+compdef _cake cake
+&lt;/pre&gt;</content>
+  </entry>
+  <entry>
+    <title>New Office</title>
+    <link rel="alternate" href="/blog/2011/06/18/office.html"/>
+    <id>/blog/2011/06/18/office.html</id>
+    <published>2011-06-18T00:00:00Z</published>
+    <updated>2011-06-18T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Last week I set up my new office in Zürich, right next to Zurich University of the Arts. You can find me here:&lt;/p&gt;
+
+&lt;iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;amp;source=s_q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=baumstrasse+10,+Z%C3%BCrich&amp;amp;aq=&amp;amp;sll=32.472695,30.410156&amp;amp;sspn=67.863477,135.263672&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=Baumgasse+10,+Kreis+5+8005+Z%C3%BCrich,+Switzerland&amp;amp;t=h&amp;amp;z=14&amp;amp;ll=47.382205,8.535778&amp;amp;output=embed"&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;small&gt;
+  &lt;a href="http://maps.google.com/maps?f=q&amp;amp;source=embed&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=baumstrasse+10,+Z%C3%BCrich&amp;amp;aq=&amp;amp;sll=32.472695,30.410156&amp;amp;sspn=67.863477,135.263672&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=Baumgasse+10,+Kreis+5+8005+Z%C3%BCrich,+Switzerland&amp;amp;t=h&amp;amp;z=14&amp;amp;ll=47.382205,8.535778" style="color:#0000FF;text-align:left"&gt;View Larger Map&lt;/a&gt;
+&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Drop by for a visit!&lt;/p&gt;
+</content>
+  </entry>
+</feed>
