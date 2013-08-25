@@ -8,4 +8,3 @@ use Rack::Rewrite do
 end
 
 run Rack::Directory.new('build')
-

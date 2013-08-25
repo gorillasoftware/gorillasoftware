@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.0.0p247"
+ruby "2.0.0"
 
 gem "middleman", "~>3.1.4"
 
@@ -15,3 +15,4 @@ gem "nokogiri"
 
 gem "rack-contrib"
 gem "rack-rewrite"
+gem "thin"

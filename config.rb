@@ -43,4 +43,3 @@ set :haml, { ugly: true }
 page "/feed.xml", :layout => false
 
 activate :directory_indexes
-set :build_dir, "tmp"
