@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "ruby-2.0.0"
+ruby "2.0.0"
 
 gem "middleman", "~>3.1.4"
 
