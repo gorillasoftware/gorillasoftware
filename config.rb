@@ -33,9 +33,10 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
-activate :syntax
+activate :syntax, lineanchors: 'line'
+
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown, :fenced_code_blocks => true
 
 set :haml, { ugly: true }
 
