@@ -1,9 +1,9 @@
 =image($img, $raster-format: 'png', $svg: true, $height: false, $width: false)
   $img-raster: "#{$img}.#{$raster-format}"
-  background: image-url($img-raster)
+  background-image: image-url($img-raster)
   @if $svg
     $img-svg: "#{$img}.svg"
-    background: none, inline-image($img-svg)
+    background-image: none, inline-image($img-svg)
   background-position: center
   background-repeat: no-repeat
   background-size: contain
