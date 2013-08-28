@@ -1,9 +1,17 @@
 // Settings file to override Foundation variables
-$body-font-family: "futura-pt-1","futura-pt-2", Helvetica, Arial, sans-serif;
+$body-font-family: "futura-pt",sans-serif;
 $body-font-weight: 300;
-$body-font-color: #222;
-$header-font-family: "futura-pt-1","futura-pt-2", Helvetica, Arial, sans-serif;
+$body-font-color: #666;
+
+$header-font-family: "futura-pt",sans-serif;
 $header-font-weight: 300;
+
+$topbar-bg: #2b3e50;
+$topbar-title-font-size: 14px;
+$topbar-dropdown-bg: #2b3e50;
+$topbar-height: 70px;
+$topbar-title-weight: 300;
+$topbar-link-weight: 300;
 
 // You can find the variables for each component at the bottom of their
 // doc page. We tried to name them to where they'd make sense just by reading them.
@@ -970,10 +978,8 @@ $header-font-weight: 300;
 //
 
 // Background color for the top bar
-$topbar-bg: #2b3e50;
 
 // Height and margin
-$topbar-height: 70px;
 // $topbar-margin-bottom: emCalc(30px);
 
 // Control Input height for top bar
@@ -981,7 +987,6 @@ $topbar-height: 70px;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: bold;
-$topbar-title-font-size: 14px;
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff;
@@ -989,7 +994,6 @@ $topbar-title-font-size: 14px;
 // $topbar-link-font-size: emCalc(13px);
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: #2b3e50 
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
