@@ -43,3 +43,11 @@ configure :build do
   activate :asset_hash
   activate :relative_assets
 end
+
+activate :deploy do |deploy|
+  deploy.method   = :ftp
+  deploy.host     = "ftp.gorillasoftware.ch"
+  deploy.user     = "ftp1109386-sdecaste"
+  deploy.password = File.read("#{Dir.home}/.middleman-ftp/kpricorn.org") rescue ""
+  deploy.path     = "/gorillasoftware.ch"
+end
