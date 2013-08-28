@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="10.803651"
-     inkscape:cy="1.4690397"
+     inkscape:zoom="256"
+     inkscape:cx="18.371577"
+     inkscape:cy="0.15095729"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -69,11 +69,12 @@
        width="36"
        style="fill:#000000;fill-opacity:1;stroke:none;opacity:1" />
     <path
-       style="fill:#2b3e50;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
-       d="M 0,12.999983 10.290929,0 17.867073,0 7.8286822,13 z"
+       style="fill:#2b3e50;fill-opacity:1;stroke:none"
+       d="M 0,13 10.290929,0 17.867073,0 7.8286818,13 z"
        id="path4057"
        inkscape:connector-curvature="0"
-       transform="translate(0,1039.3622)" />
+       transform="translate(0,1039.3622)"
+       sodipodi:nodetypes="ccccc" />
     <path
        inkscape:connector-curvature="0"
        id="path4059"
@@ -95,6 +96,7 @@
        style="fill:#df6662;fill-opacity:1;stroke:none"
        d="m 7.8286818,1052.3622 10.1713182,0 10.290929,-13 -10.423856,0 z"
        id="path4573"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>

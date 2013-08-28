@@ -1,28 +1,10 @@
-!!!
-%html
-  %head
-    %meta{:name => "viewport", :content => "width=device-width"}/
-    %meta{:charset => "utf-8"}/
-    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
-    %title= current_page.data.title || "gorilla software"
-
-    = stylesheet_link_tag "app"
-    = javascript_include_tag "modernizr.js"
-    = javascript_include_tag "//use.typekit.net/iof8zoc.js"
-    :javascript
-      try{Typekit.load();}catch(e){}
-
-  %body{class: page_classes}
-    = partial 'navigation'
-    .row
-      .content.columns.large-8
-        %h1= current_page.data.title
-        .separator
-          .line.line-1
-        = yield
-      %aside.nav.columns.large-4
-        = partial 'blog_nav'
-    =partial 'footer'
-    = javascript_include_tag "http://code.jquery.com/jquery-1.10.1.min.js"
-    = javascript_include_tag  "site"
-    = yield_content :assets
+- wrap_layout :layout do
+  .row
+    .content.columns.large-8
+      %h1= current_page.data.title
+      .separator
+        .line.line-1
+      = yield
+    %aside.nav.columns.large-4
+      = partial 'blog_nav'
+  =partial 'footer'
