@@ -1,0 +1,3 @@
+$ ->
+  $.localScroll()
+  $(document).foundation();
