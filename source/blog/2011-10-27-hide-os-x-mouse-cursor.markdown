@@ -2,6 +2,7 @@
 title: Hide OS X Mouse Cursor
 updated_at: 2011-06-29
 rendered: site.time
+tags: os x, devops
 ---
 
 These instructions replace the default OS X cursor with an empty image.
