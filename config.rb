@@ -43,7 +43,7 @@ configure :build do
   activate :asset_hash
   activate :relative_assets
   activate :gzip
-  activate :gzip_assets
+  activate :favicon_maker
 end
 
 activate :deploy do |deploy|
