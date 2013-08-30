@@ -7,3 +7,13 @@ RewriteCond %{REQUEST_FILENAME}.gz -f
 RewriteRule ^(.*)\.css$ $1.css.gz [QSA,L]
 RewriteRule ^(.*)\.js$ $1.js.gz [QSA,L]
 RewriteRule ^(.*)\.html$ $1.html.gz [QSA,L]
+
+<IfModule mod_expires.c>
+ExpiresActive On
+############################################
+## Add default Expires header
+## http://developer.yahoo.com/performance/rules.html#expires
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+ ExpiresDefault "access plus 1 year"
+</FilesMatch>
+</IfModule>
