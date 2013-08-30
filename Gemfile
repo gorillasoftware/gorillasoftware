@@ -17,4 +17,6 @@ gem "rack-contrib"
 gem "rack-rewrite"
 gem "thin"
 gem "middleman-deploy"
-gem "middleman-minify-html"
+
+gem 'therubyracer'
+gem 'oj'

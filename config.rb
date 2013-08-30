@@ -43,7 +43,7 @@ configure :build do
   activate :asset_hash
   activate :relative_assets
   activate :gzip
-  activate :minify_html
+  activate :gzip_assets
 end
 
 activate :deploy do |deploy|
