@@ -1,6 +1,5 @@
 ---
 title: Cake Task Completion for Zsh
-date: 2011-06-24T10:27:33+00:00
 tags: build tools, command line, shell
 ---
 Working on a node.js/coffeescript project I got tired of keeping in
