@@ -66,6 +66,8 @@ GEM
       middleman-core (>= 3.0.0)
       net-sftp
       ptools
+    middleman-disqus (0.0.3)
+      middleman-core (>= 3.1.0)
     middleman-favicon-maker (3.3)
       favicon_maker (~> 0.2.3)
       middleman-core (>= 3.0.0)
@@ -149,6 +151,7 @@ DEPENDENCIES
   middleman (~> 3.1.4)
   middleman-blog (~> 3.2.0)
   middleman-deploy
+  middleman-disqus
   middleman-favicon-maker
   middleman-livereload (~> 3.1.0)
   middleman-syntax

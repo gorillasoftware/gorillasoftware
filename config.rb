@@ -53,3 +53,7 @@ activate :deploy do |deploy|
   deploy.password = File.read("#{Dir.home}/.middleman-ftp/kpricorn.org") rescue ""
   deploy.path     = "/gorillasoftware.ch"
 end
+
+activate :disqus do |d|
+  d.shortname = "gorillasoftware"
+end
