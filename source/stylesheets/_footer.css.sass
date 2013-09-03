@@ -1,14 +1,13 @@
 #footer
   background: #2b3e50
-  a
-    line-height: 40px
-    width: 100%
-    +unstyled-link
-    color: inherit
   .newsletter
+    padding-top: 5em
+    a
+      width: 100%
+      height: 40px
+      padding-top: 10px
     & > form > div
       padding-bottom: 1em
-    padding-top: 5em
     h2
       line-height: 40px
       padding: 0
@@ -39,10 +38,13 @@
     &:hover
       background: #3fb79f
 
-  .credits
-    max-width: 1000px
-    text-align: right
-    padding-bottom: 9em
-    color: #577ea5
-    text-transform: uppercase
-    font-size: 0.8em
+  .license
+    padding-top: 3em
+    padding-bottom: 2em
+    +transition(opacity 0.3s)
+    img
+      display: inline
+      text-align: left
+    opacity: 0.3
+    &:hover
+      opacity: 1

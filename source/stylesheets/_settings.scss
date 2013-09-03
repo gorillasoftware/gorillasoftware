@@ -12,6 +12,12 @@ $topbar-dropdown-bg: #2b3e50;
 $topbar-title-weight: 300;
 $topbar-link-weight: 300;
 
+// We use these as default colors throughout
+$primary-color: #50ACE0;
+$secondary-color: #e9e9e9;
+$alert-color: #df6662;
+$success-color: #70c4ae;
+
 // You can find the variables for each component at the bottom of their
 // doc page. We tried to name them to where they'd make sense just by reading them.
 // Go to http://foundation.zurb.com/docs/ to find what you need.
@@ -35,12 +41,6 @@ $topbar-link-weight: 300;
 
 // We use these to control text direction settings
 // $text-direction: ltr;
-
-// We use these as default colors throughout
-// $primary-color: #2ba6cb;
-// $secondary-color: #e9e9e9;
-// $alert-color: #c60f13;
-// $success-color: #5da423;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
