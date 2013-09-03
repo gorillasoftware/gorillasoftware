@@ -1,7 +1,10 @@
 - wrap_layout :layout do
   .row
-    .content.columns.large-8
+    %article.content.columns.large-8
       %h1= current_page.data.title
+      %h6.subheader
+        Posted on
+        %time= current_page.date.strftime('%b %e %Y')
       .separator
         .line.line-1
       = yield
