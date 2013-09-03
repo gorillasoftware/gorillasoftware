@@ -8,5 +8,15 @@
         %input#newsletter.email{:name => "EMAIL", :placeholder => "email address", :required => "", :type => "email", :value => ""}/
       .columns.medium-3.large-2
         = link_to 'Subscribe', '#', onclick: '$(this).closest("form").submit(); return false;', class: 'subscribe'
-  .credits.row
-    .columns.small-12 Copyright © gorilla software GmbH 2011-2013. All Rights Reserved.
+  .license.row
+    .columns.small-8.medium-9.large-offset-3.large-7
+      %span{:property => "dct:title", "xmlns:dct" => "http://purl.org/dc/terms/"} gorilla software website and gorilla software blog
+      by
+      = link_to "http://gorillasoftware.ch", :property => "cc:attributionName", :rel => "cc:attributionURL", "xmlns:cc" => "http://creativecommons.org/ns#" do
+        gorilla software GmbH
+      is licensed under a
+      =link_to "http://creativecommons.org/licenses/by-sa/3.0/", :rel => "license" do
+        Creative Commons Attribution-ShareAlike 3.0 Unported License
+    .columns.small-4.medium-3.large-2.end
+      = link_to "http://creativecommons.org/licenses/by-sa/3.0/", :rel => "license" do
+        = image_tag "http://i.creativecommons.org/l/by-sa/3.0/88x31.png", :alt => "Creative Commons License", :style => "border-width:0"
