@@ -16,7 +16,7 @@ developer for your next web experience drop me a line at
 The vast majority of customer projects I was working on for the
 last two years were all assigned to me by former colleagues or friends.
 While this is still an solid source for projects, it leaves me with 
-a sense of powerless.
+a sense of powerlessness.
 
 To broaden the circle of possible customers, I want to put some more
 effort into my acquisition methodology. In accordance with point one of
@@ -63,7 +63,7 @@ be a huge productivity boost. It could also help, to bundle ideas.
   * Understand your customer's needs
   * Try to find out, how you could help reach your customer's goals
 
-### Do it all, but only one thing at a time
+### Do it all, but do only one thing at a time
 
 This will be a tough nut to crack. I get so easily distracted. There are
 a few general practices I try to embrace for my everyday job.
