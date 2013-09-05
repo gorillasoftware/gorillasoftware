@@ -41,7 +41,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="80.83573"
+     inkscape:cx="18.256779"
      inkscape:cy="71.958598"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -71,7 +71,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -82,22 +82,23 @@
      transform="translate(-337.4152,-413.84374)">
     <g
        id="g3777"
-       clip-path="url(#clipPath3813)">
+       clip-path="url(#clipPath3813)"
+       style="fill:#cf706b;fill-opacity:1">
       <path
          sodipodi:nodetypes="ccccccccccc"
          inkscape:connector-curvature="0"
          id="path4473"
          d="m 337.4152,510.5117 c 12.89109,-21.256 28.64081,-33.93612 46.03959,-41.669 13.91789,-11.47807 31.97268,-18.40553 52.32872,-22.8016 -7.39735,4.82773 -13.29518,10.40522 -15.55327,17.80259 l 5.73304,0.87031 c 8.48443,-4.44497 17.99718,-6.31916 27.76033,-7.56735 -4.44152,4.70155 -9.86261,8.91331 -11.91423,14.8098 22.22567,14.07426 29.6871,26.54584 39.60582,39.38942 l 0,-97.50213 -144,0 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+         style="fill:#cf706b;fill-opacity:1;stroke:none" />
       <g
-         style="fill:#000000;fill-opacity:1"
+         style="fill:#cf706b;fill-opacity:1"
          id="g3761">
         <path
            sodipodi:nodetypes="ccccccccccc"
            inkscape:connector-curvature="0"
            id="path2991"
            d="m 337.4152,510.5117 c 12.89109,-21.256 28.64081,-33.93612 46.03959,-41.669 13.91789,-11.47807 31.97268,-18.40553 52.32872,-22.8016 -7.39735,4.82773 -13.29518,10.40522 -15.55327,17.80259 l 5.73304,0.87031 c 8.48443,-4.44497 17.99718,-6.31916 27.76033,-7.56735 -4.44152,4.70155 -9.86261,8.91331 -11.91423,14.8098 22.22567,14.07426 29.6871,26.54584 39.60582,39.38942 l 0,46.49787 -144,0 z"
-           style="fill:#000000;fill-opacity:1;stroke:none" />
+           style="fill:#453932;fill-opacity:1;stroke:none" />
       </g>
     </g>
   </g>
