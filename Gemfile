@@ -16,7 +16,8 @@ gem "nokogiri"
 gem "rack-contrib"
 gem "rack-rewrite"
 gem "thin"
-gem 'middleman-s3_sync'
+gem "middleman-s3_sync"
+gem "slim"
 
 gem "therubyracer"
 gem "oj"
