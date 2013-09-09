@@ -12,6 +12,7 @@ gem "middleman-syntax"
 gem "redcarpet"
 # for blog article summary
 gem "nokogiri"
+gem "middleman-gsass"
 
 gem "rack-contrib"
 gem "rack-rewrite"
