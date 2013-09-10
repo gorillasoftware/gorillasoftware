@@ -1,5 +1,5 @@
 #contact
-  background-color: #49c9af
+  background-color: $green
   *
     color: white
   h3
@@ -15,23 +15,23 @@
       margin-bottom: 2em
       border-radius: 8px
       border: none
-      background: #3fb79f
+      background: darken($green, 10%)
     label
-      color: #f3f3f3
+      color: $white
       text-transform: uppercase
     .submit
       float: right
-      background-color: #fa5c5c
+      background-color: $red
       border-radius: 6px
       display: inline-block
-      color: #feffff
+      color: white
       padding: 6px 24px 4px 24px
       text-decoration: none
       text-align: center
       margin-right: 0px
       margin-top: 22px
       &:hover
-        background-color: #2c3e50
+        background-color: $tertiary-color
 
   .contactinfo
     padding-bottom: 3em
@@ -40,7 +40,7 @@
       & > a
         display: inline-block
         cursor: pointer
-        background-color: darken(#49c9af, 10%)
+        background-color: darken($green, 10%)
         width: 40px
         height: 40px
         margin: 0px 4px
@@ -57,4 +57,4 @@
         background-image: image-url('t-github.png')
         background-image: none, inline-image('t-github.svg')
       & > a:hover
-        background-color: darken(#49c9af, 30%)
+        background-color: darken($green, 30%)

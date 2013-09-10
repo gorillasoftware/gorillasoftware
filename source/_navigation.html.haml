@@ -1,43 +1,8 @@
-.contain-to-grid
-  %nav.top-bar
-    %ul.title-area
-      %li.name
-        %h1
-          =link_to 'gorilla software', '/'
-      %li.toggle-topbar.menu-icon
-        %a{:href => "#"}
-          %span
-    %section.top-bar-section
-      %ul.right
-        %li
-          =link_to 'Was', '/#about'
-        %li
-          =link_to 'Wer', '/#team'
-        %li
-          =link_to 'Wie', '/#services'
-        %li
-          =link_to 'Kontakt', '/#contact'
-        %li.has-dropdown.not-click
-          =link_to 'Blog', '/blog.html'
-          %ul.dropdown
-            %li
-              %label Recent Articles
-            - blog.articles[0...10].each do |article|
-              %li
-                = link_to article.title, article
-            %li= link_to 'See all →', '/blog.html'
-            %li.divider
-            %li.has-dropdown.not-click
-              =link_to 'Tags', '#'
-              %ul.dropdown
-                - blog.tags.each do |tag, articles|
-                  %li
-                    = link_to "#{tag} (#{articles.size})", tag_path(tag)
-            %li.divider
-            %li.has-dropdown.not-click
-              =link_to 'By Year', '#'
-              %ul.dropdown
-                - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-                  %li
-                    = link_to "#{year} (#{articles.size})", blog_year_path(year)
-            %li.divider
+= topbar(title: 'gorilla software', sticky: true, contain_to_grid: true, menu_text: '') do
+  - right do
+    - menu_item 'Was', '/#about'
+    - menu_item 'Wer', '/#team'
+    - menu_item 'Wie', '/#services'
+    - menu_item 'Kontakt', '/#contact'
+    - divider
+    - menu_item 'Blog', '/blog'

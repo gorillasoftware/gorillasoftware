@@ -21,8 +21,6 @@
       try{Typekit.load();}catch(e){}
 
   %body{class: page_classes}
-    = partial 'navigation'
-    .ruler
     = yield
     = javascript_include_tag "http://code.jquery.com/jquery-1.10.1.min.js"
     = javascript_include_tag  "all"

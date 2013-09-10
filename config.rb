@@ -22,6 +22,8 @@ page "/feed.xml", :layout => false
 activate :directory_indexes
 activate :livereload
 activate :gsass
+activate :foundation_navigation
+activate :bourbon
 
 # Build-specific configuration
 configure :build do

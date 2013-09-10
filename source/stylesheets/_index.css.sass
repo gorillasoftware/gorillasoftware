@@ -6,6 +6,13 @@ $grey: #7c8180
 
 
 .index
+  .no-touch &
+    .contain-to-grid
+      > *
+        +transition(opacity 0.3s ease-in-out)
+        opacity: 0.3
+      &.fixed > *, &:hover > *
+        opacity: 1
 
   h2, h3
     text-transform: uppercase

@@ -1,5 +1,5 @@
 #footer
-  background: #2b3e50
+  background: $tertiary-color
   .newsletter
     padding-top: 5em
     a
@@ -19,7 +19,7 @@
       input
         margin: 0
         border: none
-        background: #486e93
+        background: lighten($tertiary-color, 30%)
         height: auto
         font-size: 20px
         color: #8caecf
@@ -27,16 +27,16 @@
 
   .subscribe
     float: left
-    background-color: #49c9af
+    background-color: darken($success-color, 15%)
     border-radius: 6px
     display: inline-block
-    color: #fff
+    color: white
     font-size: 19px
     text-decoration: none
     text-align: center
     cursor: pointer
     &:hover
-      background: #3fb79f
+      background-color: darken($success-color, 25%)
 
   .license
     padding-top: 3em

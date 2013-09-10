@@ -1,4 +1,16 @@
-// Settings file to override Foundation variables
+$green: #49c9af;
+$red: #df6662;
+$white: #e9e9e9;
+$grey: #2b3e50;
+$brown: #453932;
+
+$primary-color: $red;
+$secondary-color: $white;
+$tertiary-color: #222;
+$alert-color: red;
+$success-color: $green;
+$anchor-font-color-hover: darken($primary-color, 30%);
+
 $body-font-family: "futura-pt",sans-serif;
 $body-font-weight: 300;
 $body-font-color: #666;
@@ -6,18 +18,18 @@ $body-font-color: #666;
 $header-font-family: "futura-pt",sans-serif;
 $header-font-weight: 300;
 
-$topbar-bg: #2b3e50;
-$topbar-title-font-size: 14px;
-$topbar-dropdown-bg: #2b3e50;
+$topbar-bg: $red;
+$topbar-dropdown-bg: $red;
 $topbar-title-weight: 300;
 $topbar-link-weight: 300;
+$topbar-height: 100px;
+$topbar-margin-bottom: 0px;
+$topbar-link-color: #fff;
+$topbar-link-font-size: 20px;
+$topbar-menu-link-color-toggled: #fff;
+$topbar-menu-icon-color-toggled: #fff;
 
-// We use these as default colors throughout
-$primary-color: #50ACE0;
-$secondary-color: #e9e9e9;
-$alert-color: #df6662;
-$success-color: #70c4ae;
-
+// Transitions and breakpoint styles
 // You can find the variables for each component at the bottom of their
 // doc page. We tried to name them to where they'd make sense just by reading them.
 // Go to http://foundation.zurb.com/docs/ to find what you need.
