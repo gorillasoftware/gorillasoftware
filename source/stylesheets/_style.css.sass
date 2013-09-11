@@ -18,9 +18,11 @@ h1
     .top-bar
       .title-area
         padding-left: emCalc(30px)
-        .name
-          +gs-image('logo_title', $width: true, $height: true, $svg: true)
-          +hide-text
+        .name h1
+          padding-top: 18px
+          a
+            +gs-image('logo_title', $width: true, $height: true, $svg: true)
+            +hide-text
 
 .ruler
   width: 100%
