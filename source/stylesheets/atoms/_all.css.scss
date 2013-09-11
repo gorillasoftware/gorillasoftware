@@ -14,17 +14,19 @@
   margin-bottom: 3em;
 
   &.line-1 {
-    background: #ededed;
+    background: darken($white, 10%);
   }
 
   &.line-2 {
-    background: #44bba3;
+    background: darken($green, 10%);
   }
 }
 
 div, a {
-  @include transition(background-color 0.2s ease-in-out);
-  @include transition(border-color 0.2s ease-in-out);
+  @include transition(
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out
+    );
 }
 
 h1 {
@@ -36,7 +38,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media #{$small} {
-  h1, h2, h3, h4, h5, h6 {
+  // no h1
+  h2, h3, h4, h5, h6 {
     text-align: inherit;
   }
 }
