@@ -42,10 +42,13 @@ activate :bourbon
 configure :build do
   activate :minify_css
   activate :minify_javascript
+  activate :cache_buster
   activate :asset_hash
   activate :relative_assets
   activate :gzip
   activate :favicon_maker
+  require "middleman-smusher"
+  activate :smusher
 end
 
 activate :disqus do |d|

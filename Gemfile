@@ -16,6 +16,7 @@ gem "middleman-gsass"
 gem "middleman-foundation-navigation"
 gem "middleman-bourbon"
 gem "middleman-google-analytics", github: 'kpricorn/middleman-google-analytics', branch: 'features/domain_name_and_allow_linker'
+gem "middleman-smusher"
 
 gem "rack-contrib"
 gem "rack-rewrite"
