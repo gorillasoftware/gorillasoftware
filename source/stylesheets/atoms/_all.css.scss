@@ -24,18 +24,19 @@
 
 div, a {
   @include transition(background-color 0.2s ease-in-out);
+  @include transition(border-color 0.2s ease-in-out);
 }
 
 h1 {
   text-transform: uppercase;
 }
 
-header, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
 @media #{$small} {
-  header, h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6 {
     text-align: inherit;
   }
 }
