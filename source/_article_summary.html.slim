@@ -3,7 +3,7 @@ article.article-entry-summary[itemprop='blogPost' itemscope itemtype='http://sch
     == partial 'article_headline', :locals => { :article => article, :single_article => false }
     div.entry-summary-content[itemprop='description']
       == article.summary
-    == partial 'article_more', :locals => { :article => article }
+      == partial 'article_more', :locals => { :article => article }
 
   footer.entry-footer
     == partial 'article_meta', locals: { article: article }
