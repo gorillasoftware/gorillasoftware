@@ -15,6 +15,7 @@ gem "nokogiri"
 gem "middleman-gsass"
 gem "middleman-foundation-navigation"
 gem "middleman-bourbon"
+gem "middleman-google-analytics"
 
 gem "rack-contrib"
 gem "rack-rewrite"

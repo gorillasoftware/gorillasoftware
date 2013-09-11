@@ -103,6 +103,8 @@ GEM
     middleman-foundation-navigation (0.0.1)
       foundation-navigation
       middleman-core (>= 3.1.0)
+    middleman-google-analytics (0.0.1)
+      middleman-core (>= 3.0.6)
     middleman-gsass (0.0.1)
       gsass
     middleman-livereload (3.1.0)
@@ -215,6 +217,7 @@ DEPENDENCIES
   middleman-disqus
   middleman-favicon-maker
   middleman-foundation-navigation
+  middleman-google-analytics
   middleman-gsass
   middleman-livereload (~> 3.1.0)
   middleman-s3_sync
