@@ -23,9 +23,12 @@
 
   %body{class: page_classes}
     = yield_content :before
-    =partial 'navigation'
-    = yield
-    =partial 'footer'
+    %header#header-container
+      =partial 'navigation'
+    #content-container
+      #content= yield
+    %footer#footer-container
+      =partial 'footer'
     = javascript_include_tag "http://code.jquery.com/jquery-1.10.1.min.js"
     = javascript_include_tag  "all"
 

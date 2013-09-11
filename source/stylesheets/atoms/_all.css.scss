@@ -34,6 +34,12 @@ header, h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+@media #{$small} {
+  header, h1, h2, h3, h4, h5, h6 {
+    text-align: inherit;
+  }
+}
+
 fieldset {
   border: 0;
   margin: 0;
@@ -84,7 +90,7 @@ a.submit {
   color: white;
   padding: 10px 24px 4px 24px;
   text-align: center;
-  font-size: 19px;
+  font-size: 120%;
   cursor: pointer;
   text-decoration: none;
 }

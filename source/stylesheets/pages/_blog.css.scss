@@ -1,4 +1,12 @@
-.blog {
+.archive, .blog {
+  #content-container {
+    @include grid-row;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2em;
+    padding-bottom: 3em;
+  }
+
   .article-meta {
     padding: 3em 0;
   }
@@ -20,5 +28,11 @@
       &:after { content: " / "; }
       &:last-child:after { content: ""; }
     }
+  }
+
+  iframe {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }
