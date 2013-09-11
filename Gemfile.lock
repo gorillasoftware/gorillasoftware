@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/kpricorn/middleman-google-analytics.git
+  revision: 74a9146adf4bfca3a108106f37b580a89317f11e
+  branch: features/domain_name_and_allow_linker
+  specs:
+    middleman-google-analytics (0.0.1)
+      middleman-core (>= 3.0.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -103,8 +111,6 @@ GEM
     middleman-foundation-navigation (0.0.1)
       foundation-navigation
       middleman-core (>= 3.1.0)
-    middleman-google-analytics (0.0.1)
-      middleman-core (>= 3.0.6)
     middleman-gsass (0.0.1)
       gsass
     middleman-livereload (3.1.0)
@@ -217,7 +223,7 @@ DEPENDENCIES
   middleman-disqus
   middleman-favicon-maker
   middleman-foundation-navigation
-  middleman-google-analytics
+  middleman-google-analytics!
   middleman-gsass
   middleman-livereload (~> 3.1.0)
   middleman-s3_sync
