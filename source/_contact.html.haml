@@ -35,5 +35,4 @@
         .message
           %label{:for => "messageform"} Nachricht
           %textarea#messageform{:name => "Field8"}
-        %p
-          = link_to 'Verschicken', '#', onclick: '$(this).closest("form").submit(); return false;', class: 'submit'
+        = link_to 'Verschicken', '#', onclick: '$(this).closest("form").submit(); return false;', class: 'signup submit'

@@ -216,16 +216,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  builder (~> 3.0.0)
-  middleman (~> 3.1.4)
-  middleman-blog (~> 3.2.0)
+  builder
+  middleman
+  middleman-blog
   middleman-bourbon
   middleman-disqus
   middleman-favicon-maker
   middleman-foundation-navigation
   middleman-google-analytics!
   middleman-gsass
-  middleman-livereload (~> 3.1.0)
+  middleman-livereload
   middleman-s3_sync
   middleman-syntax
   nokogiri

@@ -1,0 +1,13 @@
+---
+title: Archiv
+pageable: false
+---
+
+h1 Archiv
+
+- blog.articles.group_by{ |a| a.date.year }.each do |year, articles|
+  h2.subheader== year
+  hr
+  == partial 'articles_archive', locals: { articles: articles }
+
+== partial 'article_paginate', locals: locals

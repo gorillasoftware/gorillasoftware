@@ -1,0 +1,13 @@
+article.article-entry[itemprop='blogPost' itemscope itemtype='http://schema.org/BlogPosting']
+  header.entry-header
+    == partial 'article_date', locals: { datetime: current_article.date }
+
+  div
+    == partial 'article_headline', locals: { article: current_article, single_article: true }
+  div.article-entry-content[itemprop='articleBody']
+    == current_article.body
+
+  footer.entry-footer
+    == partial 'article_meta', locals: { article: current_article }
+    == partial 'article_navigate', locals: { previous_article: current_article.previous_article, next_article: current_article.next_article }
+    == disqus

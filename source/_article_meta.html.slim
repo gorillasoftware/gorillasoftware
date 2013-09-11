@@ -1,0 +1,4 @@
+.article-meta
+  ' Publiziert am
+  ==' partial 'article_date', :locals => { :datetime => article.date }
+  == partial 'article_tags', :locals => { :tags => article.tags }

@@ -1,0 +1,19 @@
+nav.article-navigation[aria-labelledby='pagination' role='navigation']
+  .articles-nav
+    .article-prev
+      - if previous_article
+        a[href='#{previous_article.url}' rel='prev']
+          ' ←
+          = previous_article.title
+      - else
+        | &nbsp;
+    .article-page
+      | ★
+    .article-next
+      - if next_article
+        a[href='#{next_article.url}' rel='next']
+          =' next_article.title
+          | →
+      - else
+        | &nbsp;
+hr

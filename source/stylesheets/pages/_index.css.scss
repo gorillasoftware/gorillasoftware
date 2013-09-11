@@ -1,0 +1,48 @@
+body.index {
+  html.no-touch & {
+    .contain-to-grid {
+      & > * {
+        @include transition(opacity 0.3s ease-in-out);
+        opacity: 0.3;
+      }
+
+      &.fixed > *, &:hover > * {
+        opacity: 1;
+      }
+    }
+  }
+
+  .page {
+    min-height: 100%;
+    padding-top: 3em;
+    padding-bottom: 2em;
+  }
+
+  h2, h3 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h1, h2 {
+    margin-bottom: 0.1em;
+  }
+
+  h3 {
+    color: $red;
+    &.light {
+      color: white;
+    }
+  }
+
+  h1 {
+    color: $green;
+
+    &.light {
+      color: white;
+    }
+  }
+
+  h2 {
+    color: white;
+  }
+}

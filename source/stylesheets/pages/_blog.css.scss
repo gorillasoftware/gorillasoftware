@@ -1,0 +1,24 @@
+.blog {
+  .article-meta {
+    padding: 3em 0;
+  }
+
+  word-wrap: break-word
+  ul {
+    margin-left: 1em
+  }
+
+  p.more {
+    margin-top: 30px;
+  }
+
+  ul.tags {
+    list-style: none; margin: 0; padding: 0;
+    display: inline;
+    li {
+      display: inline;
+      &:after { content: " / "; }
+      &:last-child:after { content: ""; }
+    }
+  }
+}

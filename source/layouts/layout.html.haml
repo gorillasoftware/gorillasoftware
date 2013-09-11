@@ -4,7 +4,7 @@
     %meta{:name => "viewport", :content => "width=device-width"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
-    %title= current_page.data.title || "The Middleman"
+    %title= title
 
     =favicon_tag "/apple-touch-icon-144x144-precomposed.png", rel: "apple-touch-icon-precomposed apple-touch-icon", sizes: "144x144"
     =favicon_tag "/apple-touch-icon-114x114-precomposed.png", rel: "apple-touch-icon-precomposed apple-touch-icon", sizes: "114x114"
@@ -22,9 +22,12 @@
       try{Typekit.load();}catch(e){}
 
   %body{class: page_classes}
+    = yield_content :before
+    =partial 'navigation'
     = yield
+    =partial 'footer'
     = javascript_include_tag "http://code.jquery.com/jquery-1.10.1.min.js"
     = javascript_include_tag  "all"
 
-    = yield_content :assets
+    = yield_content :after
     = google_analytics_tag

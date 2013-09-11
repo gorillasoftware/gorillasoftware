@@ -1,0 +1,55 @@
+#footer {
+  background: $tertiary-color;
+  .newsletter {
+    padding-top: 5em;
+    a {
+      width: 100%;
+      height: 40px;
+      padding-top: 10px;
+    }
+    & > form > div {
+      padding-bottom: 1em;
+    }
+    h2 {
+      line-height: 40px;
+      padding: 0;
+      margin: 0;
+      text-transform: none;
+      text-align: inherit;
+      color: white;
+    }
+    form {
+      input {
+        margin: 0;
+        border: none;
+        background: lighten($tertiary-color, 30%);
+        height: auto;
+        font-size: 20px;
+        color: #8caecf;
+        outline: none;
+      }
+    }
+  }
+
+  .subscribe {
+    float: left;
+    background-color: darken($success-color, 15%);
+    &:hover {
+      background-color: darken($success-color, 25%);
+    }
+  }
+
+  .license {
+    padding-top: 3em;
+    padding-bottom: 2em;
+    @include transition(opacity 0.3s);
+    opacity: 0.3;
+    img {
+      display: inline;
+      text-align: left;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

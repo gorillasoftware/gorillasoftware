@@ -1,0 +1,21 @@
+- if paginate
+  nav.page-pagination[aria-labelledby='pagination' role='navigation']
+    - if page_number && num_pages && num_pages > 1
+      .articles-nav
+        .article-prev
+          - if prev_page
+            a[href='#{prev_page.url}' rel='prev'] ←
+          - else
+            | &nbsp;
+        .article-page
+          ' –
+          =' page_number
+          | /
+          =<> num_pages
+          | –
+        .article-next
+          - if next_page
+            a[href='#{next_page.url}' rel='next'] →
+          - else
+            | &nbsp;
+    hr

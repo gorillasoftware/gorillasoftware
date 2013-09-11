@@ -1,0 +1,28 @@
+.contain-to-grid {
+  box-shadow: 0 2px 1px rgba(0,0,0,0.25);
+  .top-bar {
+    h1 {
+      text-align: inherit;
+      a {
+        width: inherit;
+      }
+    }
+  }
+}
+
+.no-touch {
+  .contain-to-grid {
+    .top-bar {
+      .title-area {
+        padding-left: emCalc(30px);
+        .name h1 {
+          padding-top: 18px;
+          a {
+            @include gs-image('logo_title', $width: true, $height: true, $svg: true);
+            @include hide-text;
+          }
+        }
+      }
+    }
+  }
+}
