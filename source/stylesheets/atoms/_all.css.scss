@@ -63,10 +63,6 @@ time {
 }
 
 p {
-  font-family: $georgia;
-}
-
-p {
   a {
     border-bottom: 2px dotted lighten($primary-color, 30%);
     &:hover {
@@ -81,10 +77,6 @@ em {
   &:hover {
     background-color: lighten($primary-color, 30%);
   }
-}
-
-li {
-  list-style-type: none;
 }
 
 a.submit {

@@ -1,4 +1,5 @@
 .archive, .blog {
+
   #content-container {
     @include grid-row;
     padding-left: 1em;
@@ -21,7 +22,9 @@
   }
 
   ul.tags {
-    list-style: none; margin: 0; padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: inline;
     li {
       display: inline;
