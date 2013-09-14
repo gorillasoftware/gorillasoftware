@@ -1,0 +1,148 @@
+---
+title: The Coderetreat – Conway's Game of Life
+published: false
+---
+
+- content_for :after do
+  == javascript_include_tag url_for("#{current_page.url}scripts/vendor/requirejs/require.js"), { 'data-main' => 'scripts/main.js' }
+
+== image_tag "blog/2013-09-12-code-retreat/retreat.jpg"
+small
+  ' Retreat at Long Island. Engraving by J.C. Armytage from painting by M.A. Wageman
+  a href="http://www.flickr.com/photos/ooocha/2594127956/" ↩
+
+h3 The Coderetreat
+
+p
+  ' Yesterday, I took part in my first
+  a<>(href='http://coderetreat.org/') Coderetreat
+  ' at the
+  a<>(href='ch-open.ch/wstage/workshop-tage/2013/aktuelles-programm-2013/ws-15-coderetreat-honing-the-craft-together/')
+    ' /ch/open workshop days
+  ' in Zürich. I was pretty sceptical about the day to come. The course
+  ' description didn't mention much about the topics which are to be worked on.
+  ' But I was also looking forward to work on my <em>social coding skills</em>. READMORE
+
+h3 The course process
+
+p
+  ' The main task, we were working on for the whole day was called
+  a(href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life") Conway's Game of Life
+  |.
+  blockquote
+    ' The Game of Life, also known simply as Life, is a cellular automaton
+    ' devised by the British mathematician John Horton Conway in 1970. The "game"
+    ' is a zero-player game, meaning that its evolution is determined by its initial
+    ' state, requiring no further input. One interacts with the Game of Life by
+    ' creating an initial configuration and observing how it evolves.
+    cite
+      a(href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life") Wikipedia
+
+h4 Rules
+
+p
+  ol
+    li Any live cell with fewer than two live neighbours dies, as if caused by under-population.
+    li Any live cell with two or three live neighbours lives on to the next generation.
+    li Any live cell with more than three live neighbours dies, as if by overcrowding.
+    li Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+p
+  ' The main focus of the Coderetreat day wasn't the taks itself. It was more
+  ' about the approach with focus on clean, re-usable code and test driven 
+  ' development. The session lasted 45' each, with a 15' review session.
+
+p
+  ' I'll try to summarize shortly the different sessions, what the individual
+  ' goal was and my lessons learned.
+
+h4 Session #1 - Warm-up
+
+p
+  ' This was mostly a warm-up round. As I was used to TDD already, I could dive
+  ' into the problem solving immediately as the driver.
+
+ul
+  li
+    ' Using a single file for specs and production code turned out to be a good
+    ' choice for TDD, especially in early phases.
+  li
+    ' It's helpful to invest time and effort into your development environment.
+    ' Being able to run the specs quickly with a keyboard shortcut (I use
+    a<>(href='https://github.com/skalnik/vim-vroom') vim-vroom
+    ' for that) or automated (e.g. with
+    a<>(href='https://github.com/guard/guard') guard
+    |) helps you to pick up speed, especially when moving between production-
+    ' and test-code.
+  li I liked the fact, that we had to delete the code after the session was over.
+
+h4 Session #2 - New constraint: No return values
+
+p
+  ' After changing groups, the coding started again from zero. As an additional
+  ' constraint for this session, we were not allowed to use return values.
+
+p
+  ' In this session, you could clearly see, how important it is to talk to your
+  ' coding partner. Some challenges are better approached by thoroughly
+  ' discuss a possible solution or approach upfront. In my opinion, this is
+  ' what makes pair programming so valuable.
+
+h4 Session #3 - New constraint: No conditionals
+
+p
+  ' OK, this time no conditionals. Almost all the groups came up with some
+  ' sort of dictionary decision tree based solution. The proposed Object Oriented
+  ' approach first seemed as a total overkill (it was some kind of state
+  ' machine, where a cell could trigger a state change of a counter depending
+  ' on it's own life state).
+
+hr
+
+h4 Session #4 - New constraint: Time
+
+p
+  ' In my opinion, this was the best session. The 'Write test/implementation' and
+  ' refactoring cycles were time-boxed to 3'. Later this time was reduced to
+  ' 2' and even 1'. The implementation and test code that was not yet finished
+  ' (green) had to be deleted after every cycle.
+
+p
+  ' Also if the code quality was questionable, this was the session were I came
+  ' closest to a running implementation. It forced to shrink your coding cycles
+  ' to about one or two lines per production and test code each. This constraint
+  ' really kept you going the red/green TDD iteration path. And it forces you
+  ' to be proficient in your development environment.
+
+h4 Session #5 - The Devil is in the details
+
+p
+  ' For the last session, I was working with a ActionScript/PHP developer and
+  ' we were struggling in finding a suitable environment, that fit for both.
+  ' It showed pretty quickly, that for a successful pairing session it's
+  ' essential that both participants are familiar with the environment.
+  ' As for me, I am using vim together with the Dvorak keyboard layout. You
+  ' seldom find people who are familiar with this environment (that is also
+  ' my biggest doubt about using it). But even a slight little change in
+  ' your work-flow can already slow you down drastically (like the different
+  ' layouts used in Switzerland like German, Swiss-German, US, ...).
+
+p
+  ' If you are working together with a vim user, these issues can be addressed
+  ' by using some sort of screen sharing (e.g. tmux). But again, it forces many people
+  ' to leave their known environment. Perhaps the emerging usage of web IDEs like
+  a(href="https://c9.io/") cloud9
+  ' can facilitate pair programming.
+
+h3 The follow-ups
+
+p
+  ' As a follow up, I implemented the Game of Life in CoffeeScript. The code is
+    available
+  a(href='https://github.com/kpricorn/game-of-life') here
+  ' I will write a post about the implementation details.
+
+h3 Summary
+
+p
+  ' All in all it was a great and exciting experience and I highly recommend
+  ' to anyone to participate in such a Coderetreat day.
