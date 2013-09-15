@@ -1,0 +1,64 @@
+---
+title: Conway's Game of Life, again
+---
+
+- content_for :after do
+  == javascript_include_tag url_for("#{current_page.url}bower_components/requirejs/require.js"), { 'data-main' => 'scripts/f6854c8b.main' }
+
+- unless is_blog_article?
+  == image_tag "blog/2013-09-14-game-of-life/teaser.gif"
+
+p
+  ' Driven by the motivation to write code caused by my participation on a Coderetreat day, I decided to create a JavaScript implementation of Conway's Game of Life. READMORE
+
+#gol
+  p
+    .row
+      canvas.small-12 style="height: 300px; background-color: white; display: block; margin: 0 auto; box-shadow: #111 0 0 1px;"
+  p
+    .label<>Note:
+    | Click and drag on the grid you can create living cells.
+
+  p
+    .row
+      .columns.small-12.medium-1
+        p
+          .round.alert.label
+            ' Sequence:
+            span.js-sequence 0
+      .columns.small-6.medium-offset-9.medium-1
+        p
+          input.js-toggle.small.button.radius(type='button' value="Start")
+      .columns.small-6.medium-1
+        p
+          input.js-reset.small.button.radius(type='button' value="Reset")
+
+p
+  ' These are the ingredients:
+
+ul
+  li
+    a<>(href='http://paperjs.org') Paper.js
+    | — The Swiss Army Knife of Vector Graphics Scripting.
+  li
+    a<>(href='http://backbonejs.org') Backbone.js
+    | — Glue the game and UI stuff together
+  li
+    a<>(href='http://yeoman.io/') Yeoman
+    | /
+    a<>(href='http://gruntjs.com/') Grunt
+    | /
+    a<>(href='http://bower.io/') Bower
+    | /
+    a<>(href='http://requirejs.org/') RequireJS
+    | — Dependency handling and building (Hm, this was'n really necessary. Just out of personal curiosity)
+
+p
+  ' The code is available on github
+ul
+  li
+    a<>(href='https://github.com/kpricorn/game-of-life') kpricorn/game-of-life
+    | — Game of Life implementation
+  li
+    a<>(href='https://github.com/kpricorn/game-of-life-sample') kpricorn/game-of-life-sample
+    | — Sample JS App
