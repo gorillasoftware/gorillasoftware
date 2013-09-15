@@ -40,8 +40,8 @@ activate :bourbon
 
 # Build-specific configuration
 configure :build do
+  activate :minify_javascript, ignore: ['require.js', 'f6854c8b.main']
   activate :minify_css
-  activate :minify_javascript
   activate :cache_buster
   activate :asset_hash
   activate :relative_assets
