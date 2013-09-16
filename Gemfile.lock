@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/kpricorn/middleman-google-analytics.git
-  revision: 74a9146adf4bfca3a108106f37b580a89317f11e
+  revision: ed767d6d2d5276799b011784aff39e5af9f195cd
   branch: features/domain_name_and_allow_linker
   specs:
     middleman-google-analytics (0.0.1)
