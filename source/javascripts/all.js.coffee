@@ -1,5 +1,3 @@
-#= require_tree ./_vendor
-
 #= require foundation/foundation
 
 #= require foundation/foundation.alerts
