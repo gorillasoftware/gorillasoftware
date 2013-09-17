@@ -7,7 +7,7 @@ tags: os x, devops
 
 These instructions replace the default OS X cursor with an empty image.
 This can be helpful for full-screen environments, where the cursor
-cannot be set from within the application.
+cannot be set from within the application. READMORE
 
 Open the Terminal (Applications -> Utilities -> Terminal) and type the
 following commands:
