@@ -14,7 +14,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :blog do |blog|
-  blog.per_page = 3
+  blog.per_page = 5
   blog.prefix = "blog"
   blog.layout = "layouts/blog_article"
   blog.tag_template = "tag.html"
