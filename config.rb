@@ -69,3 +69,7 @@ activate :google_analytics do |ga|
   ga.domain_name = 'gorillasoftware.ch'
   ga.allow_linker = true
 end
+
+foundation_dir = Gem::Specification.find_by_name("zurb-foundation").gem_dir
+sprockets.append_path File.join(foundation_dir, 'js')
+sprockets.append_path File.join(foundation_dir, 'scss')

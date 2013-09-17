@@ -5,7 +5,7 @@ ruby "2.0.0"
 gem "middleman"
 
 gem "middleman-livereload"
-gem "zurb-foundation"
+gem "zurb-foundation", github: 'kpricorn/foundation'
 gem "middleman-blog"
 gem "builder"
 gem "redcarpet"
