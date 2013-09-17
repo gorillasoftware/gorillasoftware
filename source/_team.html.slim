@@ -1,0 +1,23 @@
+section#team.page
+  h1.light wer
+  .separator
+    .line.line-2
+
+  article.team
+    .teamlist.row
+      .who.columns.small-centered.medium-6.large-4.small-10
+        .members-box
+          .photo.photo-one
+          h4.name-team Sebastian de Castelberg
+        .photo-footer
+          .plus-btn
+          .socialicons
+            == link_to 'http://github.com/kpricorn' do
+              .t.t-github
+            == link_to 'http://twitter.com/kpricorn_' do
+              .t.t-twitter
+            == link_to 'http://facebook.com/kpricorn' do
+              .t.t-fb
+            - mail_block = capture do
+              .t.t-mail
+            == mail_to 'sebastian@gorillasoftware.ch', mail_block
