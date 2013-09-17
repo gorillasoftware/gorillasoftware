@@ -23,14 +23,18 @@ activate :blog do |blog|
   blog.summary_separator = /(READMORE)/
 end
 
-activate :syntax, lineanchors: 'line'
-
+set :markdown,
+  tables: true,
+  autolink: true,
+  gh_blockcode: true,
+  fenced_code_blocks: true,
+  smartypants: true
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true
+
 
 set :haml, { ugly: true }
 
-page "/feed.xml", :layout => false
+page "/feed.xml", layout: false
 
 activate :directory_indexes
 activate :livereload

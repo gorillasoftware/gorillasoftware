@@ -4,6 +4,7 @@ nav.page-pagination > .articles-nav {
   .article-page {
     @include grid-column(2);
     text-align: center;
+    color: $red;
   }
   .article-prev {
     @include grid-column(5);

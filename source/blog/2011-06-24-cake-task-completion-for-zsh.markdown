@@ -11,13 +11,13 @@ already had lying around in my zsh.d directory. It turned out to be very
 easy task to modify the rake completion.
 Basically, I just needed to change the following line from
 
-```bash
+```.language-bash
 rake --silent --tasks | cut -d " " -f 2 > .rake_tasks
 ```
 
 to
 
-```bash
+```.language-bash
 cake | cut -d " " -f 2 > .cake_tasks
 ```
 
@@ -28,7 +28,7 @@ done.
 The final zsh snippet looks like this. Add it to your `.zshrc` or to
 some other location that gets loaded when zsh starts:
 
-```bash
+```.language-bash
 _cake_does_task_list_need_generating () {
   if [ ! -f .cake_tasks ]; then return 0;
   else
