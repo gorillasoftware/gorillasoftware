@@ -1,10 +1,11 @@
 #teaser
   background: $red
   .row
-    -webkit-animation-name: gorilla
-    -webkit-animation-duration: .9s
+    -webkit-animation: gorilla 0.9s
     .gorilla
       +gs-image('gorilla', $height: true)
+      &:hover
+        +gs-image('gorilla_twinkle_twinkle', $height: true)
     h1
       text-align: center
       color: white
