@@ -25,6 +25,7 @@
   %body{class: page_classes}
     = yield_content :before
     %header#header-container
+      = yield_content :before_nav
       =partial 'navigation'
     #content-container
       #content= yield
