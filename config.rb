@@ -49,7 +49,6 @@ configure :build do
   activate :cache_buster
   activate :asset_hash, ignore: ['require.js', 'f6854c8b.main']
   activate :relative_assets
-  activate :gzip
   activate :favicon_maker
   require "middleman-smusher"
   activate :smusher
