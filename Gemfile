@@ -8,7 +8,6 @@ gem "middleman-livereload"
 gem "zurb-foundation"
 gem "middleman-blog"
 gem "builder"
-gem "middleman-syntax"
 gem "redcarpet"
 # for blog article summary
 gem "nokogiri"
