@@ -10,11 +10,15 @@ body.index {
         opacity: 1;
       }
     }
+
+    section.page {
+      padding-top: 100px;
+    }
   }
 
   section.page {
     min-height: 100%;
-    padding-top: 100px;
+    padding-top: 20px;
     padding-bottom: 2em;
   }
 
