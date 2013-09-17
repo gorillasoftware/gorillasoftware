@@ -1,0 +1,6 @@
+---
+title: fooooooo
+---
+
+![](/blog/2020-12-12-test/teaser.jpg)
+![](./2020-12-12-test/teaser.jpg)

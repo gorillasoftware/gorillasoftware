@@ -3,7 +3,7 @@ title: Hide OS X Mouse Cursor
 tags: os x, devops
 ---
 
-![Mouse Cursor](<%= image_path 'blog/2011-10-27-hide-os-x-mouse-cursor/cursor.png' %>)
+![Mouse Cursor](/blog/2011-10-27-hide-os-x-mouse-cursor/cursor.png)
 
 These instructions replace the default OS X cursor with an empty image.
 This can be helpful for full-screen environments, where the cursor

@@ -4,7 +4,7 @@ tags: projects, acquisition, open company
 published: false
 ---
 
-![John Cunning: Manhattan Skyline, 1934](<%= image_path 'blog/2013-09-15-its-the-economy-stupid/newyork.jpg' %>)
+![John Cunning: Manhattan Skyline, 1934](/blog/2013-09-15-its-the-economy-stupid/newyork.jpg)
 <small>John Cunning: Manhattan Skyline, 1934 [↩][2]</small>
 
 <big>

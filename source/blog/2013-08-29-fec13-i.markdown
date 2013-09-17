@@ -3,7 +3,7 @@ title: FEC13 - Day 1
 tags: conference, frontend
 ---
 
-![Unlock / Lock - user interface issue with bathroom doors at Microsoft, Redmond Campus, Redmond, Washington, USA](<%= image_path 'blog/2013-08-29-fec13-i/frontend.jpg' %>)
+![Unlock / Lock - user interface issue with bathroom doors at Microsoft, Redmond Campus, Redmond, Washington, USA](/blog/2013-08-29-fec13-i/frontend.jpg)
 <small>Unlock / Lock - user interface issue with bathroom doors at Microsoft, Redmond Campus, Redmond, Washington, USA [↩](http://www.flickr.com/photos/wonderlane/4315076635)</small>
 
 Here is my short rating and overview of the Thursday talks of Frontend
@@ -34,7 +34,7 @@ topic.
 * when did you last use quotes? - Why is one of the main (and mostly
 nicest) styleguide components always a quote.
 
-![Blockquotes. Screenshot of bootstrap CSS docs](<%= image_path 'blog/2013-08-29-fec13/quotes.png' %>)
+![Blockquotes. Screenshot of bootstrap CSS docs](/blog/2013-08-29-fec13-i/quotes.png)
 
 * <http://frontify.com/>
 

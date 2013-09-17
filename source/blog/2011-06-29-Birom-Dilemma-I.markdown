@@ -4,7 +4,7 @@ updated_at: 2011-06-29
 tags: birom, problem solving
 ---
 
-![Birom Dilemma starts at move 5](<%= image_path "blog/2011-06-29-Birom-Dilemma-I/teaser.jpg" %>)
+![Birom Dilemma starts at move 5](/blog/2011-06-29-Birom-Dilemma-I/teaser.jpg)
 <small>A fork in the road in North Georgia<a href="http://www.flickr.com/photos/nshivar/9648409425/">↩</a></small>
 
 
@@ -15,7 +15,7 @@ described [here](http://birom.net/424843/Rules). READMORE
 The pattern in question was _Fig. 6b_. I tried to replay the game and
 found the following sequence of moves:
 
-![Birom Dilemma starts at move 5](<%= image_path "blog/2011-06-29-Birom-Dilemma-I/dilemma.jpg" %>)
+![Birom Dilemma starts at move 5](/blog/2011-06-29-Birom-Dilemma-I/dilemma.jpg)
 
 For the remainder, player A holds the blue, player B the yellow stones.
 Moves __(1)__ to __(4)__ are non-ambiguous. The order is clear and

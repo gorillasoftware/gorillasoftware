@@ -3,7 +3,7 @@ title: Come in, we're open
 tags: acquisition, open company
 ---
 
-![Open 24 Hrs - Money Change](<%= image_path 'blog/2013-09-16-come-in-we-are-open/teaser.jpg' %>)
+![Open 24 Hrs - Money Change](/blog/2013-09-16-come-in-we-are-open/teaser.jpg)
 <small>Open 24 Hrs - Money Change [↩][1]</small>
 
 <big>
