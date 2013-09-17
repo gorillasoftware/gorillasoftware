@@ -4,7 +4,7 @@ tags: conference, frontend
 ---
 
 ![Unlock / Lock - user interface issue with bathroom doors at Microsoft, Redmond Campus, Redmond, Washington, USA](/blog/2013-08-29-fec13-i/frontend.jpg)
-<small>Unlock / Lock - user interface issue with bathroom doors at Microsoft, Redmond Campus, Redmond, Washington, USA [↩](http://www.flickr.com/photos/wonderlane/4315076635)</small>
+<small>Unlock / Lock - user interface issue with bathroom doors at Microsoft, Redmond Campus, Redmond, Washington, USA [↩][1]</small>
 
 Here is my short rating and overview of the Thursday talks of Frontend
 Conference in Zürich. The ratings are highly subjective.
@@ -129,3 +129,5 @@ Recommended book: Growing Object-Oriented Software Guided by Tests
 * <http://www.growing-object-oriented-software.com/>
 * <http://bekk.no>
 * <https://speakerdeck.com/kimjoar/patterns-of-large-scale-javascript-applications>
+
+[1]: http://www.flickr.com/photos/wonderlane/4315076635
