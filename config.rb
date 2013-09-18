@@ -12,6 +12,7 @@ end
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+sprockets.append_path File.join "#{root}", "bower_components"
 
 activate :blog do |blog|
   blog.per_page = 5

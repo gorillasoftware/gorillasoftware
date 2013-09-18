@@ -1,0 +1,21 @@
+{
+  "name": "gorillasoftware.ch",
+  "version": "0.5.4",
+  "homepage": "http://gorillasoftware.ch",
+  "authors": [
+    "Sebastian de Castelberg <sebu@kpricorn.org>"
+  ],
+  "description": "gorillasoftware website",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "prismjs": "*"
+  }
+}
