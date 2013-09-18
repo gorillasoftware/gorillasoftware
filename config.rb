@@ -41,14 +41,13 @@ activate :livereload
 activate :gsass
 activate :foundation_navigation
 activate :bourbon
+activate :asset_hash, ignore: ['require.js', 'f6854c8b.main']
+activate :cache_buster
 
 # Build-specific configuration
 configure :build do
   activate :minify_javascript, ignore: ['require.js', 'f6854c8b.main']
   activate :minify_css
-  activate :cache_buster
-  activate :asset_hash, ignore: ['require.js', 'f6854c8b.main']
-  activate :relative_assets
   activate :favicon_maker
   require "middleman-smusher"
   activate :smusher
