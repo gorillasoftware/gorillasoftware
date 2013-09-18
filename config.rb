@@ -7,6 +7,41 @@ helpers do
     end
     title
   end
+
+  def keywords
+    kw = (current_page.data.tags || '').split(/,\W*/)
+    kw.concat [
+      'Software Development',
+      'Softwareentwicklung',
+      'Software',
+      'Mobile Apps',
+      'HTML5',
+      'CSS',
+      'Zürich',
+      'Blog',
+      'Schweiz',
+      'Ruby',
+      'Ruby on Rails',
+      'Node.js',
+      'Python',
+      'Heroku',
+      'Linux',
+      'Git',
+      'Consulting',
+      'Coaching',
+      'Javascript',
+      'Open Source',
+      'Web Design',
+      'Responsive Design',
+      'CoffeeScript',
+      'Backbone.js',
+      'Solr',
+      'ELasticSearch',
+      'RubyMotion',
+      'Game development',
+    ]
+    kw.join ', '
+  end
 end
 
 set :css_dir, 'stylesheets'
@@ -44,6 +79,7 @@ activate :foundation_navigation
 activate :bourbon
 activate :asset_hash, ignore: ['require.js', 'f6854c8b.main']
 activate :cache_buster
+activate :gzip
 
 # Build-specific configuration
 configure :build do
