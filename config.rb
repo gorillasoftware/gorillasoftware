@@ -3,7 +3,7 @@ helpers do
     title = "gorilla software"
     page_title = current_page.data.title
     if page_title.present?
-      title = "#{page_title} ★ #{title}"
+      title = "#{page_title} • #{title}"
     end
     title
   end
