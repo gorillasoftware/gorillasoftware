@@ -1,6 +1,5 @@
 ---
 title: Overview of available ruby markdown libraries
-published: false
 ---
 
 ![Markdown in in iA Writer](/blog/2013-09-19-ruby-markdown-libraries/teaser.gif)
