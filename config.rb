@@ -64,7 +64,8 @@ set :markdown,
   autolink: true,
   gh_blockcode: true,
   fenced_code_blocks: true,
-  smartypants: true
+  smartypants: true,
+  strikethrough: true
 set :markdown_engine, :redcarpet
 
 
