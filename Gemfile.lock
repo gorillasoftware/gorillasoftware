@@ -1,17 +1,16 @@
 GIT
+  remote: git://github.com/MrJoy/middleman-google-analytics.git
+  revision: 9b8e2bb56ca6e2d13990f27cd5de1acaaf3dfd0a
+  specs:
+    middleman-google-analytics (0.0.1)
+      middleman-core (>= 3.0.6)
+
+GIT
   remote: git://github.com/kpricorn/foundation.git
   revision: ce28e55a46132a73e45f50faaa56f3bcb259ecc2
   specs:
     zurb-foundation (4.3.1)
       sass (>= 3.2.0)
-
-GIT
-  remote: git://github.com/kpricorn/middleman-google-analytics.git
-  revision: ed767d6d2d5276799b011784aff39e5af9f195cd
-  branch: features/domain_name_and_allow_linker
-  specs:
-    middleman-google-analytics (0.0.1)
-      middleman-core (>= 3.0.6)
 
 GEM
   remote: https://rubygems.org/
