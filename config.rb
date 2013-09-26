@@ -78,7 +78,6 @@ activate :livereload
 activate :gsass
 activate :foundation_navigation
 activate :bourbon
-activate :asset_hash, ignore: ['require.js', 'f6854c8b.main']
 activate :cache_buster
 activate :gzip
 
@@ -89,6 +88,7 @@ configure :build do
   activate :favicon_maker
   require "middleman-smusher"
   activate :smusher
+  activate :asset_hash, ignore: ['require.js', 'f6854c8b.main']
 end
 
 activate :disqus do |d|
