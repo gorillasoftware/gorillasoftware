@@ -8,8 +8,8 @@ published: false
 
 I was confronted by the technology decision lately of chosing a ruby
 markdown library for a Rails project. The following overview was mostly
-of personal interest, but may be helpful for other people too.  For
-errata or missing libraries please contact me via the comments form.
+of personal interest, but may be helpful for other people too. READMORE
+For errata or missing libraries please contact me via the comments form.
 
 These were my requisites
 
