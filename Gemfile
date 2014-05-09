@@ -1,11 +1,13 @@
 source "https://rubygems.org"
 
-ruby "2.0.0"
+ruby "2.1.1"
 
 gem "middleman"
 
 gem "middleman-livereload"
-gem "zurb-foundation", github: 'kpricorn/foundation'
+gem "zurb-foundation"
+gem "sass", "3.2.13"
+gem "compass"
 gem "middleman-blog"
 gem "builder"
 gem "redcarpet"
@@ -29,7 +31,6 @@ gem "middleman-favicon-maker"
 gem "middleman-disqus"
 
 group :development do
-  gem "pry"
+  gem "pry", :require => true
   gem "pry-debugger"
-  require 'pry'
 end

@@ -19,6 +19,7 @@
       .title-area {
         padding-left: emCalc(30px);
         .name h1 {
+          font: 0/0 a;
           padding-top: 18px;
           a {
             @include gs-image('logo_title', $width: true, $height: true, $svg: true);

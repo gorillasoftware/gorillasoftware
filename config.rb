@@ -42,6 +42,18 @@ helpers do
     ]
     kw.join ', '
   end
+
+  def article_date(date)
+    {
+      :iso8601 => date.strftime('%Y-%m-%dT%H:%M:%S%:z'),
+      :year_name => date.strftime('%Y').to_i,
+      :month_name => date.strftime('%B'),
+      :day_name => date.strftime('%-e').to_i,
+      :year_path => blog_year_path(date.strftime('%Y').to_i),
+      :month_path => blog_month_path(date.strftime('%Y').to_i, date.strftime('%m').to_i),
+      :day_path => blog_day_path(date.strftime('%Y').to_i, date.strftime('%m').to_i, date.strftime('%d').to_i)
+    }
+  end
 end
 
 set :css_dir, 'stylesheets'
