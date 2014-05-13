@@ -20,12 +20,12 @@
     }
     form {
       input {
-        margin: 0;
-        border: none;
         background: lighten($tertiary-color, 30%);
-        height: auto;
+        border-radius: 8px;
+        border: none;
         font-size: 120%;
-        color: #8caecf;
+        height: auto;
+        margin: 0;
         outline: none;
       }
     }

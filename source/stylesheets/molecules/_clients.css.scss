@@ -1,0 +1,73 @@
+#clients {
+  h3 { text-align: inherit; }
+
+  .clients {
+    .client {
+      padding-bottom: 3em;
+      p {
+        .label {
+          background-color: $green;
+        }
+      }
+      .img {
+        margin: 0 auto 1em;
+        cursor: pointer;
+        background-color: lighten($egg, 10%);
+        border: solid 4px lighten($red, 30%);
+        width: 136px;
+        height: 128px;
+        padding-top: 132px;
+        border-radius: 68px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 70%;
+      }
+
+      &.screenconcept .img { background-image: image-url("clients/screenconcept.png") }
+      &.fela .img { background-image: image-url("clients/fela.png") }
+      &.rayneer .img { background-image: image-url("clients/rayneer.png") }
+      &.winterlife .img { background-image: image-url("clients/winterlife.png") }
+    }
+  }
+}
+
+.no-touch #clients {
+  .clients {
+    .client {
+      .img {
+        filter: gray;
+        -webkit-filter: grayscale(1);
+      }
+      &:hover .img {
+        background-color: lighten($egg, 5%);
+        filter: none;
+        -webkit-filter: none;
+      }
+    }
+  }
+}
+
+#clients {
+  .clients {
+    @include grid-row;
+    .client {
+      text-align: center;
+      @include grid-column(10, $offset: 1, $last_column: true);
+    }
+  }
+}
+
+@media #{$small} {
+  #clients {
+    .clients {
+      .client {
+        &:nth-child(2n+1) {
+          @include grid-column(5, $offset: 1, $last_column: false);
+        }
+        &:nth-child(2n) {
+          @include grid-column(5, $offset: 0, $last_column: true);
+        }
+      }
+    }
+  }
+}

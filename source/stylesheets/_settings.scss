@@ -1,13 +1,14 @@
 $green: #70C4AE;
 $red: #DF6662;
-$white: #F6F3E2;
+$egg: #F6F3E2;
+$darkegg: darken($egg, 10%);
 $grey: #2B3E50;
 $brown: #453932;
 $blue: #50ACE0;
 $darkblue: #2B3E50;
 
 $primary-color: lighten($darkblue, 20%);
-$secondary-color: $white;
+$secondary-color: $egg;
 $tertiary-color: #222;
 $alert-color: red;
 $success-color: $green;
@@ -34,10 +35,15 @@ $topbar-link-color: #fff;
 $topbar-link-font-size: 20px;
 $topbar-menu-link-color-toggled: #fff;
 $topbar-menu-icon-color-toggled: #fff;
-$topbar-bg-color: darken($red, 10%);
+$topbar-bg-color: $red;
 
-$body-bg: #F6F3E2;
+$body-bg: $egg;
 $list-style-position: inside;
+$topbar-link-bg-hover: inherit;
+
+$orbit-container-bg: $egg;
+
+/*$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);*/
 
 // Transitions and breakpoint styles
 // You can find the variables for each component at the bottom of their

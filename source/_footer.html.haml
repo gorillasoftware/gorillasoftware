@@ -5,9 +5,9 @@
       .columns.medium-12.large-3
         %h2 Newsletter
       .columns.medium-9.large-7
-        %input#newsletter.email{:name => "EMAIL", :placeholder => "email address", :required => "", :type => "email", :value => ""}/
+        %input#newsletter.email{:name => "EMAIL", :placeholder => "E-Mail Adresse", :required => "", :type => "email", :value => ""}/
       .columns.medium-3.large-2
-        = link_to 'Subscribe', '#', onclick: '$(this).closest("form").submit(); return false;', class: 'subscribe submit'
+        = link_to 'Eintragen', '#', onclick: '$(this).closest("form").submit(); return false;', class: 'subscribe submit'
   .license
     .row
       .columns.small-8.medium-9.large-10
@@ -25,4 +25,4 @@
           = image_tag "http://i.creativecommons.org/l/by-sa/3.0/88x31.png", :alt => "Creative Commons License", :style => "border-width:0"
     .row
       .columns.small-12.medium-9
-        %p artwork and logo © 2013 gorilla software GmbH. All Rights Reserved.
+        %p artwork and logo © 2014 gorilla software GmbH. All Rights Reserved.
