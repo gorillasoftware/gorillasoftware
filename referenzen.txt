@@ -1,0 +1,12 @@
+## Referenzen
+
+* Winterlife
+  * Backend Skiresort App
+* Fela
+  * Notsprechstellen Software
+* Screenconcept
+  * Alfred Müller
+  * Roche Pipeline
+  * Elesa Ganter
+* Rayneer
+  * Streaming server

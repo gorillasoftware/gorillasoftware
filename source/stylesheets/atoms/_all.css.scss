@@ -31,6 +31,7 @@ div, a {
 
 h1 {
   text-transform: uppercase;
+  padding-bottom: 1.3em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,4 +90,8 @@ a.submit {
   font-size: 120%;
   cursor: pointer;
   text-decoration: none;
+}
+
+.label {
+  font-weight: normal;
 }

@@ -7,19 +7,12 @@
           background-color: $green
       .img
         margin: 0 auto 1em
-        cursor: pointer
-        background-color: lighten($egg, 10%)
-        border: solid 4px lighten($red, 30%)
         width: 136px
         height: 128px
         padding-top: 132px
-        border-radius: 68px
         background-position: center
         background-repeat: no-repeat
         background-size: auto 70%
-      &:hover
-        .img
-          background-color: lighten($egg, 5%)
 
       &.langs .img
         background-image: image-url('skills/ruby.png')
@@ -39,19 +32,3 @@
       &.oss .img
         background-image: image-url('skills/oss.png')
         background-image: none, inline-image('skills/oss.svg')
-
-#services
-  .services
-    +grid-row
-    .service
-      text-align: center
-      +grid-column(10, $offset: 1, $last-column: true)
-
-@media #{$small}
-  #services
-    .services
-      .service
-        &:nth-child(2n+1)
-          +grid-column(5, $offset: 1, $last-column: false)
-        &:nth-child(2n)
-          +grid-column(5, $offset: 0, $last-column: true)

@@ -7,3 +7,4 @@ $ ->
   $(document).foundation('orbit', {
     timer_show_progress_bar: false
   })
+  $(document).foundation('tooltips')

@@ -1,15 +1,13 @@
-$green: #70C4AE;
-$red: #DF6662;
-$egg: #F6F3E2;
-$darkegg: darken($egg, 10%);
-$grey: #2B3E50;
-$brown: #453932;
+$green: #16A085;
+$red: #C0392B;
+$egg: #F6F2E4;
 $blue: #50ACE0;
 $darkblue: #2B3E50;
+$dark: #222;
 
 $primary-color: lighten($darkblue, 20%);
 $secondary-color: $egg;
-$tertiary-color: #222;
+$tertiary-color: $dark;
 $alert-color: red;
 $success-color: $green;
 
@@ -20,7 +18,8 @@ $body-font-color: #666;
 $paragraph-font-family: "futura-pt",sans-serif;
 $paragraph-font-weight: 300;
 $paragraph-font-color: #666;
-$paragraph-font-size: 1.2em;
+$paragraph-font-size: 1.3em;
+$paragraph-line-height: 1.4;
 
 $header-font-family: "futura-pt",sans-serif;
 $header-font-weight: 300;
@@ -42,6 +41,7 @@ $list-style-position: inside;
 $topbar-link-bg-hover: inherit;
 
 $orbit-container-bg: $egg;
+$orbit-timer-show-progress-bar: false;
 
 /*$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);*/
 
