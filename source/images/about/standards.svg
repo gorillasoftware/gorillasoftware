@@ -7,10 +7,38 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   width="135.71429"
-   height="135.71429"
-   id="svg11434">
+   width="96.143768"
+   height="109.03754"
+   id="svg11434"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="standards.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="720"
+     id="namedview18"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.7389473"
+     inkscape:cx="-103.7441"
+     inkscape:cy="56.819009"
+     inkscape:window-x="1"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg11434" />
   <defs
      id="defs11436">
     <clipPath
@@ -44,51 +72,42 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-481.04349,-164.9293)"
-     id="layer1">
-    <path
-       d="m 116.42857,46.562817 a 82.5,82.5 0 1 1 -165,0 82.5,82.5 0 1 1 165,0 z"
-       transform="matrix(0.82251083,0,0,0.82251083,520.99402,194.48802)"
-       id="path11517"
-       style="fill:#4c4dff;fill-opacity:0;stroke:none" />
-    <g
-       transform="matrix(0.7937154,0,0,0.7937154,414.58104,-35.571383)"
-       id="g10639">
-      <polygon
-         points="404.321,470.819 255.778,512 107.644,470.877 74.633,100.62 437.367,100.62 "
-         transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
-         id="polygon6"
-         style="fill:#e44d26" />
-      <polygon
-         points="256,130.894 256,480.523 376.03,447.246 404.27,130.894 "
-         transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
-         id="polygon8"
-         style="fill:#f16529" />
-      <polygon
-         points="256,221.716 256,176.305 255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 256,313.627 256,268.217 195.91,268.217 191.76,221.716 "
-         transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
-         id="polygon10"
-         style="fill:#ebebeb" />
-      <polygon
-         points="156.409,336.333 162.771,407.634 255.791,433.457 256,433.399 256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 177.419,336.333 "
-         transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
-         id="polygon12"
-         style="fill:#ebebeb" />
-      <polygon
-         points="255.843,313.627 311.761,313.627 306.49,372.521 255.843,386.191 255.843,433.435 348.937,407.634 349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217 255.843,268.217 "
-         transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
-         id="polygon22"
-         style="fill:#ffffff" />
-      <polygon
-         points="255.843,221.716 365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 369.597,176.305 255.843,176.305 255.843,204.509 255.843,221.605 "
-         transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
-         id="polygon24"
-         style="fill:#ffffff" />
-    </g>
+     id="g10639"
+     transform="matrix(0.7937154,0,0,0.7937154,-86.24771,-213.83905)">
+    <polygon
+       style="fill:#e44d26"
+       id="polygon6"
+       transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
+       points="255.778,512 107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 " />
+    <polygon
+       style="fill:#f16529"
+       id="polygon8"
+       transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
+       points="376.03,447.246 404.27,130.894 256,130.894 256,480.523 " />
+    <polygon
+       style="fill:#ebebeb"
+       id="polygon10"
+       transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
+       points="256,313.627 256,268.217 195.91,268.217 191.76,221.716 256,221.716 256,176.305 255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 " />
+    <polygon
+       style="fill:#ebebeb"
+       id="polygon12"
+       transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
+       points="205.227,372.55 201.994,336.333 177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399 256,386.153 255.801,386.206 " />
+    <polygon
+       style="fill:#ffffff"
+       id="polygon22"
+       transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
+       points="349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217 255.843,268.217 255.843,313.627 311.761,313.627 306.49,372.521 255.843,386.191 255.843,433.435 348.937,407.634 " />
+    <polygon
+       style="fill:#ffffff"
+       id="polygon24"
+       transform="matrix(0.33393972,0,0,0.33393972,83.740346,235.81426)"
+       points="369.597,176.305 255.843,176.305 255.843,204.509 255.843,221.605 255.843,221.716 365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 " />
   </g>
 </svg>
