@@ -42,7 +42,7 @@
 
     .t
       cursor: pointer
-      background-color: darken($blue, 30%)
+      background-color: $blue
       width: 36px
       height: 36px
       margin: 0px 4px
@@ -69,23 +69,7 @@
 
 html.no-touch
   #team
-    .photo-footer
-      .plus-btn
-        +transition(top 0.3s)
-        text-align: center
-        color: #f3f3f3
-        height: 67px
-        position: absolute
-        top: 0px
-        padding-top: 12px
-        background: image-url('follow.jpg') no-repeat center 6px #fa5c5c
-        span
-          display: inline-block
-          padding-top: 10px
-      &:hover
-        .plus-btn
-          top: 67px
     .socialicons
       .t
         &:hover
-          background-color: #fa5c5c
+          background-color: $red

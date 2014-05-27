@@ -63,23 +63,6 @@ time {
   color: #999;
 }
 
-p {
-  a {
-    border-bottom: 2px dotted lighten($primary-color, 30%);
-    &:hover {
-      border-bottom: none;
-      background-color: lighten($primary-color, 30%);
-    }
-  }
-}
-
-em {
-  font-style: italic;
-  &:hover {
-    background-color: lighten($primary-color, 30%);
-  }
-}
-
 a.submit {
   height: 40px;
   border-radius: 6px;

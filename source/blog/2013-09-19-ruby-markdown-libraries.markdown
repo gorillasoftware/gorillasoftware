@@ -22,25 +22,25 @@ These were my requisites
 
 READMORE
 
-| Candidates                  | tables   | pdf   | pure ruby      | Active development<sup>B</sup>   | License | Remarks  |
-| ----------                  | :------: | :---: | :------------: | :------------------: | ------- | -------: |
-| Github Markup [↩][ghmd]     |          |       | ✓              | ✓                    | MIT     | 1        |
-| ~~Markup~~ [↩][markup]      |          |       | ✓              |                      |         |          |
-| Redcarpet [↩][redcarpet]    | ✓        |       | ✓              | ✓                    |         | 1, 2     |
-| RDiscount [↩][rdiscount]    |          |       |                | ✓                    | BSD     | 3        |
-| Bluecloth [↩][bluecloth]    |          |       | ✓              |                      |         |          |
-| Bluecloth 2 [↩][bluecloth2] |          |       | ✓              |                      |         |          |
-| kramdown [↩][kramdown]      | ✓        | ✓     | ✓              | ✓                    | MIT     |          |
-| Maruku [↩][maruku]          |          | ✓     | ✓              | ✓                    | MIT     | 4        |
+| Candidates                  | tables   | pdf   | pure ruby      | Active development<sup>B</sup> | License | Remarks  |
+| ----------                  | :------: | :---: | :------------: | :------------------:           | ------- | -------: |
+| Github Markup [↩][ghmd]     |          |       | ✓              | ✓                              | MIT     | 1        |
+| ~~Markup~~ [↩][markup]      |          |       | ✓              |                                |         |          |
+| Redcarpet [↩][redcarpet]    | ✓        |       | ✓              | ✓                              |         | 1, 2     |
+| RDiscount [↩][rdiscount]    |          |       |                | ✓                              | BSD     | 3        |
+| Bluecloth [↩][bluecloth]    |          |       | ✓              |                                |         |          |
+| Bluecloth 2 [↩][bluecloth2] |          |       | ✓              |                                |         |          |
+| kramdown [↩][kramdown]      | ✓        | ✓     | ✓              | ✓                              | MIT     |          |
+| Maruku [↩][maruku]          |          | ✓     | ✓              | ✓                              | MIT     | 4        |
 
 #### Non-ruby implementations
 
-| Candidates                                                                         | tables   | pdf   | pure ruby      | Active development<sup>B</sup> | License | Remarks  |
-| ----------                                                                         | :------: | :---: | :------------: | :----------------------------: | ------- | -------: |
-| pandoc-markdown [↩][pandoc]                                                        | ✓        | ✓     | -              | ✓                              | GPL     |          |
-| MultiMarkdown [↩][multimarkdownpl] <br>(aka MultiMarkdown.pl)                      | ✓        | ✓     | -              |                                |         |          |
-| MultiMarkdown [↩][multimarkdownv3] <br>(aka peg-multimarkdown or MultiMarkdown v3) | ✓        | ✓     | -              |                                |         |          |
-| MultiMarkdown 4 [↩][multimarkdownv4]                                               | ✓        | ✓     | -              | ✓                              | GPL/MIT |          |
+| Candidates                                                                         | tables   | pdf   | pure ruby      | Active development<sup>B</sup> | License |
+| ----------                                                                         | :------: | :---: | :------------: | :----------------------------: | ------- |
+| pandoc-markdown [↩][pandoc]                                                        | ✓        | ✓     | -              | ✓                              | GPL     |
+| MultiMarkdown [↩][multimarkdownpl] <br>(aka MultiMarkdown.pl)                      | ✓        | ✓     | -              |                                |         |
+| MultiMarkdown [↩][multimarkdownv3] <br>(aka peg-multimarkdown or MultiMarkdown v3) | ✓        | ✓     | -              |                                |         |
+| MultiMarkdown 4 [↩][multimarkdownv4]                                               | ✓        | ✓     | -              | ✓                              | GPL/MIT |
 
 ## Remarks
 
