@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.1.1"
+ruby "2.6.5"
 
 gem "middleman"
 
@@ -22,15 +22,9 @@ gem "middleman-smusher"
 gem "rack-contrib"
 gem "rack-rewrite"
 gem "thin"
-gem "middleman-s3_sync"
 gem "slim"
 
 gem "therubyracer"
 gem "oj"
 gem "middleman-favicon-maker"
 gem "middleman-disqus"
-
-group :development do
-  gem "pry", :require => true
-  gem "pry-debugger"
-end
