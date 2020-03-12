@@ -123,7 +123,7 @@ GEM
       dimensions (> 0)
       mime-types (> 0)
       sass (> 0)
-    rake (10.3.1)
+    rake (13.0.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
