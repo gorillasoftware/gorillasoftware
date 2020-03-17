@@ -10,12 +10,8 @@ section#team.page
         .photo-footer
           .plus-btn
           .socialicons
-            == link_to 'http://github.com/kpricorn' do
+            == link_to 'https://github.com/kpricorn' do
               .t.t-github
-            == link_to 'http://twitter.com/kpricorn' do
-              .t.t-twitter
-            == link_to 'http://facebook.com/kpricorn' do
-              .t.t-fb
             - mail_block = capture do
               .t.t-mail
             == mail_to 'sebastian@gorillasoftware.ch', mail_block
