@@ -22,13 +22,16 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto 70%;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
       }
 
       &.screenconcept .img { background-image: image-url("clients/screenconcept.png") }
       &.fela .img { background-image: image-url("clients/fela.png") }
       &.rayneer .img { background-image: image-url("clients/rayneer.png") }
       &.winterlife .img { background-image: image-url("clients/winterlife.png") }
-      &.birom .img { background-image: image-url("clients/birom.png") }
+      &.plex-lab .img { background-image: image-url("clients/plex_lab.png") }
+      &.swisscom .img { background-image: image-url("clients/swisscom_sw.png") }
     }
   }
 }
